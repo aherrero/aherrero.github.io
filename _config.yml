@@ -13,15 +13,16 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: This thing about Electronic Engineering was...
-email: your-email@example.com
+
+title: And the Electronic Engineering was...
+# email: your-email@example.com
 description: > # this means to ignore newlines until "baseurl:"
   Electronic Engineer who basically, as many of us, develop software.
   More and more, coming back to the electronics field and this blog is the demostration of that.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  jekyll
+# twitter_username: aherrero
+github_username:  aherrero
 
 # Build settings
 markdown: kramdown

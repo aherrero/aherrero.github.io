@@ -1,9 +1,28 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
-date:   2017-07-13 07:24:28 +0200
-categories: jekyll update
+title:  "Hello World post!"
+date:   1970-01-01 08:00 +0200
+categories: helloworld jekyll
 ---
+
+Hello World Jekyll!
+
+So basically..
+
+[https://jekyllrb.com/docs/installatioon/](https://jekyllrb.com/docs/installatioon/)
+
+After that
+
+[https://jekyllrb.com/docs/quickstart/](https://jekyllrb.com/docs/quickstart/)
+
+Test to display images:
+
+![electronics](/assets/helloworld/electronics.jpg)
+
+![electro2]({{ site.url }}/assets/helloworld/electronics.jpg)
+
+---
+
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 
 To add new posts, simply add a file in the `_posts` directory that follows the convention `YYYY-MM-DD-name-of-post.ext` and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.

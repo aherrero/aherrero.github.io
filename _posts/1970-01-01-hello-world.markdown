@@ -9,7 +9,7 @@ Hello World Jekyll!
 
 So basically..
 
-[https://jekyllrb.com/docs/installatioon/](https://jekyllrb.com/docs/installatioon/)
+[https://jekyllrb.com/docs/installation/](https://jekyllrb.com/docs/installation/)
 
 After that
 

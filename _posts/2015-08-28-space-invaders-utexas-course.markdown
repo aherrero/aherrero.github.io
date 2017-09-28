@@ -2,7 +2,7 @@
 layout: post
 title:  "Arcade game with TM4C123G Launch Pad"
 date:   2015-08-28 08:00 +0200
-categories: microcontroller texas edx
+categories: microcontroller ti
 ---
 
 # Arcade Game with TM4C123G Microcontroller

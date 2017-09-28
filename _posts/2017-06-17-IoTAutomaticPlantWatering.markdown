@@ -9,7 +9,7 @@ categories: arduino iot
 
 The goal of this project is to automate the plant watering, measuring the soil moisture and activating the pump motor if the plant needs water.
 
-<b>[UPDATE] Second prototype with limit current protection, here</b>
+<b>[UPDATE] Second prototype with limit current protection, [here](/arduino/iot/2017/09/10/IoTAutomaticPlantWatering_2.html)</b>
 
 ## Prototype v0.1.1
 
@@ -166,7 +166,7 @@ void loop()                     // run over and over again
 ```
 
 ### Results
-It seems it's working, the sensor read the moisture, and when the mositure has a level less than "800" as an input raw value, the pump motor start to work. Otherwise, the Arduino sleeps until the next interaction to read the value.
+The circuit is working, the sensor reads the moisture, and when the mositure has a level less than "800" (ADC, input raw value), the pump motor start to work. Otherwise, the Arduino sleeps until the next interaction to read the value.
 
 ## Prototype v0.1.2
 
@@ -182,16 +182,23 @@ And from the back,
 
 ![alt text](/assets/IoTAutomaticPlantWatering_v0.1.1/back.JPG)
 
-
 # Conclusion
-The complete circuit seems to work.. Until the pump motor crash. Different solutions have though about that:
+The complete circuit works for a short period of time, then, the pump motor broke.
+This could be due a different possibilities:
 - There is no diode between the positive and negative of the pump motor. The diode should helps to avoid the reverse voltage when we stop the motor.
-- The current is too high. Remember, the power supply used for all the circuit is a Lipo, and the Lipo battery will give us as much as current as we want. If the pump motor hasn't a curret limiter, which probably has not, we are the responsible to limit this current in another way.
+- The current is too high. Remember, the power supply used for all the circuit is a Lipo, and the Lipo battery will give us as much as current as the circuit needs. If the pump motor hasn't a curret limiter, which probably has not, we are the responsible to limit this current with another way.
 
 ## Possible improvements
 - Diode between positive and negative in the pump motor.
-- Current limiter with a motor controller type [L298N](https://www.sparkfun.com/datasheets/Robotics/L298_H_Bridge.pdf). The problem with that is, we don't need run the motor in the opposite direction and the motor may consume more than the motor controller can give us.
-- Current limiter with [LM317](http://www.ti.com/lit/ds/symlink/lm317.pdf). It seems a good idea, and the circuit is simple to make. ![alt text](/assets/IoTAutomaticPlantWatering_v0.1.1/lm317Circuit.png). The problem, I don't have a resitor so low to limit the current until the level that I want. More information, [http://www.ti.com/lit/ds/symlink/lm317.pdf](http://www.ti.com/lit/ds/symlink/lm317.pdf) and [http://www.techlib.com/electronics/regulators.html](http://www.techlib.com/electronics/regulators.html)
-- Current limiter with [L7812](https://www.sparkfun.com/products/12766). The circuit will be ![alt text](/assets/IoTAutomaticPlantWatering_v0.1.1/7812Circuit.png). It seems the best solution. For the next interation.
+- Current limiter with a motor controller type [L298N](https://www.sparkfun.com/datasheets/Robotics/L298_H_Bridge.pdf). The problem with that is, we don't need run the motor in the opposite direction and the motor may consume more than the motor controller can give us (Typically, the L298N gives 0.5A)
+- Current limiter with [LM317](http://www.ti.com/lit/ds/symlink/lm317.pdf). The circuit would be:
+![alt text](/assets/IoTAutomaticPlantWatering_v0.1.1/lm317Circuit.png)
+
+  It's a good alternative, but in this moment, I didn't have the material to do it, so, let's see another possibility. (More information,  [http://www.ti.com/lit/ds/symlink/lm317.pdf](http://www.ti.com/lit/ds/symlink/lm317.pdf) and [http://www.techlib.com/electronics/regulators.html](http://www.techlib.com/electronics/regulators.html))
+- Current limiter with
+[L7812](https://www.sparkfun.com/products/12766). The circuit will be
+![alt text](/assets/IoTAutomaticPlantWatering_v0.1.1/7812Circuit.png)
+
+  As alternative of the LM317, it's a good solution. This solution will be implemented in the next iteration [Part 2]()
 
 [Link to project](https://github.com/aherrero/IoTAutomaticPlantWatering)

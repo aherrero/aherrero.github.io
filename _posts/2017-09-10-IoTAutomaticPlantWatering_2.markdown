@@ -7,7 +7,9 @@ categories: arduino iot
 
 # IoT Automatic Plant Watering - v2
 
-The goal of this project is to automate the plant watering, measuring the soil moisture and activating the pump motor if the plant needs water.
+The goal of this project is to automate the plant watering, measuring the soil moisture sensor and activating the pump motor if the plant needs water.
+
+The arduino will sleep 24 hours, then the sensor will read the value, and it will activate the pump motor if needed. Then, the microcontroller will sleep again.
 
 [...] Picture of the complete project...
 
@@ -173,3 +175,9 @@ void loop()                     // run over and over again
 }
 
 ```
+
+## Prototype v1.2
+PCB...
+
+
+[Link to the Git Project](https://github.com/aherrero/IoTAutomaticPlantWatering)

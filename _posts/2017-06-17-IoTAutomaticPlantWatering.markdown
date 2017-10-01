@@ -199,6 +199,6 @@ This could be due a different possibilities:
 [L7812](https://www.sparkfun.com/products/12766). The circuit will be
 ![alt text](/assets/IoTAutomaticPlantWatering_v0.2/7812Circuit.png)
 
-  As alternative of the LM317, it's a good solution. This solution will be implemented in the next iteration [Part 2]()
+  As alternative of the LM317, it's a good solution. This solution will be implemented in the next iteration [Version 2](/arduino/iot/2017/09/10/IoTAutomaticPlantWatering_2.html)
 
 [Link to project](https://github.com/aherrero/IoTAutomaticPlantWatering)

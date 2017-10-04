@@ -46,12 +46,16 @@ This is the circuit:
 
 More information: [http://bildr.org/2012/03/rfp30n06le-arduino/](http://bildr.org/2012/03/rfp30n06le-arduino/)
 
+[IRF540N Datasheet](https://www.infineon.com/dgdl/irf540n.pdf?fileId=5546d462533600a4015355e396cb199f)
+
 ### Current Limiter - Power Supply
 The full circuit is powered by a Lipo, but with the current controlled, to avoid to break some electronics.
 
 The circuit will be:
 
 ![alt text](/assets/IoTAutomaticPlantWatering_v0.2/7812Circuit.png)
+
+Direct circuit application from the [Datasheet](https://cdn.sparkfun.com/datasheets/Components/General/TO-220.pdf)
 
 If we connect the Lipo (Around 12V) in Vi, and we take a R1 resistor of 10k, this should give us approximatelly up to 1.2A (enough to protect our circuits).
 
@@ -73,6 +77,10 @@ Also, if you are going to use the system outside, you probably want cover the se
 
 ![alt text](/assets/IoTAutomaticPlantWatering_v0.1/moisturesensor.JPG)
 
+### Schematic
+
+![alt text](/assets/IoTAutomaticPlantWatering_v1.1/schematic.png)
+
 ### Code
 
 ```
@@ -82,7 +90,7 @@ Also, if you are going to use the system outside, you probably want cover the se
  * Input/Output
  */
 
-int inMoistureSensor = 1;    //Analog: Read Sensor
+int inMoistureSensor = 0;    //Analog: Read Sensor
 int pinOnMoistureSensor = 2; //Digital: on/off sensor
 int outControl = 3;          //PWM Digital: Motor output
 int pinInternalLed = 13;     //Digital: Led output (internal) used as indicator
@@ -167,11 +175,10 @@ void loop()                     // run over and over again
   digitalWrite(pinOnMoistureSensor, LOW);
   delay(100);
 
-  //Main Sleep
-  delay(2000);
-
-  //Sleep for 8s
-  //LowPower.powerDown(SLEEP_8S, ADC_OFF, BOD_OFF);
+  //Sleep 24 hours (3600 seconds)
+  int endForSleep = 3600/8;  //8 -> 8 sec is the max to put in the LowPower library to sleep
+  for(int i=0; i<endForSleep; i++)
+    LowPower.powerDown(SLEEP_8S, ADC_OFF, BOD_OFF);
 }
 
 ```

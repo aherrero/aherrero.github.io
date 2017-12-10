@@ -18,7 +18,7 @@ The arduino will sleep 24 hours, then the sensor will read the value, and it wil
 ![alt text](/assets/IoTAutomaticPlantWatering_v1.1/complete.JPG)
 
 ## Material used
-- [Arduino Uno](https://www.sparkfun.com/products/11021)
+- [Arduino Uno](https://www.sparkfun.com/products/11021) or [Arduino Pro Mini 5V](https://www.sparkfun.com/products/11113)
 - [Soil Moisture Sensor](https://www.sparkfun.com/products/13322)
 - Mosfet [IRF540N](https://www.infineon.com/dgdl/irf540n.pdf?fileId=5546d462533600a4015355e396cb199f)
 - 2 x Resistor 10k

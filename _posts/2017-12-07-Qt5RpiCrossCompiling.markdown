@@ -28,9 +28,8 @@ From my point of view, these are the advantages:
 3. Once you have the system configured, you won't need a rpi for developing applications. This could be useful if you don't have the rpi yet.
 
 4. You will have the entire system of the rpi on your computer, before flash the system in the SC card. This have another two advantages:
-
-  - You can modify whatever you want on the root system (For example, you might want put an static IP in /etc/dhcpcd.conf and enable the SSH connection)
-  - To replicate the system to whatever rpi3 it will be enough with copy and paste the image file.
+  * You can modify whatever you want on the root system (For example, you might want put an static IP in /etc/dhcpcd.conf and enable the SSH connection)
+  * To replicate the system to whatever rpi3 it will be enough with copy and paste the image file.
 
 ## First steps and result
 The initial configuration was:
@@ -75,7 +74,7 @@ chmod +x qt-unified-linux-x64-3.0.2-online.run
 ./qt-unified-linux-x64-3.0.2-online.run
 ```
 And the installer will start.
-I've installed in the path /opt/Qt
+I've installed in the path **/opt/Qt**
 
 At this moment, the latest Qt Version, Qt 5.10, was released a few days ago, but for the cross compiling and Rpi, I couldn't compile with a newer version than 5.4 (The same as [the tutorial of reference](https://medium.com/@amirmann/how-to-cross-compile-qt-for-raspberry-pi-3-on-linux-ubuntu-for-beginners-75acf2a078c)). But, as I need additional features for newest versions, I've manage to install the package independently (E.g.: Qt Charts).
 
@@ -98,6 +97,8 @@ Mount the system,
 ```
 sudo mkdir /mnt/rasp-pi-rootfs
 unzip 2017-07-05-raspbian-jessie.zip
+```
+```
 fdisk -l 2017-07-05-raspbian-jessie.img
 ```
 
@@ -129,7 +130,7 @@ https://exploreembedded.tumblr.com/
 ## Compile Qt
 Go where the Source of Qt is installed,
 ```
-cd /opt/Qt/Qt5/5.4/Src/
+cd /opt/Qt/5.4/Src/
 ```
 
 And export where the cross compile is and the system mounted,
@@ -153,14 +154,19 @@ And then, start the compilation.
 #### Configure
 
 ```
-sudo ./configure -opengl es2 -device linux-rasp-pi-g++ -device-option CROSS_COMPILE=$RPI_TOOLCHAIN -sysroot $RPI_SYSROOT -opensource -confirm-license -optimized-qmake -reduce-exports -release -make libs -prefix /usr/local/qt5pi -skip qtwebkit
+sudo ./configure -opengl es2 \
+-device linux-rasp-pi-g++ -device-option CROSS_COMPILE=$RPI_TOOLCHAIN \
+-sysroot $RPI_SYSROOT -opensource \
+-confirm-license -optimized-qmake \
+-reduce-exports -release -make libs \
+-prefix /usr/local/qt5pi -skip qtwebkit
 ```
 
 To avoid problems, I've skipped qtwebkit, and because is a big package, but you can remove this instruction.
 
 For more information, [these are the options](http://doc.qt.io/qt-5/configure-options.html) for the configure.
 
-After 5-10 minutes, the configure finishes.
+After 3 minutes, the configure finishes.
 You should not have errors at all.
 
 Note... Different options for configure,
@@ -172,7 +178,7 @@ We probably want to do the "make" with our 4 processors, if you have.
 ```
 sudo make -j4
 ```
-After 30-45 minutes and not errors at all,
+After 20-30 minutes and not errors at all,
 
 
 #### Install
@@ -180,7 +186,7 @@ After 30-45 minutes and not errors at all,
 ```
 sudo make install
 ```
-This final instrucion will install qt in our system and in the sysroot mounted.
+After 1-2 minutes, the qt (rpi version) will be installed in our system and in the sysroot mounted (For flashing the rpi)
 
 #### Results
 
@@ -197,17 +203,35 @@ Here in this tutorial we will install QtChart, because it was a needed library.
 
 http://download.qt.io/official_releases/qt/5.7/5.7.1/submodules/
 
+```
+cd ~/crosscompile-tools
+wget http://download.qt.io/official_releases/qt/5.7/5.7.1/submodules/qtcharts-opensource-src-5.7.1.tar.gz
+sudo cp qtcharts-opensource-src-5.7.1.tar.gz /opt/Qt/5.4/Src/
+cd /opt/Qt/5.4/Src/
+sudo tar -zxf qtcharts-opensource-src-5.7.1.tar.gz
+```
+
+```
+/usr/local/qt5pi/bin/qmake .
+sudo make -j4 # 3-4 minutes
+sudo make install
+```
+
+Make in 3-4 minutes, because it is only a module (Not error at all again) and make install in seconds.
+
 http://wiki.qt.io/index.php?title=Raspberrypi_beginners_guide&redirect=no
 
-
-## Flash SD Card
-https://www.raspberrypi.org/documentation/installation/installing-images/
-
 ## Qt Creator configuration
+
+Before of umount the system.. (the system must be mounted when compile for rpi)
 
 https://www.olimex.com/forum/index.php?topic=3826.0
 
 https://www.ics.com/blog/configuring-qt-creator-raspberry-pi
+
+
+## Flash SD Card
+https://www.raspberrypi.org/documentation/installation/installing-images/
 
 ## First start
 Static IP address

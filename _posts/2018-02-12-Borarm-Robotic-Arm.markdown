@@ -31,11 +31,11 @@ I've used polystyrene to build the structure. Very easy to build something quick
 
 Here, I've realized that I would need spaces between the walls, to restrict the movement, therwise, when I tighten the screw, the walls bend. Also, longer screws should work better.
 
-![borarm_v1_img](/assets/borarm/1.4.JPG)
+![borarm_v1_img](/assets/borarm/1.4.png)
 
 In the second iteration,
 
-![borarm_v1_img](/assets/borarm/2.1JPG)
+![borarm_v1_img](/assets/borarm/2.1.JPG)
 
 ![borarm_v1_img](/assets/borarm/2.2.JPG)
 
@@ -43,9 +43,11 @@ In the second iteration,
 I've used a nunchuck to control the servos, instead of multiples potentiometer, or serial communication and a keybord.
 
 The nunchuck is easy to use with the correct library, allows multiple options (joystick 360°, 2 buttons, accelerometers XYZ) and not very expensive
+
 [https://www.amazon.fr/dp/B001T1GX2S/ref=pe_3044141_189395771_TE_3p_dp_1](https://www.amazon.fr/dp/B001T1GX2S/ref=pe_3044141_189395771_TE_3p_dp_1)
 
 You could use this projects as examples of using the nunchuck,
+
 [https://create.arduino.cc/projecthub/mtashiro/control-servos-using-wii-nunchuk-9136bd](https://create.arduino.cc/projecthub/mtashiro/control-servos-using-wii-nunchuk-9136bd)
 
 [http://arduinoarts.com/2014/07/tutorial-wii-nunchuck-pan-tilt-servo/](http://arduinoarts.com/2014/07/tutorial-wii-nunchuck-pan-tilt-servo/)
@@ -57,7 +59,10 @@ All in [Github](https://github.com/aherrero/Borarm).
 
 One remark; I don't like at all the Arduino IDE. Of course, you can use Arduino IDE to program the Arduino with this source code, but I've started to use this Pakckage for Atom, and it's awesome.
 
-[http://docs.platformio.org/en/latest/ide/atom.html](http://docs.platformio.org/en/latest/ide/atom.html)
+
+![platformio](https://platformio.org/images/platformio-logo.17fdc3bc.png)
+
+[https://platformio.org/](https://platformio.org/)
 
 # Video result
 

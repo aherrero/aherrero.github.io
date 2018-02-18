@@ -5,6 +5,8 @@ date:   2018-02-12 08:00 +0200
 categories: robotic arduino
 ---
 
+![borarm_v1_img](/assets/borarm/2.1.JPG)
+
 # Borarm as a first robotic Arm
 The goal of this projects is very simple to understand: Build a simple robotic arm to start using Arduino again.
 

@@ -26,7 +26,7 @@ github_username:  aherrero
 
 # Enable comments
 disqus:
-  shortname: aherrero
+  shortname: aherrero-1
 
 # Build settings
 markdown: kramdown

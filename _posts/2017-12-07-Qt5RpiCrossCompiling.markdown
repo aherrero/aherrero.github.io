@@ -277,8 +277,3 @@ https://stackoverflow.com/questions/37059310/building-qt5-6-or-qt5-7-on-raspberr
 
 ## Hardware
 https://www.sparkfun.com/products/13733
-
-
-* image example
-
-![alt text](/assets/IoTAutomaticPlantWatering_v1.1/schematic.png)

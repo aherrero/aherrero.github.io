@@ -3,6 +3,7 @@ layout: post
 title:  "Arcade game with TM4C123G Launch Pad"
 date:   2015-08-28 08:00 +0200
 categories: microcontroller ti
+comments: true
 ---
 
 # Arcade Game with TM4C123G Microcontroller
@@ -67,3 +68,9 @@ Finally, I have joined all the systems to create an embedded system that can pla
 <iframe width="560" height="315" src="https://www.youtube.com/embed/7BozoCaN9yg" frameborder="0" allowfullscreen></iframe>
 
 [Link to project](https://github.com/aherrero/EmbeddedSystems/tree/master/UT.6.02x/Lab15_SpaceInvaders)
+
+##
+
+{% if page.comments %}
+{% include disqus.html %}
+{% endif %}

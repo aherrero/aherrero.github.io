@@ -3,6 +3,7 @@ layout: post
 title:  "Hello World post!"
 date:   1970-01-01 08:00 +0200
 categories: helloworld jekyll
+comments: true
 ---
 
 Hello World Jekyll!

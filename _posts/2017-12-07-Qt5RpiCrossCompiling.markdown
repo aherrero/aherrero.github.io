@@ -3,6 +3,7 @@ layout: post
 title:  "Cross compile Qt5 for Rpi3 on Linux (Ubuntu)"
 date:   2017-12-07 08:00 +0200
 categories: linux qt rpi
+comments: true
 ---
 
 # How to cross compile Qt5 for Rpi3 on Linux
@@ -125,7 +126,7 @@ sudo ./sysroot-relativelinks.py /mnt/rasp-pi-rootfs
 ```
 
 Note... Some people uses this script for fix the symbolic links: fixQualifiedLibraryPaths
-https://exploreembedded.tumblr.com/
+[https://exploreembedded.tumblr.com/](https://exploreembedded.tumblr.com/)
 
 ## Compile Qt
 Go where the Source of Qt is installed,
@@ -170,7 +171,7 @@ After 3 minutes, the configure finishes.
 You should not have errors at all.
 
 Note... Different options for configure,
-http://www.tal.org/building_qt_5_for_raspberrypi_jessie
+[http://www.tal.org/building_qt_5_for_raspberrypi_jessie](http://www.tal.org/building_qt_5_for_raspberrypi_jessie)
 
 #### Make
 
@@ -201,7 +202,7 @@ Once we have the QtBase installed, we don't want to limit with this modules and 
 
 Here in this tutorial we will install QtChart, because it was a needed library.
 
-http://download.qt.io/official_releases/qt/5.7/5.7.1/submodules/
+[http://download.qt.io/official_releases/qt/5.7/5.7.1/submodules/](http://download.qt.io/official_releases/qt/5.7/5.7.1/submodules/)
 
 ```
 cd ~/crosscompile-tools
@@ -219,47 +220,55 @@ sudo make install
 
 Make in 3-4 minutes, because it is only a module (Not error at all again) and make install in seconds.
 
-http://wiki.qt.io/index.php?title=Raspberrypi_beginners_guide&redirect=no
+[http://wiki.qt.io/index.php?title=Raspberrypi_beginners_guide&redirect=no](http://wiki.qt.io/index.php?title=Raspberrypi_beginners_guide&redirect=no)
 
 ## Qt Creator configuration
 
-Before of umount the system.. (the system must be mounted when compile for rpi)
+Here a guide about how to configure QT Creator for cross compile.
 
-https://www.olimex.com/forum/index.php?topic=3826.0
+[https://www.olimex.com/forum/index.php?topic=3826.0](https://www.olimex.com/forum/index.php?topic=3826.0)
 
-https://www.ics.com/blog/configuring-qt-creator-raspberry-pi
+[https://www.ics.com/blog/configuring-qt-creator-raspberry-pi](https://www.ics.com/blog/configuring-qt-creator-raspberry-pi)
 
+Don't forget, for cross compile with the qmake for the target, you will need the system mounted
 
 ## Flash SD Card
-https://www.raspberrypi.org/documentation/installation/installing-images/
+[https://www.raspberrypi.org/documentation/installation/installing-images/](https://www.raspberrypi.org/documentation/installation/installing-images/)
 
 ## First start
 Static IP address
-https://www.modmypi.com/blog/how-to-give-your-raspberry-pi-a-static-ip-address-update
+
+[https://www.modmypi.com/blog/how-to-give-your-raspberry-pi-a-static-ip-address-update](https://www.modmypi.com/blog/how-to-give-your-raspberry-pi-a-static-ip-address-update)
 
 Install a keyboard on screen
-https://raspberrypi.stackexchange.com/questions/59849/how-to-install-on-screen-keyboard-in-raspbian-without-a-physical-keyboard
+
+[https://raspberrypi.stackexchange.com/questions/59849/how-to-install-on-screen-keyboard-in-raspbian-without-a-physical-keyboard](https://raspberrypi.stackexchange.com/questions/59849/how-to-install-on-screen-keyboard-in-raspbian-without-a-physical-keyboard)
 
 Enable SSH
-https://www.raspberrypi.org/documentation/remote-access/ssh/
 
-https://www.raspberrypi.org/forums/viewtopic.php?f=29&t=167326
+[https://www.raspberrypi.org/documentation/remote-access/ssh/](https://www.raspberrypi.org/documentation/remote-access/ssh/)
 
-You can always make a copy...
-https://thepihut.com/blogs/raspberry-pi-tutorials/17789160-backing-up-and-restoring-your-raspberry-pis-sd-card
+[https://www.raspberrypi.org/forums/viewtopic.php?f=29&t=167326](https://www.raspberrypi.org/forums/viewtopic.php?f=29&t=167326)
+
+How to copy the entire SD Card with the linux already configured
+
+[https://thepihut.com/blogs/raspberry-pi-tutorials/17789160-backing-up-and-restoring-your-raspberry-pis-sd-card](https://thepihut.com/blogs/raspberry-pi-tutorials/17789160-backing-up-and-restoring-your-raspberry-pis-sd-card)
 
 ## References
 * Cross compiling an "Hello World" application, without Qt.
-[https://hackaday.com/2016/02/03/code-craft-cross-compiling-for-the-raspberry-pi/](https://hackaday.com/2016/02/03/code-craft-cross-compiling-for-the-raspberry-pi/)
+
+  [https://hackaday.com/2016/02/03/code-craft-cross-compiling-for-the-raspberry-pi/](https://hackaday.com/2016/02/03/code-craft-cross-compiling-for-the-raspberry-pi/)
 
 * Linaro Compiler for ARM systems
-[https://launchpad.net/gcc-linaro](https://launchpad.net/gcc-linaro)
+
+  [https://launchpad.net/gcc-linaro](https://launchpad.net/gcc-linaro)
 
 * Qt for embedded Linux
-[http://doc.qt.io/qt-5/embedded-linux.html](http://doc.qt.io/qt-5/embedded-linux.html)
+
+  [http://doc.qt.io/qt-5/embedded-linux.html](http://doc.qt.io/qt-5/embedded-linux.html)
 
 ## Errors
-https://stackoverflow.com/questions/46654778/error-while-cross-compiling-qt-for-a-raspberry-pi3
+[https://stackoverflow.com/questions/46654778/error-while-cross-compiling-qt-for-a-raspberry-pi3](https://stackoverflow.com/questions/46654778/error-while-cross-compiling-qt-for-a-raspberry-pi3)
 
 ```
 Note: No wayland-egl support detected. Cross-toolkit compatibility disabled.
@@ -271,9 +280,16 @@ You might need to modify the include and library search paths by editing QMAKE_I
 QMAKE_LIBDIR_OPENGL[_ES2] and QMAKE_LIBS_OPENGL[_ES2] in the mkspec for your platform.
 ```
 
-https://forum.qt.io/topic/29795/qmake-can-t-find-wayland-egl-building-qtwayland/7
+[https://forum.qt.io/topic/29795/qmake-can-t-find-wayland-egl-building-qtwayland/7](https://forum.qt.io/topic/29795/qmake-can-t-find-wayland-egl-building-qtwayland/7)
 
-https://stackoverflow.com/questions/37059310/building-qt5-6-or-qt5-7-on-raspberry-pi3-or-and-pi-zero
+[https://stackoverflow.com/questions/37059310/building-qt5-6-or-qt5-7-on-raspberry-pi3-or-and-pi-zero](https://stackoverflow.com/questions/37059310/building-qt5-6-or-qt5-7-on-raspberry-pi3-or-and-pi-zero)
 
 ## Hardware
-https://www.sparkfun.com/products/13733
+Screen: [https://www.sparkfun.com/products/13733](https://www.sparkfun.com/products/13733)
+
+
+##
+
+{% if page.comments %}
+{% include disqus.html %}
+{% endif %}

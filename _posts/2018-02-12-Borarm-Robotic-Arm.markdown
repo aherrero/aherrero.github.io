@@ -3,6 +3,7 @@ layout: post
 title:  "Borarm. First Robotic Arm. Part I"
 date:   2018-02-12 08:00 +0200
 categories: robotic arduino
+comments: true
 ---
 
 ![borarm_v1_img](/assets/borarm/2.1.JPG)
@@ -18,20 +19,24 @@ I've found this simple robotic arm on Internet, which seems not very difficult t
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/rRRQp8YUqT0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
+
 But until then, there is so much work to do.
 
 # Servo testing
 The first to do is to try the electronic available.
+
 ![borarm_v1_img](/assets/borarm/1.1.JPG)
 
-Here is where I've realized that the servos need more power, more current. So, I use an external power supply for the servos (using a microusb adaptator and a normal tranformer from a mobile, 5V, 2A) and also for the Arduino, with the VIn pin, and the serial cable to see what happens in the serial communication.
+Here is where I've realized that the servos need more power, more current. So, I use an external power supply for the servos (using a microusb adaptator and a normal tranformer from a mobile, 5V, 2A) to move them, and we can use also this power supply to turn on the Arduino with the pin Vin.
+
+The USB cable is connected to the PC for seeing the serial communication terminal.
 
 # Structure
 I've used polystyrene to build the structure. Very easy to build something quickly, but not too stable.
 
 ![borarm_v1_img](/assets/borarm/1.2.JPG)
 
-Here, I've realized that I would need spaces between the walls, to restrict the movement, therwise, when I tighten the screw, the walls bend. Also, longer screws should work better.
+Here, I've realized that I would need spaces between the walls, to restrict the movement. Otherwise, when I tighten the screw, the walls bend. Also, longer screws should work better.
 
 ![borarm_v1_img](/assets/borarm/1.4.png)
 
@@ -75,3 +80,5 @@ First iteration
 Second iteration
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/nhzhC5NQzSk" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+{% include disqus.html %}

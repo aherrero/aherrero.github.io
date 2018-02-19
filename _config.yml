@@ -24,10 +24,6 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 # twitter_username: aherrero
 github_username:  aherrero
 
-# Enable comments
-disqus:
-  shortname: aherrero
-
 # Build settings
 markdown: kramdown
 theme: minima

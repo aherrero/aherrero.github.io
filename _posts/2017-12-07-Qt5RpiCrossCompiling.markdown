@@ -2,7 +2,7 @@
 layout: post
 title:  "Cross compile Qt5 for Rpi3 on Linux (Ubuntu)"
 date:   2017-12-07 08:00 +0200
-categories: qt5 rpi linux
+categories: linux qt rpi
 ---
 
 # How to cross compile Qt5 for Rpi3 on Linux

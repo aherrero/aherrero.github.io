@@ -2,7 +2,7 @@
 layout: post
 title:  "Borarm. First Robotic Arm. Part I"
 date:   2018-02-12 08:00 +0200
-categories: robotic arduino
+categories: arduino robotic
 comments: true
 ---
 
@@ -81,4 +81,6 @@ Second iteration
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/nhzhC5NQzSk" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
+{% if page.comments %}
 {% include disqus.html %}
+{% endif %}

@@ -5,6 +5,8 @@ date:   2018-02-12 08:00 +0200
 categories: arduino robotic
 comments: true
 youtubeId: rRRQp8YUqT0
+youtubeId2: r8ElZAFM2SY
+youtubeId3: nhzhC5NQzSk
 ---
 
 ![borarm_v1_img](/assets/borarm/2.1.JPG)
@@ -18,12 +20,7 @@ I've found this simple robotic arm on Internet, which seems not very difficult t
 
 [http://www.instructables.com/id/4-Axis-Robot-Arm-DIY/](http://www.instructables.com/id/4-Axis-Robot-Arm-DIY/)
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/rRRQp8YUqT0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-
-***
-
 {% include youtubePlayer.html id=page.youtubeId %}
-
 
 But until then, there is so much work to do.
 
@@ -80,11 +77,11 @@ One remark; I don't like at all the Arduino IDE. Of course, you can use Arduino 
 
 First iteration
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/r8ElZAFM2SY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+{% include youtubePlayer.html id=page.youtubeId2 %}
 
 Second iteration
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/nhzhC5NQzSk" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+{% include youtubePlayer.html id=page.youtubeId3 %}
 
 ***
 

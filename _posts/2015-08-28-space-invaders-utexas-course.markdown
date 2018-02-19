@@ -69,7 +69,7 @@ Finally, I have joined all the systems to create an embedded system that can pla
 
 [Link to project](https://github.com/aherrero/EmbeddedSystems/tree/master/UT.6.02x/Lab15_SpaceInvaders)
 
-##
+***
 
 {% if page.comments %}
 {% include disqus.html %}

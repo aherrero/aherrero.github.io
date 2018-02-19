@@ -204,7 +204,7 @@ This could be due a different possibilities:
 
 [Link to project](https://github.com/aherrero/IoTAutomaticPlantWatering)
 
-##
+***
 
 {% if page.comments %}
 {% include disqus.html %}

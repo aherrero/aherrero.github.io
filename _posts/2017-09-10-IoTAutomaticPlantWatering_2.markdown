@@ -188,7 +188,7 @@ PCB...
 
 [Link to the Git Project](https://github.com/aherrero/IoTAutomaticPlantWatering)
 
-##
+***
 
 {% if page.comments %}
 {% include disqus.html %}

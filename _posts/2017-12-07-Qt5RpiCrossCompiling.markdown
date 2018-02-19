@@ -287,8 +287,7 @@ QMAKE_LIBDIR_OPENGL[_ES2] and QMAKE_LIBS_OPENGL[_ES2] in the mkspec for your pla
 ## Hardware
 Screen: [https://www.sparkfun.com/products/13733](https://www.sparkfun.com/products/13733)
 
-
-##
+***
 
 {% if page.comments %}
 {% include disqus.html %}

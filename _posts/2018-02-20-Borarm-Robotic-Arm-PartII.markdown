@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Borarm. First Robotic Arm. Part I"
+title:  "Borarm. First Robotic Arm. Part II"
 date:   2018-02-12 08:00 +0200
 categories: arduino robotic
 comments: true

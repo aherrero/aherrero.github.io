@@ -40,7 +40,7 @@ I've used polystyrene to build the structure. Very easy to build something quick
 
 Here, I've realized that I would need spaces between the walls, to restrict the movement. Otherwise, when I tighten the screw, the walls bend. Also, longer screws should work better.
 
-![borarm_v1_img](/assets/borarm/1.4_2.png)
+![borarm_v1_img](/assets/borarm/1.4.png)
 
 In the second iteration,
 

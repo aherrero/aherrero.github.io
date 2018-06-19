@@ -4,10 +4,12 @@ title:  "Borarm. First Robotic Arm. Part II"
 date:   2018-02-12 08:00 +0200
 categories: arduino robotic
 comments: true
-youtubeId: rRRQp8YUqT0
+youtubeId: bvyPbT7BsPw
 ---
 
 # Borarm evolution
+
+{% include youtubePlayer.html id=page.youtubeId %}
 
 ## Structure
 The hardware structure has been changed from polystyrene to [PVC rigid foam](https://www.modulor.de/forex-classic-pvc-hartschaumplatte-weiss.html).

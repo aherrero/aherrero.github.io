@@ -14,9 +14,29 @@ The hardware structure has been changed from polystyrene to [PVC rigid foam](htt
 
 This allow to have a more rigid structure for the robot, therefore more stable and precise.
 
-![borarm_v3_img](/assets/borarm/3.1_2.JPG)
-
 ![borarm_v4_img](/assets/borarm/3.2_2.JPG)
+
+## Construction
+
+![](/assets/borarm/part2/0001.JPG)
+
+![](/assets/borarm/part2/0002.JPG)
+
+![](/assets/borarm/part2/0003.JPG)
+
+![](/assets/borarm/part2/0004.JPG)
+
+![](/assets/borarm/part2/0005.JPG)
+
+![](/assets/borarm/part2/0006.JPG)
+
+![](/assets/borarm/part2/0007.JPG)
+
+![](/assets/borarm/part2/0008.JPG)
+
+![](/assets/borarm/part2/0009.JPG)
+
+![](/assets/borarm/part2/00010.JPG)
 
 ***
 

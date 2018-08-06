@@ -6,7 +6,7 @@ categories: rpi iot
 comments: true
 ---
 
-# Smart Scanner
+# Introduction
 The goal of this project is to make "smart" an old scanner.
 We will have a button to automatically scan what ever you want and send this information to a shared disk, to be accessible from another computer (or in best cases, from mobile phone).
 
@@ -14,7 +14,7 @@ We will have a button to automatically scan what ever you want and send this inf
 
 ## Build of materials
 - [Raspberry Pi Model A](https://www.adafruit.com/product/1344) (The first rpi model, although, it doesn't matter which rpi you will use)
-- Scanner (I've used an old HP Deskjet, printer-scanner, but with the SANE libraries, you should check if you scanner is compatible)
+- Scanner (I've used an old HP Deskjet, printer-scanner. It could be any scanner compatible with SANA libraries. See below)
 - [Normal button](https://www.sparkfun.com/products/9190)
 - Green led
 - Red led

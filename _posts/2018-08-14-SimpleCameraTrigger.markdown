@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Simple Camera Trigger - v1"
-date:   2018-08-16 08:00 +0200
+date:   2018-08-14 08:00 +0200
 categories: arduino iot
 comments: true
 ---
@@ -34,7 +34,7 @@ Interesting project though, but not for this time.
 You can read more about IR communication in this [tutorial](https://learn.sparkfun.com/tutorials/ir-communication) from sparkfun.
 
 ## Software
-The Sony alpha series seems that they have an [API](https://developer.sony.com/file/download/sony-camera-remote-api-beta-sdk/) to make your own programs, as an embedded aplication in the camera, or even from your phone.
+The Sony alpha series seems that they have an [API](https://developer.sony.com/file/download/sony-camera-remote-api-beta-sdk/) to make your own programs, as an embedded application in the camera, or even from your phone.
 
 [Example application to activate the shooter](https://www.playmemoriescameraapps.com/portal/usbdetail.php?eid=IS9104-NPIA09014_00-C10005)
 
@@ -79,13 +79,32 @@ or
 
 ![bjt2.jpg](/assets/cam01/bjt2.jpg)
 
-The functional prototype will be something like this,
+We could control the trigger, and let the power supply (At this moment, the coin cell) powering always, or we can control the power supply (allowing the current or not) and short-cutting the trigger. I've decided this second option because; It's working. At I reduce the power consummation.
+
+## Functional prototype
 
 ![CAM01_05.JPG](/assets/cam01/CAM01_05.JPG)
 
 ![CAM01_06.JPG](/assets/cam01/CAM01_06.JPG)
 
+## Sample Code
 
+    // the setup function runs once when you press reset or power the board
+    void setup() {
+      // initialize Digital Outputs
+      pinMode(12, OUTPUT);
+      pinMode(13, OUTPUT);
+    }
+
+    // the loop function runs over and over again forever
+    void loop() {
+      digitalWrite(12, HIGH);
+      digitalWrite(13, HIGH);
+      delay(1000);
+      digitalWrite(12, LOW);
+      digitalWrite(13, LOW);
+      delay(5000);
+    }
 
 ***
 

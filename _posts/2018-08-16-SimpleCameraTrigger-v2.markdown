@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Simple Camera Trigger - v2"
-date:   2018-08-14 08:00 +0200
+date:   2018-08-16 08:00 +0200
 categories: arduino iot
 comments: true
 ---
@@ -41,13 +41,13 @@ or
 ![power2](/assets/cam01/power2.jpg)
 [Buy from hobby king](https://hobbyking.com/en_us/zippy-flightmax-1800mah-3s1p-20c.html?___store=en_us)
 
-Normally, the lipo batteries are for RC planes, car, etc. This is way, we have high current and big capacity.
+Normally, the lipo batteries are for RC planes, car, etc. This is why, we have high current and big capacity.
 A small calculator of our needs [here](http://multicopter.forestblue.nl/lipo_need_calculator.html)
 
 ## Voltage regulator
 In the past, I've used voltage regulator to [convert to 5V](https://www.sparkfun.com/products/107), or even more stable regulators from pololu [here](https://www.pololu.com/product/2562) and [here](https://www.pololu.com/product/2119) but in this case, we need something more specific, and even less than the typical 3.3V. We introduce the [LM317](https://www.onsemi.com/pub/Collateral/LM317-D.PDF) or the [LD1117](https://www.sparkfun.com/datasheets/Components/LD1117V33.pdf).
 
-I've bought this regulator because it is possible also to regulate the current with them, but in this case, it is a great oportunity to use as voltage regulator.
+I've bought this regulator because it is possible also to regulate the current with them, but in this case, it is a great opportunity to use as voltage regulator.
 
 I've found this [schema](https://microcontrollerelectronics.com/lm317-3-3v-source/),
 ![lm317_schema.png](/assets/cam01/lm317_schema.png)
@@ -55,7 +55,7 @@ I've found this [schema](https://microcontrollerelectronics.com/lm317-3-3v-sourc
 which it's nice, because we have the capacitor to improve the stability of the current, and we have even [this calculator](http://www.reuk.co.uk/wordpress/electric-circuit/lm317-voltage-calculator/) to calculate the resistor for our desired output voltage.
 
 ## Low Powering
-Talking about low powering, here we have some tips to reduce the current consumation
+Talking about low powering, here we have some tips to reduce the current consummation
 [here](http://www.home-automation-community.com/arduino-low-power-how-to-run-atmega328p-for-a-year-on-coin-cell-battery/) and [here](https://www.gammon.com.au/power)
 
 # Remote Control switch

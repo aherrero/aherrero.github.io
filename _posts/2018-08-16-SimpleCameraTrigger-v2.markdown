@@ -7,7 +7,10 @@ comments: true
 ---
 
 ## Introduction
-In the [latest version](https://aherrero.github.io/arduino/iot/2018/08/14/SimpleCameraTrigger.html), we had a functional prototype to control the camera through IR and an Arduino for controlling the time of the trigger.
+
+[See last version](https://aherrero.github.io/arduino/iot/2018/08/23/SimpleCameraTrigger-v3.html)
+
+In the [previous version](https://aherrero.github.io/arduino/iot/2018/08/14/SimpleCameraTrigger.html), we had a functional prototype to control the camera through IR and an Arduino for controlling the time of the trigger.
 
 ### Elements of the fast prototype
 - Original coin cell separated of the main power (I didn't know if the current from the Arduino could be enough).
@@ -30,7 +33,8 @@ In the [latest version](https://aherrero.github.io/arduino/iot/2018/08/14/Simple
 ![ardu pro mini](https://cdn.sparkfun.com//assets/parts/6/5/4/0/11114-01.jpg)
 
 ![Pinout](/assets/cam01/arduino-pinout.jpg)
-[Pdf](https://cdn.sparkfun.com/datasheets/Dev/Arduino/Boards/ProMini8MHzv1.pdf)
+
+[Download pdf datasheet from here](https://cdn.sparkfun.com/datasheets/Dev/Arduino/Boards/ProMini8MHzv1.pdf)
 
 ## Powering
 ### Battery
@@ -93,6 +97,23 @@ And, in this case, instead of control a [motor](http://bildr.org/2012/03/rfp30n0
 ## Electrical Schema
 
 ![quickSchema.jpg](/assets/cam01/quickSchema.jpg)
+
+## Problems
+
+I have had several problems with the remote control that I've used to control the camera.
+
+It doesn't matter if the remote control and the arduino are powered separately (coin cell and battery lipo) or everything together with the same lipo, the problem is the same:
+
+The remote control seems don't work with the Mosfet. But, the power (3V) or directly the 3.7V reach the remote control.. But nothing happens in the shutter.
+If I've change the Mosfet by a regular BJT is working.
+
+What I understand about the Mosfet, they are a kind of transistor, and connected as I've connected, they should allow the current, so, the 3V/3.7V through the remote control, or not, depends of the Gate status, controlled by Arduino.
+
+But something seems not working correctly... The IR doesn't light when the remote control has 3V thought the Mosfet, but it's working if I connect it directly to the coin cell. So, something is wrong in my schema, that doesn't allow enough current.
+
+And I am tired of using this remote control. So, I bought IR Leds, and I am going to play with the IR Remote library for Arduino. In this way, I don't have to use the remote control anymore, and the circuit is simplified a lot. Also, the consumption is going to be less.
+
+[See next chapter](https://aherrero.github.io/arduino/iot/2018/08/23/SimpleCameraTrigger-v3.html)
 
 ***
 

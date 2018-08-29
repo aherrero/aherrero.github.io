@@ -7,11 +7,16 @@ comments: true
 ---
 
 # Introduction
+
+[See last version](https://aherrero.github.io/arduino/iot/2018/08/23/SimpleCameraTrigger-v3.html)
+
 In this project, I was trying very hard to not do an overkill project, due there are several ways to make a camera trigger from Arduino, but I want it something simple from the things I've already have it.
 
 The goal of this project is to be able to make timelapses from my camera Sony, controller by IR sensor, and activate the shutter each X time. For example, if I want to make star photography, be able to make the shutter each 1 minute during 8 hours.
 
 First, probably there are more sophisticate shutter already in the market to set the time and to be able to do exactly the same. But that is not DIY (And not fun :/ )
+
+Final result:
 
 ![CAM01_05.JPG](/assets/cam01/CAM01_05.JPG)
 
@@ -25,7 +30,7 @@ On the other hand, I don't know if this will work for my camera.
 [Buy in amazon](https://www.amazon.fr/S2-D%C3%A9clencheur-T%C3%A9l%C3%A9commande-obturateur-RX100II/dp/B06ZYKWL8M/ref=sr_1_3?ie=UTF8&qid=1534395448&sr=8-3&keywords=telecommande+sony+camera)
 
 ## IR Led Emitter - Receiver
-If you have an IR Led emitter, you can try [this project](https://www.instructables.com/id/Simple-Arduino-Camera-Trigger/) and make the communication protocol IR for your camera. I've tried this option, but it seems it is not working for my current camera.
+If you have an IR Led emitter, you can try [this project](https://www.instructables.com/id/Simple-Arduino-Camera-Trigger/) and make the communication protocol IR for your camera. I've tried this option, but it seems it is not working for my current camera the IR code I am sending.
 
 The same for this [other project](http://www.righto.com/2009/08/multi-protocol-infrared-remote-library.html) or [this](https://www.instructables.com/id/Arduino-Based-IR-Translator-SONY/).
 
@@ -105,6 +110,8 @@ We could control the trigger, and let the power supply (At this moment, the coin
       digitalWrite(13, LOW);
       delay(5000);
     }
+
+[See next chapter](https://aherrero.github.io/arduino/iot/2018/08/16/SimpleCameraTrigger-v2.html)
 
 ***
 

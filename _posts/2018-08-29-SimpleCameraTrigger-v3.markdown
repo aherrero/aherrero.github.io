@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Simple Camera Trigger - v2"
-date:   2018-08-16 08:00 +0200
+title:  "Simple Camera Trigger - v3"
+date:   2018-08-29 08:00 +0200
 categories: arduino iot
 comments: true
 ---

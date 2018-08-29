@@ -8,7 +8,7 @@ comments: true
 
 # Introduction
 
-[See last version](https://aherrero.github.io/arduino/iot/2018/08/23/SimpleCameraTrigger-v3.html)
+[See last version](https://aherrero.github.io/arduino/iot/2018/08/29/SimpleCameraTrigger-v3.html)
 
 In this project, I was trying very hard to not do an overkill project, due there are several ways to make a camera trigger from Arduino, but I want it something simple from the things I've already have it.
 

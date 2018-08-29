@@ -8,7 +8,7 @@ comments: true
 
 ## Introduction
 
-[See last version](https://aherrero.github.io/arduino/iot/2018/08/23/SimpleCameraTrigger-v3.html)
+[See last version](https://aherrero.github.io/arduino/iot/2018/08/29/SimpleCameraTrigger-v3.html)
 
 In the [previous version](https://aherrero.github.io/arduino/iot/2018/08/14/SimpleCameraTrigger.html), we had a functional prototype to control the camera through IR and an Arduino for controlling the time of the trigger.
 
@@ -113,7 +113,7 @@ But something seems not working correctly... The IR doesn't light when the remot
 
 And I am tired of using this remote control. So, I bought IR Leds, and I am going to play with the IR Remote library for Arduino. In this way, I don't have to use the remote control anymore, and the circuit is simplified a lot. Also, the consumption is going to be less.
 
-[See next chapter](https://aherrero.github.io/arduino/iot/2018/08/23/SimpleCameraTrigger-v3.html)
+[See next chapter](https://aherrero.github.io/arduino/iot/2018/08/29/SimpleCameraTrigger-v3.html)
 
 ***
 

@@ -13,6 +13,45 @@ But something doesn't work about this remote control and I wasn't able to intera
 
 So, the project is going to be simpler (HW technically talking) with only an IR Led for controlling the camera and the Arduino's library [IR Remote](https://github.com/z3t0/Arduino-IRremote)
 
+Button
+Simple
+https://www.arduino.cc/en/tutorial/pushbutton
+
+State change detection
+https://www.arduino.cc/en/Tutorial/StateChangeDetection
+
+Array in Arduino...
+https://www.arduino.cc/reference/en/language/variables/data-types/array/
+
+Arduino library
+https://playground.arduino.cc/Code/Button
+https://github.com/tigoe/Button
+
+https://www.elprocus.com/pull-up-and-pull-down-resistors-with-applications/ (Concept button pull up)
+
+Class C++ in Arduino
+http://polygondoor.com.au/creating-classes-in-c-for-arduino/
+https://www.arduino.cc/en/Hacking/LibraryTutorial (concept libray as a class)
+
+Timer
+https://www.arduino.cc/reference/en/language/functions/time/millis/
+
+External interrupts
+https://www.arduino.cc/reference/en/language/functions/external-interrupts/attachinterrupt/
+https://www.allaboutcircuits.com/technical-articles/using-interrupts-on-arduino/
+
+Arduino thread. neccesary?
+
+https://www.arduinolibraries.info/libraries/arduino-thread
+https://www.hackster.io/reanimationxp/how-to-multithread-an-arduino-protothreading-tutorial-dd2c37
+https://github.com/ivanseidel/ArduinoThread
+
+Camera - Tips for battery saving
+
+https://timfordphoto.com/sony-a7-battery-saving-tips/
+
+Git personal with project...
+https://github.com/aherrero/CAM01_SimpleCameraTrigger
 
 ***
 

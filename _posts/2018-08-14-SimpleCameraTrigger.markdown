@@ -6,7 +6,7 @@ categories: arduino iot
 comments: true
 ---
 
-# Introduction
+## Introduction
 
 [See last version](https://aherrero.github.io/arduino/iot/2018/08/29/SimpleCameraTrigger-v3.html)
 
@@ -20,16 +20,16 @@ Final result:
 
 ![CAM01_05.JPG](/assets/cam01/CAM01_05.JPG)
 
-# Overkill
+## Overkill
 Let's talk about this project that I've discarded (because there were more complex, or even more simpler and I want it something DIY and for NOW).
 
-## Automatic shutter
+### Automatic shutter
 Exactly the thing I want. But in the market and even cheaper.
 On the other hand, I don't know if this will work for my camera.
 ![rpi01_1](/assets/cam01/amazon1.jpg)
 [Buy in amazon](https://www.amazon.fr/S2-D%C3%A9clencheur-T%C3%A9l%C3%A9commande-obturateur-RX100II/dp/B06ZYKWL8M/ref=sr_1_3?ie=UTF8&qid=1534395448&sr=8-3&keywords=telecommande+sony+camera)
 
-## IR Led Emitter - Receiver
+### IR Led Emitter - Receiver
 If you have an IR Led emitter, you can try [this project](https://www.instructables.com/id/Simple-Arduino-Camera-Trigger/) and make the communication protocol IR for your camera. I've tried this option, but it seems it is not working for my current camera the IR code I am sending.
 
 The same for this [other project](http://www.righto.com/2009/08/multi-protocol-infrared-remote-library.html) or [this](https://www.instructables.com/id/Arduino-Based-IR-Translator-SONY/).
@@ -38,14 +38,14 @@ Also, there is an IR library in arduino more updated, and if you know what exact
 Interesting project though, but not for this time.
 You can read more about IR communication in this [tutorial](https://learn.sparkfun.com/tutorials/ir-communication) from sparkfun.
 
-## Software
+### Software
 The Sony alpha series seems that they have an [API](https://developer.sony.com/file/download/sony-camera-remote-api-beta-sdk/) to make your own programs, as an embedded application in the camera, or even from your phone.
 
 [Example application to activate the shooter](https://www.playmemoriescameraapps.com/portal/usbdetail.php?eid=IS9104-NPIA09014_00-C10005)
 
 The problem with that... Even if normally I am a software guy, I don't want to make Android applications. And there is not so much documentation about the API, so, I will prefer don't fight so much with that, when I have a hardware solution pretty simple.
 
-# Current project.
+## Current project.
 Now, let's talk about my chosen project.
 Currently, I have this control remote.
 ![rpi01_1](/assets/cam01/amazon2.jpg)
@@ -62,7 +62,7 @@ So, we have two buttons, with two metallic parts. They make the contact and shor
 
 Using a [coin battery](http://data.energizer.com/pdfs/cr2025.pdf)
 
-## First prototype
+### First prototype
 
 Pretty simple. So the only thing we have to do is control the switch for the trigger from Arduino.
 
@@ -86,13 +86,13 @@ or
 
 We could control the trigger, and let the power supply (At this moment, the coin cell) powering always, or we can control the power supply (allowing the current or not) and short-cutting the trigger. I've decided this second option because; It's working. At I reduce the power consummation.
 
-## Functional prototype
+### Functional prototype
 
 ![CAM01_05.JPG](/assets/cam01/CAM01_05.JPG)
 
 ![CAM01_06.JPG](/assets/cam01/CAM01_06.JPG)
 
-## Sample Code
+### Sample Code
 
     // the setup function runs once when you press reset or power the board
     void setup() {

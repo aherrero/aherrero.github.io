@@ -17,7 +17,9 @@ So, the project will be simpler (HW technically talking) with only an IR Led for
 Also, there will be some buttons to configure the timelapse and a display to show this information.
 
 ## Final result
+
 {% include youtubePlayer.html id=page.youtubeId %}
+
 
 ## IR Sensor
 ### Library and IR Hello World
@@ -83,7 +85,7 @@ Download [here](https://github.com/tigoe/Button)
 
 In this library, it talks about if you connect a button with a pull-up resistor or pull-down resistor (Or if your button is connected as pull-up switch or pull-down switch).
 
-Normally, the up means if it is connected directly to VCC and the down to the GND. You can see this concept in this [tutorial]()https://www.elprocus.com/pull-up-and-pull-down-resistors-with-applications/
+Normally, the up means if it is connected directly to VCC and the down to the GND. You can see this concept in this [tutorial](https://www.elprocus.com/pull-up-and-pull-down-resistors-with-applications/)
 
 ## Display
 The configuration will be shown with a 7-segment display.

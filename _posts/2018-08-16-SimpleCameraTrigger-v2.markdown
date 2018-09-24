@@ -53,8 +53,8 @@ or
 Normally, the lipo batteries are for RC planes, car, etc. This is why, we have high current and big capacity.
 A small calculator of our needs [here](http://multicopter.forestblue.nl/lipo_need_calculator.html)
 
-### Voltage regulator
-In the past, I've used voltage regulator to [convert to 5V](https://www.sparkfun.com/products/107), or even more stable regulators from pololu [here](https://www.pololu.com/product/2562) and [here](https://www.pololu.com/product/2119) but in this case, we need something more specific, and even less than the typical 3.3V. We introduce the [LM317](https://www.onsemi.com/pub/Collateral/LM317-D.PDF) or the [LD1117](https://www.sparkfun.com/datasheets/Components/LD1117V33.pdf).
+### Voltage regulator 3V
+In the past, I've used voltage regulator to [convert to 5V](https://www.sparkfun.com/products/107), or even more stable regulators from pololu [here](https://www.pololu.com/product/2562) and [here](https://www.pololu.com/product/2119) but in this case, we need something more specific, and even less than the typical 3.3V. We introduce the [LM317](https://www.onsemi.com/pub/Collateral/LM317-D.PDF) or the [LD1117](https://www.sparkfun.com/datasheets/Components/LD1117V33.pdf) to convert to 3.0V.
 
 I've bought this regulator because it is possible also to regulate the current with them, but in this case, it is a great opportunity to use as voltage regulator.
 

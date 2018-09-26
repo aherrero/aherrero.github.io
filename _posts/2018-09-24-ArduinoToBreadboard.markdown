@@ -47,6 +47,8 @@ Copy-paste the steps..
 
 You could find additional information about the Arduino ISP in [this link](https://www.arduino.cc/en/Tutorial/ArduinoISP)
 
+The sketch also supports three LEDs that give you a visual feedback about the programming process (Pins 7,8 and 9)
+
 ![programmingISP.JPG](/assets/arduino2breadboard/programmingISP.JPG)
 
 ## Programming the Arduino
@@ -77,7 +79,7 @@ In my case, the FTDI cable [specification](https://www.ftdichip.com/Support/Docu
 ![programmingFTDI.JPG](/assets/arduino2breadboard/programmingFTDI.JPG)
 
 ### Blink!
-Connect the LED to the 13 pin in the Arduino (Wait!! The pin in the Atmega328p which correspond to the PIN13 is the **Pin 19**) and load the Arduino helloworld program (don't forget to change to the board Arduino Duemilanove w/ ATmega328).
+Connect the LED to the famous 13th pin from the Arduino (Wait!! The pin in the Atmega328p which correspond to the PIN13 is the **Pin 19**) and load the Arduino helloworld blink program (don't forget to change to the board Arduino Duemilanove w/ ATmega328).
 
 The power could come from the FTDI / the other Arduino, which you used to program.
 

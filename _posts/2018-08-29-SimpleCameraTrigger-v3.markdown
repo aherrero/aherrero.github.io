@@ -175,6 +175,7 @@ The display and the camera are in different classes.
 
 You can see all of this from my [github](https://github.com/aherrero/CAM01_SimpleCameraTrigger)
 
+[See next chapter](https://aherrero.github.io/arduino/iot/2018/09/26/SimpleCameraTrigger-v4.html)
 
 ***
 

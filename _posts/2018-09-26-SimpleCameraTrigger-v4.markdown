@@ -26,17 +26,30 @@ You only have to drag and drop the main components you want to use it, and the t
 
 Brief, if in this project I want to use a Atmega328p, 7-segements display, 3 buttons and IR Led, I have to place this 4 kind of components, and the tool is going to tell me what are all the connexion!
 
-![board-328.JPG](/assets/arduino2breadboard/board-328.png)
+![board-328.JPG](/assets/cam01/board-328.png)
 
 Sure, it is not perfect, but it give to you an idea about what you want.
 
 ## PCB
 As I didn't design the PCB schematic, I put all my components in a prototype PCB and I've started soldering everything. It is not the best solution if you want something more structural and with less cables, but if you have a project with a few components, it could be enough.
 
-![PCB_Front.JPG](/assets/arduino2breadboard/PCB_Front.JPG)
+![PCB_Front.JPG](/assets/cam01/PCB_Front.JPG)
 
-![PCB_Back.JPG](/assets/arduino2breadboard/PCB_Back.JPG)
+![PCB_Back.JPG](/assets/cam01/PCB_Back.JPG)
 
+## Software
+I did a state machine to change between the configuration of timing and the trigger operation.
+
+Also, as I wanted to configure more than 9 seconds, I've use the same display to configure the 3 digits in seconds for the timing (So, up to 999 seconds)
+
+The display and the camera are in different classes.
+
+You can see all of the code from my [github](https://github.com/aherrero/CAM01_SimpleCameraTrigger)
+
+## Final design
+TODO
+- Box
+- Battery 9V
 
 
 ***

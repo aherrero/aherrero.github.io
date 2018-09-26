@@ -10,14 +10,14 @@ comments: true
 In this post I'll explain how to use the Atmega328p (aka as the core of the Arduino Uno) for using in a Breadboard and programming with the Arduino bootloader.
 
 ## Motivation
-I don't hate Arduino. In fact, I like so much, and as lot of us, we've started the microcontroller worlds from this microcontroller to the basic ones. While a real electronics should start from the basic digital microchips to another more complex, Arduino allows to skip some steps, and go forward or backward to the knowledge of electronics... =D
+I don't hate Arduino. In fact, I like so much, and as lot of us, I've started the microcontrollers world from this microcontroller to the basic ones. While a real electronics should start from the basic digital microchips to another more complex, Arduino allows to skip some steps, and go forward or backward to the knowledge of electronics... =D
 
-But, there are several reason you may decide use the microcontroller directly instead of the Arduino itself:
+But, there are several reason you may decide use the microcontroller (Atmega) directly instead of the Arduino itself:
 
-- **Size**: You may not need all the pins or all the elements that contains the Arduino, but it is more valuable the size where you want to use for your project. Basically, the Atmega328p will need an external clock, two capacitors.. and that's it!
-- **Integration**: Could be the reason more usual because, instead of develop an specific PCB to act as a shield of the Arduino, you want to solder the Atmega328p with the other components that you will use for your circuit.
-- **Power saving**: This is an affirmation I am not sure is correct, because, normally you will save more power if you are not using the leds included in the Arduino (power Led, the Led 13..), you are not using the LD Power converter.. But you will need one, because the Atmega328p should be powered by 5V (except if you are using a standard power supply from a mobile phone, and you trust enough in that). And for the leds, I am not sure if it is worth it.
-- **Price**: If your motivation is the economic cost of using an Atmega328p in comparison with the Arduino Uno, you are right, you could save some money. But on the other hand, there are unofficial Arduinos that could be good enough for you, and all the elements that could cost the Arduino homemade could be the same as the unofficial Arduino.
+- **Size**: You may not need all the pins or all the elements that contains the Arduino, but it is more valuable the size where you want to use for your project. Basically, with the Atmega328p you will need an external clock, two capacitors.. and that's it!
+- **Integration**: It could be the reason more usual because, instead of develop an specific PCB to act as a shield of the Arduino, you want to solder the Atmega328p with the other components that you will use for your circuit.
+- **Power saving**: This is an affirmation I am not sure is correct, because, normally you will save more power if you are not using the leds included in the Arduino (power Led, the Led 13..), you are not using the LD Power converter.. But you will need one, because the Atmega328p should be powered by 5V (except if you are using a standard power supply from a mobile phone, and you trust enough in that). So, I am not sure if it is worth it. If you want to see some tips to save power with an Arduino, you can see [this blog](http://www.home-automation-community.com/arduino-low-power-how-to-run-atmega328p-for-a-year-on-coin-cell-battery/)
+- **Price**: If your motivation is the economic cost of using an Atmega328p in comparison with the official Arduino Uno, you are right, you could save some money. But on the other hand, there are unofficial Arduinos that could be good enough for you, and all the elements that could cost the Arduino homemade could be the same as the unofficial Arduino.
 
 ## Elements
 - 1 x [16 MHz crystal](https://www.distrelec.ch/en/quartz-hc49-4h-16-mhz-iqd-lfxtal003240/p/17451701) or 8Mhz if it is your option.
@@ -47,6 +47,8 @@ Copy-paste the steps..
 
 You could find additional information about the Arduino ISP in [this link](https://www.arduino.cc/en/Tutorial/ArduinoISP)
 
+![programmingISP.JPG](/assets/arduino2breadboard/programmingISP.JPG)
+
 ## Programming the Arduino
 Once you have the bootloader inside the Arduino, you can program from different ways:
 
@@ -56,6 +58,8 @@ Again, in the [official tutorial](https://www.arduino.cc/en/Tutorial/ArduinoToBr
 ![loading program Aduino](https://www.arduino.cc/en/uploads/Tutorial/ArduinoUSBSerial.png)
 
 To program the microcontroller, select "Arduino Duemilanove or Nano w/ ATmega328" from the the Tools > Board menu (or "ATmega328 on a breadboard (8 MHz internal clock)" with minimal configuration). Then upload as usual.
+
+![programmingArduino.JPG](/assets/arduino2breadboard/programmingArduino.JPG)
 
 ### Using FTDI cable.
 This could be useful if you don't have an external Arduino, or you can not remove the Atmega328p from it. Also, if you want to have the pinout for programming easily accesible.
@@ -70,6 +74,8 @@ In my case, the FTDI cable [specification](https://www.ftdichip.com/Support/Docu
 
 ![FTDI cable schema](/assets/cam01/ftdi_schema.png)
 
+![programmingFTDI.JPG](/assets/arduino2breadboard/programmingFTDI.JPG)
+
 ### Blink!
 Connect the LED to the 13 pin in the Arduino (Wait!! The pin in the Atmega328p which correspond to the PIN13 is the **Pin 19**) and load the Arduino helloworld program (don't forget to change to the board Arduino Duemilanove w/ ATmega328).
 
@@ -77,7 +83,7 @@ The power could come from the FTDI / the other Arduino, which you used to progra
 
 ## Powering
 At this point, you have an Arduino with the bootloader, a helloworld program, but powered from FTDI or another Arduino.
-Let's rif of that also.
+Let's rid of that also.
 
 We will need:
 - [L7805 Voltage regulator](https://www.sparkfun.com/products/107)
@@ -93,6 +99,8 @@ A better one could be the [datasheet of the component.](https://cdn.sparkfun.com
 The input could be any voltage from 8V to 20V according the datasheet. That could be a 12V power supply or a 9V battery, for example.
 You should test the 5V voltage in the third pin before to connect to the circuit.
 
+![powering.JPG](/assets/arduino2breadboard/powering.JPG)
+
 Another tutorial you could use since program the Arduino to powering is this [instructable](https://www.instructables.com/id/How-to-Build-an-Arduino-Uno-on-a-BreadBoard/).
 
 ## Explore
@@ -101,7 +109,7 @@ Only take a look of the [datasheet](http://ww1.microchip.com/downloads/en/Device
 
 You can find a good pinout diagram from [circuito.io blog](https://www.circuito.io/blog/arduino-uno-pinout/)
 
-[pinout atmega arduino](/assets/cam01/arduino-uno-pinout-diagram.png)
+![pinout atmega arduino](/assets/cam01/arduino-uno-pinout-diagram.png)
 
 ***
 

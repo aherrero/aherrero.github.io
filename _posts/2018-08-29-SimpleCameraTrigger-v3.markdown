@@ -8,6 +8,9 @@ youtubeId: 7FIHgy1nlaw
 ---
 
 ## Introduction
+
+[See last version](https://aherrero.github.io/arduino/iot/2018/09/26/SimpleCameraTrigger-v4.html)
+
 In the [previous version](https://aherrero.github.io/arduino/iot/2018/08/16/SimpleCameraTrigger-v2.html), we've tried to use the remote controlled [bought in amazon](https://www.amazon.fr/IR-Telecommande-TOOGOO-Cameras-Compact/dp/B01G37SVXG/ref=sr_1_2?ie=UTF8&qid=1534395448&sr=8-2&keywords=telecommande+sony+camera) to control the camera, using an Arduino.
 
 But something doesn't work about this remote control and I wasn't able easily to interact with this PCB from the Arduino.
@@ -96,7 +99,7 @@ All the tutorial are done for the typical one, which s the common cathode, but I
 
 Schematic from this [tutorial](https://electronicsforu.com/resources/7-segment-display-pinout-understanding),
 
-![display schematic](arduino-interfacing-sample-display.jpg)
+![display schematic](/assets/cam01/arduino-interfacing-sample-display.jpg)
 
 And a pretty code for using it in this [tutorial](https://www.jameco.com/jameco/workshop/techtip/working-with-seven-segment-displays.html)
 

@@ -4,7 +4,7 @@ title:  "Simple Camera Trigger - v4"
 date:   2018-09-26 08:00 +0200
 categories: arduino iot
 comments: true
-youtubeId: 7FIHgy1nlaw
+youtubeId: KgTajizav5w
 ---
 
 ## Introduction
@@ -54,9 +54,9 @@ Sure, it is not perfect, but it give to you an idea about what you want.
 ## PCB
 As I didn't design the PCB schematic, I put all my components in a prototype PCB and I've started soldering everything. It is not the best solution if you want something more structural and with less cables, but if you have a project with a few components, it could be enough.
 
-![PCB_Front.JPG](/assets/cam01/PCB_Front.JPG)
-
-![PCB_Back.JPG](/assets/cam01/PCB_Back.JPG)
+| PCB Front | PCB Back|
+|-------|--------|
+| ![PCB_Front.JPG](/assets/cam01/PCB_Front.JPG) | ![PCB_Back.JPG](/assets/cam01/PCB_Back.JPG) |
 
 ## Software
 I did a state machine to change between the configuration of timing and the trigger operation.
@@ -66,6 +66,17 @@ Also, as I wanted to configure more than 9 seconds, I've use the same display to
 The display and the camera are in different classes.
 
 You can see all of the code from my [github](https://github.com/aherrero/CAM01_SimpleCameraTrigger)
+
+## Final Result
+
+You could manufacture your own box if you want to carry this remote control outside or...
+
+[Buy one](https://www.distrelec.ch/en/plastic-enclosure-65-120-40-mm-grey-abs-high-impact-ip54-rnd-components-rnd-455-00052/p/30043295), there are hundreds of boxes.
+
+![PCB_Back.JPG](/assets/cam01/box_pcb.JPG)
+
+
+{% include youtubePlayer.html id=page.youtubeId %}
 
 
 ***

@@ -23,6 +23,7 @@ Also, there will be some buttons to configure the timelapse and a display to sho
 
 {% include youtubePlayer.html id=page.youtubeId %}
 
+.
 
 ## IR Sensor
 ### Library and IR Hello World

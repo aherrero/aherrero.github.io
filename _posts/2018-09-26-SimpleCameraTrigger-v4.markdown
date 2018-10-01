@@ -69,11 +69,11 @@ You can see all of the code from my [github](https://github.com/aherrero/CAM01_S
 
 ## Final Result
 
-You could manufacture your own box if you want to carry this remote control outside or...
-
-[Buy one](https://www.distrelec.ch/en/plastic-enclosure-65-120-40-mm-grey-abs-high-impact-ip54-rnd-components-rnd-455-00052/p/30043295), there are hundreds of boxes.
+You could manufacture your own box if you want to carry this remote control outside
 
 ![PCB_Back.JPG](/assets/cam01/box_pcb.JPG)
+
+... or [buy one](https://www.distrelec.ch/en/plastic-enclosure-65-120-40-mm-grey-abs-high-impact-ip54-rnd-components-rnd-455-00052/p/30043295). You saw the results. And there are hundreds of boxes.
 
 
 {% include youtubePlayer.html id=page.youtubeId %}

@@ -4,57 +4,81 @@ title:  "Timer 555"
 date:   2018-10-11 08:00 +0200
 categories: electronics
 comments: true
-youtubeId: KgTajizav5w
+youtubeId: M0q8GXnB_TU
 ---
 
 ## Introduction
-I've remember when I learn about oscillators,  multivibrators and so on, it wasn't very comfortable at all..
+I've remember when I learned about oscillators,  multivibrators, flip-flop and so on in the university, it wasn't pleasant at all..
+
+Example of what horrified me:
 
 ![tim20.gif](/assets/tmr02/tim20.gif)
 
 [Astable Multivibrator tutorial](https://www.electronics-tutorials.ws/waveforms/astable.html)
 
-But then, I've heard how the people of hackaday talks about the Timer 555 (TODO link) as references in sentences like "An Arduino for that?? I could use a 555 and it will better than your project" so, I've decided to investigate.
+But then, I've heard how the people of [hackaday](https://hackaday.com/?s=555) talks about the [Timer 555](https://www.sparkfun.com/products/9273) as a reference in sentences like:
+
+_"An Arduino for that?? I could use a 555 and it will better than your project"_
+
+So, I've decided to investigate.
 
 ## What is the timer 555
 The [wikipedia](https://en.wikipedia.org/wiki/555_timer_IC) says:
+
 _The 555 timer IC is an integrated circuit (chip) used in a variety of timer, pulse generation, and oscillator applications. The 555 can be used to provide time delays, as an oscillator, and as a flip-flop element._
+
+In other worlds, it is a small chip, not at all expensive, and very old in the market (From 1970!) but very used in all kind of applications.
 
 The IC 555 has three operating modes: Astable, Monostable and Bistable.
 
 ![555_Pinout.svg](/assets/tmr02/555_Pinout.svg)
 
-You can read the datasheet from [TI](http://www.ti.com/lit/ds/symlink/ne555.pdf)
+You can read the datasheet from [Texas Instruments](http://www.ti.com/lit/ds/symlink/ne555.pdf)
 
 ## How to use it
 This [tutorial](https://www.electronics-tutorials.ws/waveforms/555_timer.html) includes good examples about how to use the timer 555 even if there are hundreds of examples.
 
 On the other hand, the [http://www.555-timer-circuits.com/](http://www.555-timer-circuits.com/) page describes everything we want to know about this little thing.
 
+And of course, the [tutorials from sparkfun](https://www.sparkfun.com/news/2007) can't miss.
+
 ## Basic Astable 555 Oscillator Circuit
 We are going to builg a basic astable with the timer 555. For that, I have two references:
 - [Tutorial to see the layout](https://www.electronics-tutorials.ws/waveforms/555_oscillator.html)
 - [Calculator for passive components in relation with frequency](http://www.ohmslawcalculator.com/555-astable-calculator)
 
+This is a basic layout:
+
 ![tim47.gif](/assets/tmr02/tim47.gif)
 
-Following the formules,
+And the formules to calculate the passive components in function of how much frequency, duty cycle etc, you want
+
 ![tim49.gif](/assets/tmr02/tim49.gif)
 
-and
 ![tim50.gif](/assets/tmr02/tim50.gif)
 
-and also with the [calculator](http://www.ohmslawcalculator.com/555-astable-calculator), we can calculate the passive components that we want for our cycle.
+With this [calculator](http://www.ohmslawcalculator.com/555-astable-calculator), we can calculate the passive components that we want for our cycle.
 
-In this case, for a cycle high and low around 350ms, I choose the component:
-C = 100uF
-R1 = 1k
-R2 = 4.7K
+In this case, for a cycle high and low around **350ms each**, I choose the components:
+- C = 100uF
+- R1 = 1k
+- R2 = 4.7K
 
+## Testing
 
-### Final Result
+| Simple Output| Double Output|
+|-------|--------|
+| ![PCB_Front.JPG](/assets/tmr02/555_simpleOut_2.JPG) | ![PCB_Back.JPG](/assets/tmr02/555_doubleOut_2.JPG) |
+
+Video:
 
 {% include youtubePlayer.html id=page.youtubeId %}
+
+## More projects
+- [Build a robot](https://hackaday.com/2018/09/21/555-timer-robots-will-rule-the-world/). (Ok, it is not a robot, but appears a nice robot)
+- One of the [smallest blinking circuit](https://www.youtube.com/watch?v=ffbmwlk_9Io) I see, which I will try soon..
+- In [555-timer-circuits](http://www.555-timer-circuits.com/) you will find several examples.
+- A [practical example](https://circuitdigest.com/electronic-circuits/fridge-door-alarm-circuit-diagram) when our fridge is not working well enough.
 
 
 ***

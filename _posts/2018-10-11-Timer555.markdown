@@ -4,7 +4,7 @@ title:  "Timer 555"
 date:   2018-10-11 08:00 +0200
 categories: electronics
 comments: true
-youtubeId: M0q8GXnB_TU
+youtubeTmr02: M0q8GXnB_TU
 ---
 
 ## Introduction
@@ -43,7 +43,7 @@ On the other hand, the [http://www.555-timer-circuits.com/](http://www.555-timer
 And of course, the [tutorials from sparkfun](https://www.sparkfun.com/news/2007) can't miss.
 
 ## Basic Astable 555 Oscillator Circuit
-We are going to builg a basic astable with the timer 555. For that, I have two references:
+We are going to build a basic astable with the timer 555. For that, I have two references:
 - [Tutorial to see the layout](https://www.electronics-tutorials.ws/waveforms/555_oscillator.html)
 - [Calculator for passive components in relation with frequency](http://www.ohmslawcalculator.com/555-astable-calculator)
 
@@ -72,7 +72,9 @@ In this case, for a cycle high and low around **350ms each**, I choose the compo
 
 Video:
 
-{% include youtubePlayer.html id=page.youtubeId %}
+{% include youtubePlayer.html id=page.youtubeTmr02 %}
+
+.
 
 ## More projects
 - [Build a robot](https://hackaday.com/2018/09/21/555-timer-robots-will-rule-the-world/). (Ok, it is not a robot, but appears a nice robot)

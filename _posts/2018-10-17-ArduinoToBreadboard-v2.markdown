@@ -31,7 +31,7 @@ When using the Arduino IDE for programming with Arduino as ISP, we are using avr
 
 ## Possible problems
 - I am using a Linux PC (Ubuntu 16.04) for connecting the Arduino and programming. I've read on Windows the Arduino may have another behavior.
-- If you have the following problem when programming, be sure you have the 10 uF capacitor between reset and ground **on the programmer** (See this [arduino forum question](https://forum.arduino.cc/index.php?topic=342977.0) for more information)
+- If you have the following problem when programming, be sure you have the 10 uF capacitor between reset and ground **on the programmer**. If it is a electrolytic capacitor, make sure the positive is on the reset pin (See this [arduino forum question](https://forum.arduino.cc/index.php?topic=342977.0) for more information)
 
 
     avrdude: stk500_getparm(): (a) protocol error, expect=0x14, resp=0x14
@@ -94,22 +94,40 @@ I am using Arduino Uno rev3 as Arduino as ISP, with Arduino IDE 1.8.7.
 I've downloaded the [MiniCore](https://github.com/MCUdude/MiniCore) library and I saw the commands in the Arduino verbose.
 
 I've selected the Arduino 328p, with internal 8Mhz clock and the BOD 1.8V (I'm going to use a small battery, so I wanted to reduce the shutdown of the atmega to the minimum).
-For burning the bootloader,
+
+### Burning the bootloader
+
+Command from Arduino IDE (Therefore, we could use this command from outside)
 
     /opt/arduino-1.8.7/hardware/tools/avr/bin/avrdude -C/home/aherrero/.arduino15/packages/MiniCore/hardware/avr/2.0.1/avrdude.conf -v -patmega328p -carduino -P/dev/ttyACM0 -b19200 -e -Ulock:w:0x3f:m -Uefuse:w:0xfe:m -Uhfuse:w:0xd6:m -Ulfuse:w:0xe2:m
 
-But after that, any test for burning the bootloader was failed.
+You should see the hardware information and several reading and writing,
 
-The did some test with an atmega168m, which sould be similar except for the selection of bootloader.
+    Reading | ################################################## | 100% 0.01s
+    Writing | ################################################## | 100% 0.01s
 
-- Burning bootloader with Arduino as ISP into Atmega 168 with external **16Mhz** using Duemilanove board configuration... **PASS**
-- Programing blink program into ATmega168 with FTDI connection with Duemilanove board conf... **PASS**
-- Burning bootloader with Arduino as ISP into Atmega 168 with external **16Mhz** using MiniCore board configuration... **PASS**
-- Burning bootloader with Arduino as ISP into Atmega 168 with internal **8Mhz** using MiniCore board configuration and External clock 16Mhz connected to avoid errors... **PASS**
-(If not using external clock, error _avrdude: Device signature = 0x000000_)
-(If not using capacitor reset-GND, _avrdude: stk500_getparm(): (a) protocol error, expect=0x14, resp=0x14, avrdude: stk500_getparm(): (a) protocol error, expect=0x14, resp=0x02, avrdude: stk500_getparm(): (a) protocol error, expect=0x14, resp=0x10_)
+After that a command,
 
-**_Work in progres..._**
+    /opt/arduino-1.8.7/hardware/tools/avr/bin/avrdude -C/home/aherrero/.arduino15/packages/MiniCore/hardware/avr/2.0.1/avrdude.conf -v -patmega328p -carduino -P/dev/ttyACM0 -b19200 -Uflash:w:/home/aherrero/.arduino15/packages/MiniCore/hardware/avr/2.0.1/bootloaders/optiboot_flash/atmega328p/optiboot_flash_atmega328p_UART0_38400_8000000L.hex:i -Ulock:w:0x0f:m
+
+And finally, a beautiful and simple response,
+
+    avrdude done.  Thank you.
+
+### Programming
+
+There are a lot of commands for programming a simple Blink.
+First, the Arduino IDE has to compile an create the program in .hex;
+1. Using arduino-builder
+2. After, using avr-g++ for compiling and linking
+3. After that, the command avrdude to send the program to the arduino
+
+    /opt/arduino-1.8.7/hardware/tools/avr/bin/avrdude -C/home/aherrero/.arduino15/packages/MiniCore/hardware/avr/2.0.1/avrdude.conf -v -patmega328p -carduino -P/dev/ttyUSB1 -b38400 -D -Uflash:w:/tmp/arduino_build_811001/Blink.ino.hex:i
+
+And the pleasant,
+
+    avrdude done.  Thank you.
+
 
 ***
 

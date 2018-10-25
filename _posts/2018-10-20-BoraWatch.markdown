@@ -9,7 +9,7 @@ comments: true
 ## Introduction
 Hey, I've made my own watch!
 
-![bora_watch.png](/assets/tmr01/bora_watch.png)
+![Bora_Watch](/assets/tmr01/DSC_0262_2.JPG)
 
 One day, I was really impressed with the project I saw in [hackaday](https://hackaday.com/2018/08/24/an-arduino-watch-without-a-clock/). A project created by [electronoobs](https://www.electronoobs.com/eng_arduino_tut40.php) with internal clock using the atmega328p, 12 leds and resistors, 3V battery and very few components more.
 
@@ -53,7 +53,13 @@ Board
 
 It is basically an Atmega328p connected to 12 resistor and 12 leds, to a pushbutton, well configured the reset pin for the bootloader and programming (capacitor and resistor), the pins for programming (SPI and UART) and a battery holder for CR2032.
 
-You can see in the online editor the [schematic and the board](https://easyeda.com/editor#id=e2f64f5df199459d9788ec1f2d2dd938|42fc56697c8e4275b725ab0ee3979312) or in pdf, [schematics-pdf](https://github.com/aherrero/TMR01_Watch/blob/master/HW/Schematic_EN-Bora-watch_Sheet-1_20180922223903.pdf) and [board-pdf](https://github.com/aherrero/TMR01_Watch/blob/master/HW/PCB_EN-watch-PCB_20180922223520.pdf)
+You can see in the online editor
+- The [schematic](https://easyeda.com/editor#id=e2f64f5df199459d9788ec1f2d2dd938)
+- The [board](https://easyeda.com/editor#id=42fc56697c8e4275b725ab0ee3979312)
+
+Or from PDF,
+- [schematics-pdf](https://github.com/aherrero/TMR01_Watch/blob/master/HW/Schematic_EN-Bora-watch_Sheet-1_20180922223903.pdf)
+- [board-pdf](https://github.com/aherrero/TMR01_Watch/blob/master/HW/PCB_EN-watch-PCB_20180922223520.pdf)
 
 ## PCB
 Once you have the design of your board, you have to generate the [GERBER files](https://github.com/aherrero/TMR01_Watch/blob/master/HW/Gerber_EN_watch_PCB_20180922223706.zip) and order in your favorite manufacturer. In this case I choose the manufacture associated to this online designer, [jlcpcb](https://jlcpcb.com/), but you could use another tool for design and generate the gerbers as [Eagle](https://www.autodesk.com/products/eagle/overview) and then, the manufacturer could be [oshpark](https://oshpark.com/) or [seeedstudio](https://www.seeedstudio.com/1-usd-for-3-pcbs.html), as examples

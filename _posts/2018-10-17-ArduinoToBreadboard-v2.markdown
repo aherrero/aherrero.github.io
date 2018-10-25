@@ -9,6 +9,8 @@ comments: true
 ## Introduction
 I've learned in [previous post](https://aherrero.github.io/arduino/iot/2018/09/24/ArduinoToBreadboard.html) about bootloader and programming an Arduino in a Breadboard with external oscillator 16Mhz, but using the internal is more tricky than I thought.
 
+![atmega_smd.jpg](/assets/arduino2breadboard/atmega_smd.jpg)
+
 ## Background
 In the [official tutorial](https://www.arduino.cc/en/Tutorial/ArduinoToBreadboard), in the Minimal Circuit paragraph, talks about update the bootloader without external clock, using only the internal clock 8Mhz.
 

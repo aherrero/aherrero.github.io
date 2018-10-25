@@ -9,13 +9,15 @@ comments: true
 ## Introduction
 Hey, I've made my own watch!
 
-![DSC_0262_2.JPG](/assets/tmr01/DSC_0262_2.JPG)
+![bora_watch.png](/assets/tmr01/bora_watch.png)
 
 One day, I was really impressed with the project I saw in [hackaday](https://hackaday.com/2018/08/24/an-arduino-watch-without-a-clock/). A project created by [electronoobs](https://www.electronoobs.com/eng_arduino_tut40.php) with internal clock using the atmega328p, 12 leds and resistors, 3V battery and very few components more.
 
 So, as it was well documented with all the list of materials, design files and so on, I decided to made it.
 
-The challenges I had with the project were basically two; Using the atmega328p with the internal clock (Until now, I got rid of the Arduino components for using only the core, the atmega328 and a few components, but not using the internal clock) and, the really challenge here it was the **SMD soldering**
+The challenges I had with the project were basically two;
+- Using the atmega328p with the internal clock (Until now, I got rid of the Arduino components for using only the core, the atmega328 and a few components, but not using the internal clock)
+- And, the really challenge here, the **SMD soldering**
 
 Example of components size,
 
@@ -41,21 +43,27 @@ Example of components size,
 ## Schematic and Board
 I've use the same schematic and board as the original with minor modifications, because the goal this time it wasn't the electronics design.
 
-| Schematic | Board|
-|-------|--------|
-| ![schema](/assets/tmr01/schema.png) | ![board](/assets/tmr01/board.png) |
+Schematic
+
+![schema](/assets/tmr01/schema.png)
+
+Board
+
+![board](/assets/tmr01/board.png)
 
 It is basically an Atmega328p connected to 12 resistor and 12 leds, to a pushbutton, well configured the reset pin for the bootloader and programming (capacitor and resistor), the pins for programming (SPI and UART) and a battery holder for CR2032.
 
 You can see in the online editor the [schematic and the board](https://easyeda.com/editor#id=e2f64f5df199459d9788ec1f2d2dd938|42fc56697c8e4275b725ab0ee3979312) or in pdf, [schematics-pdf](https://github.com/aherrero/TMR01_Watch/blob/master/HW/Schematic_EN-Bora-watch_Sheet-1_20180922223903.pdf) and [board-pdf](https://github.com/aherrero/TMR01_Watch/blob/master/HW/PCB_EN-watch-PCB_20180922223520.pdf)
 
 ## PCB
-Once you have the design of your board, you have to generate the [GERBER files](https://github.com/aherrero/TMR01_Watch/blob/master/HW/Gerber_EN_watch_PCB_20180922223706.zip) and order in your favorite manufacturer. In this case I choose the manufacture associated to this online designer, [jlcpcb](https://jlcpcb.com/), but you could use another tool for design and generate the gerbers as [Eagle](https://www.autodesk.com/products/eagle/overview) and then, the manufacturer could be [oshpark](https://oshpark.com/) or [seeedstudio](https://www.seeedstudio.com/1-usd-for-3-pcbs.html), as examples. But jlcpcb it was fine, 10PCBs for ~7 euros.
+Once you have the design of your board, you have to generate the [GERBER files](https://github.com/aherrero/TMR01_Watch/blob/master/HW/Gerber_EN_watch_PCB_20180922223706.zip) and order in your favorite manufacturer. In this case I choose the manufacture associated to this online designer, [jlcpcb](https://jlcpcb.com/), but you could use another tool for design and generate the gerbers as [Eagle](https://www.autodesk.com/products/eagle/overview) and then, the manufacturer could be [oshpark](https://oshpark.com/) or [seeedstudio](https://www.seeedstudio.com/1-usd-for-3-pcbs.html), as examples
+
+But jlcpcb it was fine, 10PCBs for ~7 euros.
 
 ### Soldering
 I've used a technique that I've never used before, with the [soldering paste](https://en.wikipedia.org/wiki/Solder_paste).
 
-It is a paste you put in the PCB, you put the components on top of it, and then, ideally with a hot station but if you don't have anything better with a hot gun, you warm the components until the paste disappears with with the metalic parts joined.
+It is a paste you put in the PCB, you put the components on top of it, and then, ideally with a hot station but if you don't have anything better with a hot gun, you reflow the components until the paste disappears with the metallic parts joined.
 
 PCB with soldering paste,
 
@@ -81,10 +89,61 @@ Atmega328p solder,
 |-------|--------|
 | ![DSC_0208_2](/assets/tmr01/DSC_0208_2.JPG) | ![DSC_0209_2](/assets/tmr01/DSC_0209_2.JPG) |
 
-Something very important, you should check all the connection after do this procedure. It is probably some components are bad solder and you have to do it manually, but I hope this is a situation for a very few cases.
+Something very important, you should check all the connection after make this procedure (Specially the correlated pins in the microcontroller, and both pins of capacitor and resistor if they are connected between them). It is probably that some components are bad solder and you have to finish the work manually.
 
-**todo**
-some comments for soldering,
+## Software
+### Bootloader
+I've been playing with bootloader and programming since the last month for a few projects, so you may want to check this blog entries:
+- [Arduino to breadboard - Atmega328p](https://aherrero.github.io/arduino/iot/2018/09/24/ArduinoToBreadboard.html). How to use the Atmega328p without the Arduino and with an external clock.
+- [Atmega328p without clock: Internal clock. ( Mhz)](https://aherrero.github.io/arduino/iot/2018/10/17/ArduinoToBreadboard-v2.html)
+
+In these post I explain basically what we should to do here for having the Atmega328 with bootloader and programmed.
+
+But one point missing: Connection to this watch.
+
+![boot_1.png](/assets/tmr01/boot_1.png)
+
+First, I've used Arduino as ISP for burning the bootloader in the watch. This is not the best programmer you should use, and if possible, you could use an [AVR programmer](https://www.sparkfun.com/products/9825).
+
+If you are using an Arduino, as I've indicate in previous entries, **be sure you have the 10 uF capacitor between reset and ground on the programmer**
+
+For burning the bootloader I've used the library [MiniCore](https://github.com/MCUdude/MiniCore). I've selected the Arduino 328p, with internal 8Mhz clock and the BOD 1.8V (As we are going to use a small battery, we want to reduce the shutdown of the atmega to the minimum).
+
+The complete instructions for the bootloader are also in the [arduino official tutorial](https://www.arduino.cc/en/Tutorial/ArduinoToBreadboard)
+
+### Programming - Transfer the code
+For programming the Arduino we have the UARTs pinout (RX,TX and DTR for the reset) on the watch. We only need an FTDI cable and connect as shown,
+
+![boot_3.png](/assets/tmr01/boot_3.png)
+
+FTDI pinout,
+
+![FTDI cable schema](/assets/cam01/ftdi_schema.png)
+
+In this case, we already have the 0.1uF capacitor between the reset and the DTR line, so, it is not necessary to add.
+
+To send the code to the watch, we could use the Blink example, once we have the same board used for the bootloader, and changinig in the Arduino IDE from _Arduino as ISP_ to _AVRISP mkII_.
+One of the leds (I don't remember which corresponds to the pin13 in Arduino) is going to Blink, which means, we are able to send the program to our watch.
+
+Some references with the pinout of the Atmega328p and the Arduino from [circuito.io blog](https://www.circuito.io/blog/arduino-uno-pinout/)
+
+![pinout atmega arduino](/assets/cam01/arduino-uno-pinout-diagram.png)
+
+And you can download the version of my code, as well ad the original version in my [github](https://github.com/aherrero/TMR01_Watch/tree/master/Software/Code/TMR01_Watch).
+
+I didn't modify so much the source code, even if it seems there are some issues related with the clock (The time is going faster on this watch!) and also the hour programming is not working always. But it has interruption to wake up the Atmega328 when you press the button, and it only shows the hour when pressing the button.
+
+## Final results
+[video]
+
+## Future
+I've learned a lot in this (simple) project, but this doesn't means I am going to stop here. There are several improvements we could perform in this project:
+- The battery performance is not great. At all. As I've reduce the BOD to 1.8V (Mechanism to deactivate the Atmega328 when reach this voltage), we can use the watch more than the original project.. But still, the battery is for 3-4 days. Only showing a few leds sometimes during the day!
+- The time is not correct 80% of the time. Using the internal clock is not the best idea if you want to have a constant clock for measuring the time. Instead, it is normally better using an external oscillator.. Or even better, a RTC
+- Related with both topics: We could improve the time and the battery using a RTC: They consume very little, and we could really put the Atmega328p in sleep mode, so only wakes up when a button is pressed, read the time from the RTC, show the tiem and go to sleep again
+
+
+
 
 image connexion programming
 bootloader topic and software

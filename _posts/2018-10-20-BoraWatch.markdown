@@ -4,6 +4,7 @@ title:  "Bora Watch - A simple and geek homemade watch"
 date:   2018-10-20 08:00 +0200
 categories: arduino iot watch
 comments: true
+youtubeTmr01: SHC-i1KxNCg
 ---
 
 ## Introduction
@@ -140,7 +141,10 @@ And you can download the version of my code, as well ad the original version in 
 I didn't modify so much the source code, even if it seems there are some issues related with the clock (The time is going faster on this watch!) and also the hour programming is not working always. But it has interruption to wake up the Atmega328 when you press the button, and it only shows the hour when pressing the button.
 
 ## Final results
-[video]
+
+Video:
+
+{% include youtubePlayer.html id=page.youtubeTmr01 %}
 
 ## Future
 I've learned a lot in this (simple) project, but this doesn't means I am going to stop here. There are several improvements we could perform in this project:
@@ -148,11 +152,6 @@ I've learned a lot in this (simple) project, but this doesn't means I am going t
 - The time is not correct 80% of the time. Using the internal clock is not the best idea if you want to have a constant clock for measuring the time. Instead, it is normally better using an external oscillator.. Or even better, a RTC
 - Related with both topics: We could improve the time and the battery using a RTC: They consume very little, and we could really put the Atmega328p in sleep mode, so only wakes up when a button is pressed, read the time from the RTC, show the tiem and go to sleep again
 
-
-
-
-image connexion programming
-bootloader topic and software
 ***
 
 {% if page.comments %}

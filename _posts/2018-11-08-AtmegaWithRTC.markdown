@@ -4,7 +4,7 @@ title:  "Atmega328 with RTC and Sleep mode"
 date:   2018-11-08 08:00 +0200
 categories: atmega328 rtc
 comments: true
-youtubeTmr01v2: SHC-i1KxNCg
+youtubeTmr01v2: McJfuOUNxm4
 ---
 
 ## Introduction
@@ -59,9 +59,9 @@ For the setup, I've followed the schematic from the [MCP7940M datasheet](https:/
 
 But not exactly the same, because I also have another schematic from a library to use this RTC,
 
-![Img MCP7940_bb](https://github.com/SV-Zanshin/MCP7940/blob/master/Images/MCP7940_bb.png)
+![Img MCP7940_bb](https://raw.githubusercontent.com/SV-Zanshin/MCP7940/master/Images/MCP7940_bb.png)
 
-My schematic is not exactly elegant, because I've used 3 capacitor 22pF in series for arriving to the ~6.8pF ( 1/(1/22+1/22+1/22) = 7.33 pF ) and for me it wasn't necessary the MFP pin (Used for alarms)
+My schematic is not exactly elegant, because I've used 3 capacitor 22pF in series for achieving the ~6.8pF ( 1/(1/22+1/22+1/22) = 7.33 pF ) and for me it wasn't necessary the MFP pin (Used for alarms)
 
 ![2.JPG](/assets/tmr01_v2/2.JPG)
 
@@ -217,6 +217,51 @@ If I've decided of using an IC for the RTC instead of using the crystal directly
 And the biggest difference between the DS1307 and MCP7940 with the DS3234 is, this last one, includes the crystal and it is more accurate and less sensible to the external temperature. But it also 10 times more expensive than the MCP7940.
 
 You can see a [good tutorial comparing both](https://tronixstuff.com/2014/12/01/tutorial-using-ds1307-and-ds3231-real-time-clock-modules-with-arduino/)
+
+And also, you could chose one or the other depending where you want to put it. The size of the DS3234 is quite big compare with the others.
+
+![1.JPG](/assets/tmr01_v2/1.JPG)
+
+## Current consumption and final results
+The Arduino sleep mode works very well, even if I don't reach the same values of the [specification](http://ww1.microchip.com/downloads/en/devicedoc/atmega328_p%20avr%20mcu%20with%20picopower%20technology%20data%20sheet%2040001984a.pdf):
+
+According to the specification,
+Power Consumption at 1MHz, 1.8V, 25 degrees.
+- Active Mode: 0.2mA
+- Power-down Mode: 0.1μA
+- Power-save Mode: 0.75μA (Including 32kHz RTC)
+
+According to ATmega328P Typical Characteristics,
+
+Active mode 3V at 1Mhz: ~0.5mA
+
+![data1.png](/assets/tmr01_v2/data1.png)
+
+Active mode 3V at 8Mhz: ~3mA
+
+![data2.png](/assets/tmr01_v2/data2.png)
+
+### Actual consumption
+
+3V @ 8MHz
+- Active + 1 led: 4.6mA
+- Active: 3.1mA
+- Powerdown: 1.15 μA
+
+3V @ 1MHz
+- Active + 1 led: 2.46mA
+- Active: 0.82mA
+- Powerdown: 1.15 μA
+
+
+In the following video, I use the 5V from the FTDI with atmega328 at 1Mhz. We can see the three modes, powerdown, active with led, and active.
+Also, when we open the serial port to see the timing, it consumes a little more (And the time was not set correctly!)
+
+
+{% include youtubePlayer.html id=page.youtubeTmr01v2 %}
+
+
+
 
 ***
 

@@ -25,7 +25,7 @@ The steps following the official tutorial,
 
 This is not straightforward as shows; First, the "board selection" is really how to configure the hardware in your atmega. In other words, the hex file is the bootloader of the microcontroller.
 
-Then, the boards.txt is the configuration of the fuses in your atmega. This is important, because thanks to the fuses, you will configure the clock (External, Internal and which frequency), if you use a [BOD](https://electronics.stackexchange.com/questions/229189/atmega328p-how-is-brown-out-detection-supposed-to-work) and so on)
+Then, the boards.txt is the configuration of the fuses in your atmega. This is important, because thanks to the fuses, you will configure the clock (External, Internal and which frequency), if you use a [BOD](https://electronics.stackexchange.com/questions/229189/atmega328p-how-is-brown-out-detection-supposed-to-work) and so on.
 
 Until now, we use the Arduino as ISP, but this means there are [other programming tools](https://www.sparkfun.com/products/9825) you can use for programming via ISP. I read the [Arduino is not the best tool for programming](http://shallowsky.com/blog/hardware/programming-breadboard-atmega.html), so I will buy one asap.
 
@@ -42,12 +42,14 @@ When using the Arduino IDE for programming with Arduino as ISP, we are using avr
     avrdude: initialization failed, rc=-1
     Double check connections and try again, or use -F to override this check.
 
+
 - You may have the error _Device signature = 0x000000_. Normally is because the target chip's clock is not working. An atmega needs the crystal oscillator for burn a bootloader, so, you forgot the oscillator, or you are going to use the internal oscillator 8Mhz but the fueses are configured for using an external.[Forum link](https://forum.arduino.cc/index.php?topic=354674.0)
 
 
     avrdude: Device signature = 0x000000
     avrdude: Yikes!  Invalid device signature.
     Double check connections and try again, or use -F to override this check.
+
 
 ## Boards
 We should have the configuration of the boards and the hex with the bootloader. Otherwise, creating one from zero is something for someone very expert on the topic.
@@ -79,7 +81,7 @@ for programming,
 
 On the other hand, there is someone who tried the [debug mode with gdb on Linux](http://notes.asd.me.uk/2011/10/20/using-the-arduino-uno-as-an-avr-isp/) to execute the avrdude slowly, so, it gives time to Arduino to program.
 
-From my point of view and with some test performed, the problem could be resolved via hardware (With the capacitor reset-ground), but it is true is working better in debug mode.
+From my point of view and with some test performed, the problem could be resolved via hardware (With the capacitor reset-ground), but it is true it is working better in debug mode.
 
 If you have more question about avrdude, it is documented in [http://www.nongnu.org/avrdude/](http://www.nongnu.org/avrdude/)
 

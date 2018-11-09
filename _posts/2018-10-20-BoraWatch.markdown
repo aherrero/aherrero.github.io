@@ -37,7 +37,7 @@ Example of components size,
 
 **Tools**
 - [Soldering Paste](https://www.distrelec.ch/en/soldering-paste-syringe-solder-chemistry-blf03-ch-de/p/18249570) and [needle](https://www.distrelec.ch/en/dosing-needle-58-mm-pink-pink-solder-chemistry-047031/p/18249574)
-- [Heat gun](https://www.amazon.fr/gp/product/B01N0X1LFK/ref=oh_aui_detailpage_o00_s01?ie=UTF8&psc=1), although, I've realized it wasn't powerful enough, but it was ok.
+- [Heat gun](https://www.amazon.fr/gp/product/B01N0X1LFK/ref=oh_aui_detailpage_o00_s01?ie=UTF8&psc=1), although, I've realized that this one it wasn't powerful enough, but it was fine.
 - [Velcro strip](https://www.amazon.fr/gp/product/B07DFBHN5J/ref=oh_aui_detailpage_o00_s01?ie=UTF8&psc=1)
 - [Arduino uno](https://www.distrelec.ch/en/arduino-uno-rev3-smd-arduino-a000073/p/30101956) and [Capacitor 10uF](https://www.distrelec.ch/en/aluminium-electrolytic-capacitor-10-uf-50-vdc-jamicon-skr100m1hd11/p/16701353) for burning the bootloader and programmer **or** an [AVR programmer](https://www.sparkfun.com/products/9825)
 
@@ -102,7 +102,7 @@ Something very important, you should check all the connection after make this pr
 ### Bootloader
 I've been playing with bootloader and programming since the last month for a few projects, so you may want to check this blog entries:
 - [Arduino to breadboard - Atmega328p](https://aherrero.github.io/arduino/iot/2018/09/24/ArduinoToBreadboard.html). How to use the Atmega328p without the Arduino and with an external clock.
-- [Atmega328p without clock: Internal clock. ( Mhz)](https://aherrero.github.io/arduino/iot/2018/10/17/ArduinoToBreadboard-v2.html)
+- [Atmega328p without clock: Internal clock - Mhz](https://aherrero.github.io/arduino/iot/2018/10/17/ArduinoToBreadboard-v2.html)
 
 In these post I explain basically what we should to do here for having the Atmega328 with bootloader and programmed.
 
@@ -146,10 +146,13 @@ Video:
 
 {% include youtubePlayer.html id=page.youtubeTmr01 %}
 
+
 ## Future
 I've learned a lot in this (simple) project, but this doesn't means I am going to stop here. There are several improvements we could perform in this project:
 - The battery performance is not great. At all. As I've reduce the BOD to 1.8V (Mechanism to deactivate the Atmega328 when reach this voltage), we can use the watch more than the original project.. But still, the battery is for 3-4 days. Only showing a few leds sometimes during the day!
 - The time is not correct 80% of the time. Using the internal clock is not the best idea if you want to have a constant clock for measuring the time. Instead, it is normally better using an external oscillator.. Or even better, a RTC
+Keyword: 32.768kHz.
+This is a Real-Time-Clock crystal. 32.768kHz means it is precisely half of a 16-bit counter. Start counting at 0x8000 (or 32768). When the counter rolls over from 65535 to 0, then you know that exactly one second has passed.
 - Related with both topics: We could improve the time and the battery using a RTC: They consume very little, and we could really put the Atmega328p in sleep mode, so only wakes up when a button is pressed, read the time from the RTC, show the tiem and go to sleep again
 
 ***

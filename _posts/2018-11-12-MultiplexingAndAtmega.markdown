@@ -4,23 +4,27 @@ title:  "Multiplexing Outputs with 74HC595 and atmega"
 date:   2018-11-12 08:00 +0200
 categories: atmega328 shifting
 comments: true
-youtubeTmr01v2_a: McJfuOUNxm4
-youtubeTmr01v2_b: McJfuOUNxm4
+youtubeTmr01v2_a: k5yMgAc1vz4
+youtubeTmr01v2_b: TWqolyrPAAo
 ---
 
 ## Introduction
 The atmega328 (Or whatever Arduino you want to use) may don't have enough pins to control your project. But in the electronics world there are a few solutions to fix that.
 
 - Multiplexing
-- Shift register [SN74HC595](https://www.sparkfun.com/products/13699)
-- Matrix ([MAX7219](https://www.sparkfun.com/datasheets/Components/General/COM-09622-MAX7219-MAX7221.pdf))
+- Shift register (e.g.: [SN74HC595](https://www.sparkfun.com/products/13699))
+- Matrix (e.g.:  [MAX7219](https://www.sparkfun.com/datasheets/Components/General/COM-09622-MAX7219-MAX7221.pdf))
 
-The first solution seems better if you want to reduce to the minimum the number of pins. The second solution, you will need 3 pins always, but, you could put several shift register in cascade within using the same 3 pins. And the thrid solution, if you can have yours pins in a matrix type.
+The first solution seems better if you want to reduce to the minimum the number of pins.
+
+The second solution, you will need 3 pins always, but, you could put several shift register in cascade within using the same 3 pins.
+
+And the third solution, a different approach with matrix style.
 
 ## Shift register - SN74HC595
-I am going to use a shift register because I had some, so it could be not the best solution for your project.
+I am going to use a shift register because I had some, but it could be not the best solution for your project.
 
-As sparkfun describes, the SN74HC595N is a simple 8-bit shift register IC. Simply put, this shift register is a device that allows additional inputs or outputs to be added to a microcontroller by converting data between parallel and serial formats. Your chosen microprocessor is able to communicate with the The SN74HC595N using serial information then gathers or outputs information in a parallel (multi-pin) format. Essentially it takes 8 bits from the serial input and then outputs them to 8 pins.
+As sparkfun describes, the SN74HC595N is a simple 8-bit shift register IC. This shift register is a device that allows additional inputs or outputs to be added to a microcontroller by converting data between parallel and serial formats. Your chosen microprocessor is able to communicate with the The SN74HC595N using serial information then gathers or outputs information in a parallel (multi-pin) format. Essentially it takes 8 bits from the serial input and then outputs them to 8 pins.
 
 This SN74HC595N contains an 8-bit, serial-in parallel-out shift register that feeds an 8-bit D-type storage register with parallel 3-state outputs.
 
@@ -36,15 +40,16 @@ With the schema from the [datasheet](http://www.ti.com/lit/ds/symlink/sn74hc595.
 ![595_pin_diagram](/assets/SN74HC595/595_pin_diagram.png)
 
 We can start cabling the shift register;
-- 2 pins to VCC
-- 2 pins to ground
-- DS (pin 14), data pin
-- SH_CP (pin 11), clock pin
-- ST_CP (pin 12), latch pin.
+- VCC and MR pins to VCC
+- GND and OE pins to ground
+- DS (pin 14), data pin (blue cable in schematic), to Arduino 11.
+- SH_CP (pin 11), clock pin (yellow cable in schematic), to Arduino 12
+- ST_CP (pin 12), latch pin (green cable in schematic), to Arduino 8
 
 ![ShftOutExmp1_2.gif](/assets/SN74HC595/ShftOutExmp1_2.gif)
 
-After that, connect all the outputs (in this case, 8 leds) to the B0-B7 pins. Don't forget the resistor before the led.
+After that, connect all the outputs (in this case, 8 leds) to the Q0-Q7 pins. Don't forget the resistor before the led.
+Also, as recommendation, capacitor 10uF between VCC and GND.
 
 ![ShftOutExmp1_3.gif](/assets/SN74HC595/ShftOutExmp1_3.gif)
 
@@ -147,13 +152,13 @@ You could see the software explained in the Arduino webpage, but it is basically
     }
 
 ### Two shift register
-Now, the interesting topic is here: How to add a second shift register and, therefore, as many shift register as your microcontroller can support.
+Now, the interesting topic is here: How to add a second shift register and therefore, as many shift register as your microcontroller can support.
 
 #### Hardware.
 
 We can start cabling the shift register;
-- 2 pins to VCC
-- 2 pins to ground
+- VCC and MR pins to VCC
+- GND and OE pins to ground
 - DS (pin 14), data pin (Connect this second data pin to the pin 9 from the first shift register)
 - SH_CP (pin 11), clock pin (Same pin from Arduino, we could connect this directly to the first clock)
 - ST_CP (pin 12), latch pin (Same pin also, connect to the first latch)
@@ -166,7 +171,7 @@ Then, you could connect the outputs to whatever you want to control.
 ![ShftOut_Schm2.jpg](/assets/SN74HC595/ShftOut_Schm2.jpg)
 
 ### Software
-The differences between one register to two register or more is the array you could create to enable/disable pins and the times you call the function shiftOut
+The differences between one register to two register or more is the array you could create to enable/disable pins (0-1) and the times you call the function shiftOut
 
     void loop()
     {
@@ -175,7 +180,7 @@ The differences between one register to two register or more is the array you co
         //load the light sequence you want from array
         data = dataArray[j];
         data2 = dataArray2[j];
-        // data3 = dataArray3[j];    // **--> multiply the array as many as shift register you have**
+        // data3 = dataArray3[j];    // --> multiply the array as many as shift register you have
 
         //ground latchPin and hold low for as long as you are transmitting
         digitalWrite(latchPin, 0);
@@ -183,7 +188,7 @@ The differences between one register to two register or more is the array you co
         //move 'em out
         shiftOut(dataPin, clockPin, data);
         shiftOut(dataPin, clockPin, data2);
-        // shiftOut(dataPin, clockPin, data3);  // **--> multiply the times calling the function**
+        // shiftOut(dataPin, clockPin, data3);  // --> multiply the times calling the function
 
         //return the latch pin high to signal chip that it
         digitalWrite(latchPin, 1);
@@ -192,9 +197,9 @@ The differences between one register to two register or more is the array you co
     }
 
 ## Real examples
-I've developed two kind of examples to shows the possibilities of this output Multiplexing, and oriented this examples to my next projects.
+I've developed two kind of examples to shows the possibilities of this output Multiplexing.
 
-### Random lights
+### 1. Random lights
 1. Connect 4 shift register in cascade.
 2. Connect 8 leds (and resistors) to the 8 outputs from the shift register
 3. Using an Arduino Uno, control every leds separately, but in a random way (It's almost Christmas!!)
@@ -210,7 +215,7 @@ Just,
 
 4 times (for the 4 register)
 
-### Wall clock
+### 2. Wall clock
 I'm getting obsessed with the watches, but I found it easy... And I need a wall clock =D
 
 So, we could use the previous project with 4 displays 7-segments instead of 8 leds (There is 1 output that will be free from the register.. Or we could use the dot from the display)
@@ -221,7 +226,7 @@ And we could merge the project with the [AtmegaWithRTC](https://aherrero.github.
 
 Otherwise, we could continue using the watch from the microwave =D
 
-#todo image microwave
+![DSC_0487_2.JPG](/assets/SN74HC595/DSC_0487_2.JPG)
 
 #### Software
 Software in my github, [TMR1_v2_rtcLowDisplay](https://github.com/aherrero/TMR01v2_Watch/tree/master/Software/TMR1_v2_rtcLowDisplay)
@@ -230,7 +235,7 @@ You have to be careful what leds you want to turn on / turn off.
 
 ![7segment.jpg](/assets/SN74HC595/7segment.jpg)
 
-If you connect (Q0, ..., Q6), with the segments (a,..., g) and your display is Common anode (VCC connected to display) the following array is applicable,
+If you connect (Q0, ..., Q6) from the shift register, with the segments (a,..., g) and your display is Common anode (VCC connected to display) the following array is applicable,
 
     byte numbersToDisplay[] = {
         B11000000,  //  0
@@ -245,10 +250,10 @@ If you connect (Q0, ..., Q6), with the segments (a,..., g) and your display is C
         B10011000  //  9
     };
 
-- The bit MSB is not used (always 0), as the array is filled with (Q7, Q6, ..., Q0)
+- The bit MSB is not used (always 1), as the array is filled with (Q7, Q6, ..., Q0)
 - The 0 turns on the led. The 1, turns off.
 
-Then, you can write your own function to set the time (In my software, set hour and minutes, but not seconds or the date) and show the time each 1 second.
+Then, you can write your own function to I set the time (In my software, set hour and minutes, but not seconds or the date) and show the time each 1 second.
 
 
 ***

@@ -104,7 +104,8 @@ You have to connect only three cables:
 ## Software
 Once everything is tested, the only thing missing is the sleep mode of the atmega328. For that, I've used the [Arduino Low Power library](https://github.com/rocketscream/Low-Power)
 
-The complete software for this test:
+The complete software for this test
+(Also available in my [github](https://github.com/aherrero/TMR01v2_Watch/tree/master/Software/TMR1_v2_rtcLowPower))
 
     #include <Arduino.h>
 

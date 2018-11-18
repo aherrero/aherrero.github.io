@@ -207,7 +207,7 @@ I've developed two kind of examples to shows the possibilities of this output Mu
 {% include youtubePlayer.html id=page.youtubeTmr01v2_a %}
 
 #### Software
-Available in my github,  [TMR1v2_shiftRegister4Leds](https://github.com/aherrero/TMR01v2_Watch/tree/master/Software/TMR1v2_shiftRegister4Leds)
+Available in my github,  [TMR1v2_shiftRegister4Leds](https://github.com/aherrero/TMR03_Wallclock/tree/master/Software/TMR1v2_shiftRegister4Leds)
 
 Just,
 
@@ -229,7 +229,7 @@ Otherwise, we could continue using the watch from the microwave =D
 ![DSC_0487_2.JPG](/assets/SN74HC595/DSC_0487_2.JPG)
 
 #### Software
-Software in my github, [TMR1_v2_rtcLowDisplay](https://github.com/aherrero/TMR01v2_Watch/tree/master/Software/TMR1_v2_rtcLowDisplay)
+Software in my github, [TMR1_v2_rtcLowDisplay](https://github.com/aherrero/TMR03_Wallclock/tree/master/Software/TMR1_v2_rtcLowDisplay)
 
 You have to be careful what leds you want to turn on / turn off.
 

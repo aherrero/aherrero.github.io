@@ -7,13 +7,13 @@ comments: true
 youtubelink: U-sQe68Bytg
 ---
 
-## Sundays
+## Sunday's
 Hummm... Arduino, motor shield to control CC motors, 4 motors, 4 wheels, battery and a RC radio... What could I do with that? =D
 
 ![1](/assets/rbt02/1.JPG)
 
 ## Bill of materials
-Once you have all this components, put it together and do something it is not a big deal, but, it is always funny for a Sunday.
+Having all those components, thinking about putting them together and build something; it is not a big deal, but, it is always funny for Sunday.
 
 Essentials,
 - Motor control shield, as this one, from [adafruit](https://learn.adafruit.com/adafruit-motor-shield)
@@ -27,9 +27,9 @@ Remote control
 - [RC radio receiver](https://hobbyking.com/en_us/orangerx-r615x-dsm2-dsmx-compatible-6ch-2-4ghz-receiver-w-cppm.html?___store=en_us)
 
 ## Hardware
-Basically, connect everything:
+Basically, connecting everything:
 - The CC motors in the motors from M1 to M4
-- The radio receiver could be fit in the servo signal (We need to read the PWM signal)
+- The radio receiver could be fitted together in the servo signal (We need to read the PWM signal)
 - Lipo in the motor shield power
 
 Et voilà!
@@ -42,7 +42,7 @@ Et voilà!
 The full source code in my [github](https://github.com/aherrero/RBT02_MobileRobot/tree/master/Software)
 
 ### Motors
-You could control directly the motors [using PWM] as in this link,  https://www.dfrobot.com/wiki/index.php/Arduino_Motor_Shield_(L298N)_(SKU:DRI0009) ,
+You could control directly the motors using PWM as in this link,  https://www.dfrobot.com/wiki/index.php/Arduino_Motor_Shield_(L298N)_(SKU:DRI0009) ,
 
     //Arduino PWM Speed Control：
     int E1 = 5;
@@ -74,8 +74,8 @@ Or using some library, as these from adafruit
 - [lib v2](https://github.com/adafruit/Adafruit_Motor_Shield_V2_Library)
 
 ### Radio
-The second thing to take care is reading the signal from the radio receiver, a PWM signal, into de Arduino.
-We could use simple this [expression](http://www.benripley.com/diy/arduino/three-ways-to-read-a-pwm-signal-with-arduino/),
+The second thing to take into account is to read the signal from the radio receiver, a PWM signal, to Arduino.
+We could use this [expression](http://www.benripley.com/diy/arduino/three-ways-to-read-a-pwm-signal-with-arduino/),
 
     byte PWM_PIN = 3;
 

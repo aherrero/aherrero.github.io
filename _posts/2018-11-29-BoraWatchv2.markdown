@@ -35,7 +35,7 @@ and [manufactured in seeedstudio](https://www.seeedstudio.com/fusion_pcb.html)
 - [Soldering Paste](https://www.distrelec.ch/en/soldering-paste-syringe-solder-chemistry-blf03-ch-de/p/18249570) and [needle](https://www.distrelec.ch/en/dosing-needle-58-mm-pink-pink-solder-chemistry-047031/p/18249574)
 - [Heat gun](https://www.amazon.fr/gp/product/B01N0X1LFK/ref=oh_aui_detailpage_o00_s01?ie=UTF8&psc=1), although, I've realized that this one it wasn't powerful enough, but it was fine.
 - [Velcro strip](https://www.amazon.fr/gp/product/B07DFBHN5J/ref=oh_aui_detailpage_o00_s01?ie=UTF8&psc=1)
-- [Arduino uno](https://www.distrelec.ch/en/arduino-uno-rev3-smd-arduino-a000073/p/30101956) and [Capacitor 10uF](https://www.distrelec.ch/en/aluminium-electrolytic-capacitor-10-uf-50-vdc-jamicon-skr100m1hd11/p/16701353) for burning the bootloader and programmer **or** an [AVR programmer](https://www.sparkfun.com/products/9825)
+- [AVR programmer](https://www.sparkfun.com/products/9825)
 
 ## PCB Design
 In the first version I modify the design from the original project but this time, I've made my own design with [eagle](https://www.autodesk.com/products/eagle/overview) in order to include the RTC and also, because this time is entirely **Bora Watch brand** =D
@@ -75,8 +75,8 @@ The schematics is pretty simple:
 - And just on top, J1-J4, they are only connectors I am going to use to tie the watch strap so, no electrical functionality.
 
 I've also discover two problems in the schematics after ordering the pcb:
-- According to the [atmega328 specification](http://ww1.microchip.com/downloads/en/devicedoc/atmega328_p%20avr%20mcu%20with%20picopower%20technology%20data%20sheet%2040001984a.pdf), the chips has ADC6 and ADC7 but I've realized they only works as input for voltage references, not as output, so, I can't use them to control the leds. I was forced to change this pins to SCK and MISO with cables. In the github, the schematics are OK, but the gerbers were sent with this mistake.
-- The footprint for the oscillator 32.768 wasn't correct. So, I have improvised something.
+- According to the [atmega328 specification](http://ww1.microchip.com/downloads/en/devicedoc/atmega328_p%20avr%20mcu%20with%20picopower%20technology%20data%20sheet%2040001984a.pdf), the chip has ADC6 and ADC7 pins but I've realized they only work as input for voltage references, not as output, so, I can't use them to control the leds. I was forced to change this pins to SCK and MISO with cables. In the github, the schematics are now correct, but the gerbers were sent with this mistake.
+- The footprint for the oscillator 32.768 wasn't correct for the oscillator I have. So, I have improvised something.
 
 ![atmega_schematics.png](/assets/tmr01_v2/bora2/atmega_schematics.png)
 
@@ -90,9 +90,9 @@ The board in pdf, [top layer](https://github.com/aherrero/TMR01v2_Watch/raw/mast
 
 
 ### Order
-Once you generate the gerbers ([Gerbers](https://github.com/aherrero/TMR01v2_Watch/blob/master/Hardware/TMR1_v2/TMR1_v2_2018-11-29.zip) from my watch) you can order in some manufacture, the PCB.
+Once you generate the GERBERS, you can send them to the manufacturer to print the PCB.
 
-- [Seeedstudio](https://www.seeedstudio.com/). This time, I choose this manufacturer for the PCBs. They even have a tutorial about [how to generate](http://support.seeedstudio.com/knowledgebase/articles/1176949-how-to-generate-gerber-file-from-eagle) the gerbers according to their specification.
+- [Seeedstudio](https://www.seeedstudio.com/). This time, I choose this manufacturer for the PCBs. They even have a tutorial about [how to generate](http://support.seeedstudio.com/knowledgebase/articles/1176949-how-to-generate-gerber-file-from-eagle) the gerbers, according to their specification, with eagle.
 Cost: $4.90 each 10 PCBs and $11.27 deliver to EU (Total: $16,17). Delivering time: 24 days.
 - [jlcpcb](https://jlcpcb.com/) The last time I ordered here. The cost was $2 each 10 PCBs, and shipping $6.15 (Total: $8.15) Deliver time: Around 21 days.
 
@@ -121,9 +121,7 @@ So, the final result,
 | ![5.JPG](/assets/tmr01_v2/bora2/5.JPG) | ![6.JPG](/assets/tmr01_v2/bora2/6.JPG) |
 
 ## Software
-You can find the software in my [github](https://github.com/aherrero/TMR01v2_Watch/tree/master/Software/TMR01v2)
-
-### Code
+You can find the software in [github](https://github.com/aherrero/TMR01v2_Watch/tree/master/Software/TMR01v2)
 
 ### Bootloader
 I've use the [MiniCore](https://github.com/MCUdude/MiniCore) library with Arduino to configure the fuses of the atmega, with the following configuration:
@@ -131,8 +129,28 @@ I've use the [MiniCore](https://github.com/MCUdude/MiniCore) library with Arduin
 ![arduino_config.png](/assets/tmr01_v2/bora2/arduino_config.png)
 
 ### Programming
+As you may have seen, there are 6 setpoints at the bottom, to connect the ISP for programming. Finally, as I programmed several times to get it works, I solder the pins and then remove it.
+
+May attention the sense of the pins with the schematics and your ISP cable (Detect for example the VCC, with the  battery, and compare the VCC with the cable)
 
 ## Final results
+Once the velcro strip has been sewn,
+
+![7.JPG](/assets/tmr01_v2/bora2/7.JPG)
+
+And if I compare with the previous version,
+
+![8.JPG](/assets/tmr01_v2/bora2/8.JPG)
+
+## Improvements
+Obviously, the first fix will be:
+- Redesign the PCB with the ADC pins correctly.
+- A correct oscillator or a correct footprint.
+
+And then, another improvements I was thinking on:
+- As I use one or maximum two led at the same time, we could use only one 330 ohm resistor in order to simplify the circuit.
+- The footprint for the component 0402 (led, resistor and capacitor) is not correct in eagle, so, we could use this size of component if we fix the footprint.
+- A nice enclosure printed in 3D, similar to [this project](https://hackaday.io/project/159919-binary-wrist-watch)
 
 ***
 

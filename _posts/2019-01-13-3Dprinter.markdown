@@ -10,7 +10,8 @@ youtube01: 4wLQc2ENP2A
 ## Introduction
 This is our first 3D printer!
 
-{% include youtube01.html id=page.youtubelink %}
+{% include youtubePlayer.html id=page.youtube01 %}
+
 
 After several years after my friends got a 3d printer, we decide to get one, at least, the basic and cheaper one, and this is the printer we found... With unexpected very good results!
 

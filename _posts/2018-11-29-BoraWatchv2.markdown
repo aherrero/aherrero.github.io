@@ -16,7 +16,7 @@ After the [first version](https://aherrero.github.io/arduino/iot/watch/2018/10/2
 
 ## Bill-Of-Materials
 - 1 x PCB:
-[GERBERS here](https://github.com/aherrero/TMR01v2_Watch/raw/master/Hardware/TMR1_v2/TMR1_v2_2018-11-29.zip), [schematics and board](https://github.com/aherrero/TMR01v2_Watch/tree/master/Hardware/TMR1_v2),
+[GERBERS here](https://github.com/aherrero/TMR01_Watch/raw/master/v2/Hardware/TMR1_v2/TMR1_v2_2018-11-29.zip), [schematics and board](https://github.com/aherrero/TMR01_Watch/tree/master/v2/Hardware/TMR1_v2),
 [Designed with eagle 9.2.2](https://www.autodesk.com/products/eagle/overview),
 and [manufactured in seeedstudio](https://www.seeedstudio.com/fusion_pcb.html)
 - 1 x ATMega328p-AU: [Amazon Atmega328p](https://www.amazon.fr/gp/product/B01N0DNQ78/ref=oh_aui_detailpage_o01_s00?ie=UTF8&psc=1). Bought here because my usual provider didn't have.
@@ -40,7 +40,7 @@ and [manufactured in seeedstudio](https://www.seeedstudio.com/fusion_pcb.html)
 ## PCB Design
 In the first version I modify the design from the original project but this time, I've made my own design with [eagle](https://www.autodesk.com/products/eagle/overview) in order to include the RTC and also, because this time is entirely **Bora Watch brand** =D
 
-This is the link for my [project in eagle](https://github.com/aherrero/TMR01v2_Watch/tree/master/Hardware/TMR1_v2)
+This is the link for my [project in eagle](https://github.com/aherrero/TMR01_Watch/tree/master/v2/Hardware/TMR1_v2)
 
 If you don't know eagle before, EAGLE is a _scriptable electronic design automation (EDA) application with schematic capture, printed circuit board (PCB) layout, auto-router and computer-aided manufacturing (CAM) features_
 
@@ -63,7 +63,7 @@ And lot of tutorials!
 
 ![sch1.png](/assets/tmr01_v2/sch1.png)
 
-[The schematic in pdf](https://github.com/aherrero/TMR01v2_Watch/blob/master/Hardware/TMR1_v2/TMR1_v2_Schematic.pdf)
+[The schematic in pdf](https://github.com/aherrero/TMR01_Watch/blob/master/v2/Hardware/TMR1_v2/TMR1_v2_Schematic.pdf)
 
 The schematics is pretty simple:
 - Leds with the resistor
@@ -86,7 +86,7 @@ I've also discover two problems in the schematics after ordering the pcb:
 |-------|--------|
 | ![PCB_Front.JPG](/assets/tmr01_v2/board1.png) | ![PCB_Back.JPG](/assets/tmr01_v2/board2.png) |
 
-The board in pdf, [top layer](https://github.com/aherrero/TMR01v2_Watch/raw/master/Hardware/TMR1_v2/TMR1_v2_PCB_Top.pdf) and [bottom layer](https://github.com/aherrero/TMR01v2_Watch/blob/master/Hardware/TMR1_v2/TMR1_v2_PCB_Bottom.pdf)
+The board in pdf, [top layer](https://github.com/aherrero/TMR01_Watch/raw/master/v2/Hardware/TMR1_v2/TMR1_v2_PCB_Top.pdf) and [bottom layer](https://github.com/aherrero/TMR01_Watch/blob/master/v2/Hardware/TMR1_v2/TMR1_v2_PCB_Bottom.pdf)
 
 
 ### Order
@@ -121,7 +121,7 @@ So, the final result,
 | ![5.JPG](/assets/tmr01_v2/bora2/5.JPG) | ![6.JPG](/assets/tmr01_v2/bora2/6.JPG) |
 
 ## Software
-You can find the software in [github](https://github.com/aherrero/TMR01v2_Watch/tree/master/Software/TMR01v2)
+You can find the software in [github](https://github.com/aherrero/TMR01_Watch/tree/master/v2/Software/TMR01v2)
 
 ### Bootloader
 I've use the [MiniCore](https://github.com/MCUdude/MiniCore) library with Arduino to configure the fuses of the atmega, with the following configuration:

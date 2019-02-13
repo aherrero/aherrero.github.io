@@ -25,7 +25,7 @@ Example of components size,
 ![DSC_0196_2.JPG](/assets/tmr01/DSC_0196_2.JPG)
 
 ## Bill-Of-Materials
-- 1 x PCB: [GERBERS here](https://github.com/aherrero/TMR01_Watch/blob/master/HW/Gerber_EN_watch_PCB_20180922223706.zip), [schematics](https://github.com/aherrero/TMR01_Watch/blob/master/HW/Schematic_EN-Bora-watch_Sheet-1_20180922223903.pdf) and [board](https://github.com/aherrero/TMR01_Watch/blob/master/HW/PCB_EN-watch-PCB_20180922223520.pdf). [Designed here](https://easyeda.com/) and [manufactured here](https://jlcpcb.com/)
+- 1 x PCB: [GERBERS here](https://github.com/aherrero/TMR01_Watch/blob/master/v1/HW/Gerber_EN_watch_PCB_20180922223706.zip), [schematics](https://github.com/aherrero/TMR01_Watch/blob/master/v1/HW/Schematic_EN-Bora-watch_Sheet-1_20180922223903.pdf) and [board](https://github.com/aherrero/TMR01_Watch/blob/master/v1/HW/PCB_EN-watch-PCB_20180922223520.pdf). [Designed here](https://easyeda.com/) and [manufactured here](https://jlcpcb.com/)
 - 1 x ATMega328p-AU: [Amazon Atmega328p](https://www.amazon.fr/gp/product/B01N0DNQ78/ref=oh_aui_detailpage_o01_s00?ie=UTF8&psc=1). Bought here because my usual provider didn't have.
 - 12 x 200R 0402 SMD resistors: [Distrelec 200 0402](https://www.distrelec.ch/en/smd-resistor-thick-film-200-ohm-0402-rnd-components-rnd-1550402wgf2000tce/p/30056372)
 - 12 x 0402 SMD LED: [Distrelec Led 0402](https://www.distrelec.ch/en/smd-led-red-0402-wuerth-elektronik-150040rs73240/p/30114006)
@@ -59,11 +59,11 @@ You can see in the online editor
 - The [board](https://easyeda.com/editor#id=42fc56697c8e4275b725ab0ee3979312)
 
 Or from PDF,
-- [schematics-pdf](https://github.com/aherrero/TMR01_Watch/blob/master/HW/Schematic_EN-Bora-watch_Sheet-1_20180922223903.pdf)
-- [board-pdf](https://github.com/aherrero/TMR01_Watch/blob/master/HW/PCB_EN-watch-PCB_20180922223520.pdf)
+- [schematics-pdf](https://github.com/aherrero/TMR01_Watch/blob/master/v1/HW/Schematic_EN-Bora-watch_Sheet-1_20180922223903.pdf)
+- [board-pdf](https://github.com/aherrero/TMR01_Watch/blob/master/v1/HW/PCB_EN-watch-PCB_20180922223520.pdf)
 
 ## PCB
-Once you have the design of your board, you have to generate the [GERBER files](https://github.com/aherrero/TMR01_Watch/blob/master/HW/Gerber_EN_watch_PCB_20180922223706.zip) and order in your favorite manufacturer. In this case I choose the manufacture associated to this online designer, [jlcpcb](https://jlcpcb.com/), but you could use another tool for design and generate the gerbers as [Eagle](https://www.autodesk.com/products/eagle/overview) and then, the manufacturer could be [oshpark](https://oshpark.com/) or [seeedstudio](https://www.seeedstudio.com/1-usd-for-3-pcbs.html), as examples
+Once you have the design of your board, you have to generate the [GERBER files](https://github.com/aherrero/TMR01_Watch/blob/master/v1/HW/Gerber_EN_watch_PCB_20180922223706.zip) and order in your favorite manufacturer. In this case I choose the manufacture associated to this online designer, [jlcpcb](https://jlcpcb.com/), but you could use another tool for design and generate the gerbers as [Eagle](https://www.autodesk.com/products/eagle/overview) and then, the manufacturer could be [oshpark](https://oshpark.com/) or [seeedstudio](https://www.seeedstudio.com/1-usd-for-3-pcbs.html), as examples
 
 But jlcpcb it was fine, 10PCBs for ~7 euros.
 
@@ -136,7 +136,7 @@ Some references with the pinout of the Atmega328p and the Arduino from [circuito
 
 ![pinout atmega arduino](/assets/cam01/arduino-uno-pinout-diagram.png)
 
-And you can download the version of my code, as well ad the original version in my [github](https://github.com/aherrero/TMR01_Watch/tree/master/Software/Code/TMR01_Watch).
+And you can download the version of my code, as well ad the original version in my [github](https://github.com/aherrero/TMR01_Watch/tree/master/v1/Software/Code/TMR01_Watch).
 
 I didn't modify so much the source code, even if it seems there are some issues related with the clock (The time is going faster on this watch!) and also the hour programming is not working always. But it has interruption to wake up the Atmega328 when you press the button, and it only shows the hour when pressing the button.
 

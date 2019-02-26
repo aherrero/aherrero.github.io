@@ -1,0 +1,51 @@
+---
+layout: post
+title:  "Testing RTC - DS3231"
+date:   2019-02-26 08:00 +0200
+categories: arduino rtc
+comments: true
+---
+
+## Quick Testing RTC DS3231
+
+In the past, I was using a simple oscillator to measure the time. This is not the best way, ant even worst if the oscillator is 8MHz from the microcontroller (Losing seconds every day!)
+
+Then, an oscillator with the frequency 32.768kHz improve the measure. 32.768 kHz it is precisely half of a 16-bit counter. Start counting at 0x8000 (or 32768). When the counter rolls over from 65535 to 0, then you know that exactly one second has passed.
+
+After that, I tried a RTC with the oscillator 32.768. In this way, I am no worries about how to count the seconds with the microcontroller, a dedicated chip measure the time for me. I've tried the [RTC MCP79410-I/SN SO-8](https://www.distrelec.ch/en/rtc-ic-so-microchip-mcp79410-sn/p/17380943).
+
+It is not so bad, but is necesary an external oscillator.
+
+In this test, I am going to use the [DS3231](https://eu.mouser.com/ProductDetail/Maxim-Integrated/DS3231SN?qs=1eQvB6Dk1vhUlr8%2FOrV0Fw==)
+
+The  DS3231  is  a  extremely  accurate  I2C real-time  clock  (RTC)  with  an  integrated  temperature-compensated   crystal   oscillator   (TCXO)   and   crystal.   The  device  incorporates  a  battery  input,  and  maintains  accurate  timekeeping  when  main  power  to  the  device  is  interrupted.  The  integration  of  the  crystal  resonator  enhances  the  long-term  accuracy  of  the  device  as  well  as  reduces  the  piece-part  count  in  a  manufacturing  line.
+
+![rtc](/assets/tmr01v3/rtc2.jpg)
+
+## Price
+I've consider is quite expensive (~8e), compare with others RTC (Although, it is more precise, oscillator integrated and temperature sensor for compensation...) but, as always, you can buy in [aliexpress](https://www.aliexpress.com/item/Real-Time-Clock-chip-10PCS-DS3231SN-DS3231-16-SOIC/32837219361.html?spm=a2g0y.10010108.1000001.8.1c1e56388z8bpw) for much less.
+
+## Schematic and layout
+Adafruit has a [breakout pcb](https://learn.adafruit.com/adafruit-ds3231-precision-rtc-breakout/arduino-usage) for this component and they have also the component for eagle in their [library](https://github.com/adafruit/Adafruit-Eagle-Library) if you decide to build your own system.
+
+## Pinout
+You can find the pinout in the official [datasheet](https://eu.mouser.com/datasheet/2/256/DS3231-1513891.pdf),
+
+![Pinout1](/assets/tmr01v3/pinout1.png)
+
+![Pinout2](/assets/tmr01v3/pinout2.png)
+
+And an [example](https://simple-circuit.com/pic16f877a-ds3231-rtc-set-buttons/) with the tyipical values for the component for using with a pic microcontroller
+
+## Software
+There are several libraries using this RTC for arduino (or for the atmega328), but this library from [Makuna](https://github.com/Makuna/Rtc/wiki) seems to be very simple and updated.
+
+Another library for complex (or complete) is this one [JChristensen](https://github.com/JChristensen/DS3232RTC) or the one from [adafruit](https://github.com/adafruit/RTClib)
+
+
+
+***
+
+{% if page.comments %}
+{% include disqus.html %}
+{% endif %}

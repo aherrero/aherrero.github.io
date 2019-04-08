@@ -14,7 +14,7 @@ Then, an oscillator with the frequency 32.768kHz improve the measure. 32.768 kHz
 
 After that, I tried a RTC with the oscillator 32.768. In this way, I am no worries about how to count the seconds with the microcontroller, a dedicated chip measure the time for me. I've tried the [RTC MCP79410-I/SN SO-8](https://www.distrelec.ch/en/rtc-ic-so-microchip-mcp79410-sn/p/17380943).
 
-It is not so bad, but is necesary an external oscillator.
+It is not so bad, but is necessary an external oscillator.
 
 In this test, I am going to use the [DS3231](https://eu.mouser.com/ProductDetail/Maxim-Integrated/DS3231SN?qs=1eQvB6Dk1vhUlr8%2FOrV0Fw==)
 

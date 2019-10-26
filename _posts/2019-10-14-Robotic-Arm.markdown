@@ -4,6 +4,8 @@ title:  "Robotic Arm - 3D Printed"
 date:   2019-10-14 08:00 +0200
 categories: arduino robot 3D
 comments: true
+youtube01: g3OJ1hsPSmM
+
 ---
 
 # Introduction
@@ -33,6 +35,8 @@ Also, I've use a phone charger and the Arduino port Vin, in the case the current
 Then, a [simple software](https://github.com/aherrero/RBT03_3DPrintedRobot/blob/master/Software/Bora2/Bora2.ino) for controlling the servos in a independent way, from the keyboard.
 
 Using _A D_, _W S_, _J L_, _I K_, I am able to control all the servos, sending a signal for moving from 0 degrees up to 180 degrees (Or up to the physical HW limits, still without calculate).
+
+{% include youtubePlayer.html id=page.youtube01 %}
 
 ***
 

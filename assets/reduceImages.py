@@ -23,7 +23,7 @@ def reduceImages(name,format_file, nreduce):
     nameresult = name[:pos] + '_2' + format_file
 
     cv2.imwrite(nameresult,image,[int(cv2.IMWRITE_JPEG_QUALITY), 100])
-    print 'Procesada imagen: ' + name
+    print('Procesada imagen: ' + name)
 
 def interpreteformat(formatimage):
 
@@ -75,31 +75,31 @@ def interprete_compression(number):
 
 def main():
 
-    formatimage = raw_input ('Formato de imagen: (bmp, jpg, png, tiff)\n')
+    formatimage = input ('Formato de imagen: (bmp, jpg, png, tiff)\n')
 
     format_search,format_file = interpreteformat(formatimage)
     if(format_search == ''):
-        print 'Formato archivo erroneo'
+        print('Formato archivo erroneo')
         sys.exit()
 
     filelist = glob.glob(format_search)
     if(not(filelist)):
-        print 'No hay archivos con esta extension en este directorio\n'
+        print('No hay archivos con esta extension en este directorio\n')
         sys.exit()
 
     try:
-        nreduce = float(raw_input('Porcentaje de compresion: (0.75,0.50,0.25 ...) o ampliacion (1 a 5)\n'))
+        nreduce = float(input('Porcentaje de compresion: (0.75,0.50,0.25 ...) o ampliacion (1 a 5)\n'))
         if(not(interprete_compression(nreduce))):
             print ('Valor fuera de rango')
             sys.exit(0)
     except ValueError:
-        print 'Valor no numerico\n'
+        print('Valor no numerico\n')
         sys.exit(0)
 
     for names in filelist:
         reduceImages(names,format_file, nreduce)
 
-    print 'Reduccion completa\n'
+    print('Reduccion completa\n')
 
 
 

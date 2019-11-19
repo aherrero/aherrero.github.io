@@ -1,10 +1,10 @@
 ---
 layout: post
-title:  "Radio with ATtiny"
+title:  "Radio communication 433MHz with ATtiny85"
 date:   2019-11-17 08:00 +0200
 categories: arduino rf
 comments: true
-youtube01: g3OJ1hsPSmM
+youtube01: v=jW19Q1njsn8
 
 ---
 
@@ -35,7 +35,7 @@ Make sure the pinout is correct in the [datasheet](http://ww1.microchip.com/down
 
 ![screenshot](/assets/sml/1.jpg)
 
-Then, we could use PlatformIO for loading the new software, e.g.: the blink program, following the this [tutorial from platformio](http://docs.platformio.org/en/latest/platforms/atmelavr.html#upload-using-programmer)
+Then, we could use PlatformIO for loading the new software, e.g.: the blink program, following this [tutorial from platformio](http://docs.platformio.org/en/latest/platforms/atmelavr.html#upload-using-programmer) to use Arduino as ISP.
 
 An example of blink project configured for this attiny in [github](https://github.com/aherrero/SML/tree/master/SML01/Software/sml01)
 
@@ -56,7 +56,7 @@ The receiver is quite simple; it's only the radio module receiver connected to V
 
 ![screenshot](/assets/sml/3.jpg)
 
-Then, the Arduino is connected to the computer via USB, to see the serial communication.
+Then, the Arduino is connected to the computer via USB, for powering the Arduino side and for the serial communication.
 
 The software used is in [github](https://github.com/aherrero/SML/tree/master/SML01/Software/sml01_receiver). If using ArduinoIDE for programming, make sure you change the programmer from "Arduino as ISP" with "AVRISP mkii"
 
@@ -79,7 +79,7 @@ A better one could be the [datasheet of the component.](https://cdn.sparkfun.com
 Make sure in the datasheet the pinout is correct and the ouptut is 5V. Otherwise, you will burn your regulator and/or your micro.
 
 # Final result
-[video]
+{% include youtubePlayer.html id=page.youtube01 %}
 
 # References
 - [Electronoobs](https://www.electronoobs.com/eng_arduino_tut45.php)

@@ -4,7 +4,7 @@ title:  "Radio communication 433MHz with ATtiny85"
 date:   2019-11-17 08:00 +0200
 categories: arduino rf
 comments: true
-youtube01: v=jW19Q1njsn8
+youtube01: jW19Q1njsn8
 
 ---
 

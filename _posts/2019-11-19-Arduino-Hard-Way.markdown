@@ -24,7 +24,10 @@ First, there is good pinout diagram from [circuito.io blog](https://www.circuito
 # Hello World (Blink!)
 Following the pinout and this [reference](https://www.arduino.cc/en/Reference/PortManipulation), we could be able to do something.
 
-In a few words,
+Basically,
+- To set a pin (put a 1), use the OR operator
+- To clear a pin (put a 0), use the AND operator. Use together with the ~ operator if using positive logic.
+- To toogle a pin (if 0, set to 1, if 1, clear to 0), use XOR operator.
 
     void setup()
     {
@@ -75,6 +78,9 @@ Apply altogether:
     }
 
 
+We could even toggle the pin, instead of set and the clear the pin, with the bitwise XOR operation
+
+    PORTB = PORTB ^ (unsigned char)(1<<5);  // Toggle PB5, other untouched
 
 ***
 

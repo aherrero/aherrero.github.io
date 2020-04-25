@@ -29,6 +29,7 @@ Basically,
 - To clear a pin (put a 0), use the AND operator. Use together with the ~ operator if using positive logic.
 - To toogle a pin (if 0, set to 1, if 1, clear to 0), use XOR operator.
 
+
     void setup()
     {
       // pinMode(13, OUTPUT);
@@ -53,7 +54,7 @@ On the other hand, to clear the bit, we could use always the positive logic, the
 
     PORTB = PORTB & B11011111; --> PORTB = PORTB &~ B00100000; --> PORTB = PORTB &~ (unsigned char)(1<<5);
 
-Apply altogether:
+Applying all together:
 
     #include <Arduino.h>
 

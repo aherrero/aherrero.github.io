@@ -31,9 +31,19 @@ The only problem, it only admits IP Cameras.
 - [1 Rpi camera module](https://www.raspberrypi.org/products/camera-module-v2/)
 
 ## Normal webcam (USB or cable) to IP cameras
-Using raspberrypi and a [library](https://github.com/Motion-Project/motion) in linux, you can convert this webcams to share the streaming via web.
+Using raspberrypi and a [library](https://github.com/Motion-Project/motion) in linux, you can convert these webcams to share the streaming via web.
 
 I have followed the tutorial from [https://tutorials-raspberrypi.com/raspberry-pi-security-camera-livestream-setup/](https://tutorials-raspberrypi.com/raspberry-pi-security-camera-livestream-setup/), very good explained.
+
+In a few lines,
+
+    sudo apt-get install motion
+    sudo modprobe bcm2835-v4l2 # For rpi camera modules
+    sudo nano /etc/motion/motion.conf # Edit with the desired configuration like daemon enable, image width and height and framerate
+    sudo nano /etc/default/motion # Again daemon enable
+    # Mkdir folder for saving stram and give rights
+    sudo service motion start
+
 
 I have stopped in the moment I should make it available outside the local network.
 

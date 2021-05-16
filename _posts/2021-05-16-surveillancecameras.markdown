@@ -26,9 +26,9 @@ The only problem, it only admits IP Cameras.
 
 ## Material used
 - 2 RaspberryPi: rpi3 and rpi zero w
-- 1 AS synology
-- 1 normal webcam
-- [1 rpi camera module](https://www.raspberrypi.org/products/camera-module-v2/)
+- 1 NAS Synology
+- 1 Standard Webcam
+- [1 Rpi camera module](https://www.raspberrypi.org/products/camera-module-v2/)
 
 ## Normal webcam (USB or cable) to IP cameras
 Using raspberrypi and a [library](https://github.com/Motion-Project/motion) in linux, you can convert this webcams to share the streaming via web.

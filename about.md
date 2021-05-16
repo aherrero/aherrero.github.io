@@ -10,3 +10,7 @@ Electronic engineering as studies and software engineer as profession, I feel in
 
 ## About this site
 The blog is created with [Jekyll](https://jekyllrb.com/), hosted in Github with [Git Pages](https://pages.github.com/)
+
+In case of vulnerability with dependencies, check [this](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/testing-your-github-pages-site-locally-with-jekyll)
+
+    bundle update github-pages

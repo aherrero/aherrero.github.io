@@ -52,7 +52,7 @@ For my project, it is enough having a camera available within ip address like
     http://192.168.0.22:8081
 
 ### Note for raspberrypi
-I have installed Raspberry Pi OS, using the old method with the dd command,
+I have installed [Raspberry Pi OS](https://downloads.raspberrypi.org/raspios_full_armhf/images/raspios_full_armhf-2021-03-25/2021-03-04-raspios-buster-armhf-full.zip), using the standard method with _dd command_ (although I guess the suggested [rPi Imager](https://www.raspberrypi.org/software/) also works)
 
 https://www.raspberrypi.org/documentation/installation/installing-images/linux.md
 
@@ -64,7 +64,7 @@ https://beebom.com/how-clone-raspberry-pi-sd-card-windows-linux-macos/
 
 A command like that should do the trick for cloning.
 
-    sudo dd if=custom_raspios.img of=/dev/mmcblk0 bs=4M conv=fsync status=progress
+    sudo dd if=/dev/mmcblk0 of=custom_raspios.img bs=4M conv=fsync status=progress
 
 ## Synology NAS
 Once we have both cameras sharing the stream via IP, we have to configure the NAS side.

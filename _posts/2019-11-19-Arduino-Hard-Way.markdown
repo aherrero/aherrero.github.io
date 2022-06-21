@@ -25,10 +25,9 @@ First, there is good pinout diagram from [circuito.io blog](https://www.circuito
 Following the pinout and this [reference](https://www.arduino.cc/en/Reference/PortManipulation), we could be able to do something.
 
 Basically,
-- To set a pin (put a 1), use the OR operator
-- To clear a pin (put a 0), use the AND operator. Use together with the ~ operator if using positive logic.
-- To toogle a pin (if 0, set to 1, if 1, clear to 0), use XOR operator.
-.
+To set a pin (put a 1), use the OR operator.
+To clear a pin (put a 0), use the AND operator. Use together with the ~ operator if using positive logic.
+To toogle a pin (if 0, set to 1, if 1, clear to 0), use XOR operator.
 
     void setup()
     {
@@ -45,6 +44,7 @@ Basically,
       PORTB = PORTB & B11011111;  // clear out bit PB5, leave others untouched (xx & 11 == xx)
       delay(500);
     }
+
 
 Another way to set and clear the bits is using the shift register. If we want change the bit 5th, the following expression are equivalent:
 

@@ -28,7 +28,7 @@ Basically,
 - To set a pin (put a 1), use the OR operator
 - To clear a pin (put a 0), use the AND operator. Use together with the ~ operator if using positive logic.
 - To toogle a pin (if 0, set to 1, if 1, clear to 0), use XOR operator.
-
+.
 
     void setup()
     {

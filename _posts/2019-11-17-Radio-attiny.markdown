@@ -16,7 +16,7 @@ The goal of this small project is to test the radio modules at 433MHz and the AT
 
 
 # Material
-- [433MHz radio transmitter and receiver](https://www.ebay.com/itm/433-Mhz-Sender-Empfaenger-RF-Funk-Modul-FS1000A-xy-mk-5v-Arduino-Raspberry-Pi-/252713874815)
+- [433MHz radio transmitter and receiver](https://www.amazon.de/dp/B07DK3BGWZ)
 - [ATtiny85 microcontroller](https://www.sparkfun.com/products/9378)
 - 2 x [Pushbuton](https://www.sparkfun.com/products/9190)
 - Anyway for power supply, e.g.: Connector to [micro usb](https://www.sparkfun.com/products/12035) or [L7805 Voltage regulator 5V](https://www.sparkfun.com/products/107)

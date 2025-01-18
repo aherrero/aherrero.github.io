@@ -27,6 +27,8 @@ github_username:  aherrero
 # Build settings
 markdown: kramdown
 theme: minima
+minima:
+  skin: dark
 gems:
   - jekyll-feed
 

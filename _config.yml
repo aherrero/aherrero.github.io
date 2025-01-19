@@ -26,11 +26,11 @@ github_username:  aherrero
 
 # Build settings
 markdown: kramdown
-theme: minima
+remote_theme: jekyll/minima
+plugins:
+  - jekyll-remote-theme
 minima:
-  skin: dark
-gems:
-  - jekyll-feed
+  skin: dark # or auto if you want it to switch with your system settings.
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list

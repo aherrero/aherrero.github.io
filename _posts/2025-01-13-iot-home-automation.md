@@ -88,6 +88,8 @@ For this second option, there are several guides we could follow:
 * [beginners-guide-to-esp8266-dht11-mqtt-and-home-assistant-integration](https://medium.com/@tomer.klein/title-beginners-guide-to-esp8266-dht11-mqtt-and-home-assistant-integration-7ba75df5ecfb)
 * [how-to-use-mqtt-on-esp8266](https://cedalo.com/blog/how-to-use-mqtt-on-esp8266/)
 
+On my case, I use an ESP8266 and for testing, the Arduino IDE with the PubSubClient library to use the MQTT client. The code I use could be found on [github](https://github.com/aherrero/Mqtt-esp8266-test)
+
 ### MQTT Broker with mosquitto
 Anyway, in order to use a MQTT device on the HA, we have to install a MQTT Broker on the rpi:
 * [How to](https://github.com/home-assistant/addons/blob/174f8e66d0eaa26f01f528beacbde0bd111b711c/mosquitto/DOCS.md#how-to-use)

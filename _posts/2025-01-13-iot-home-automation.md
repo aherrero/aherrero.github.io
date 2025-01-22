@@ -131,9 +131,6 @@ Temperature measurement coming from a ESP device (With one or several sensors co
     * Using directly Matter protocol with Arduino Nano Matter
 
 
-{% include button.html url="https://aherrero.github.io/iot/arduino/electronics/mqtt/esp/2025/01/22/iot-home-automation-esp.html" %}
-
-
 <button onclick="window.location.href='https://aherrero.github.io/iot/arduino/electronics/mqtt/esp/2025/01/22/iot-home-automation-esp.html';">Next project</button>
 
 

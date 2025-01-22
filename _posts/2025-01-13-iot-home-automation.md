@@ -47,6 +47,7 @@ Radio
 ## Home Assistant (HA)
 
 ![iot](/assets/20250113/15.png)
+
 All pretty straight forward to install the HA in the raspberry pi (In my case Rpi3), on the [official documentation](https://www.home-assistant.io/installation/raspberrypi)
 
 The assistant will probably already find some devices that can be added to the network, and you can spend a good couple of hours clicking through all the possible possibilities without watching any tutorials.
@@ -76,7 +77,7 @@ I have two kind of sensors using Zigbee at this moment:
 
 ![iot](/assets/20250113/16.png)
 
-Now the fun / most custom IoT part: Developing our own sensors. In the rpi, we can install a MQTT broker (With the help of HA) and our Wifi systems MQTT client could communicate and be part of the HA whole system.
+Now the fun / most custom IoT part: Developing our own sensors. In the rpi, we can install a MQTT broker (With the help of the HA) and our Wi-Fi systems MQTT client could communicate and be part of the HA whole system.
 
 Two kind of programming our ESP devices
 * The easiest way, with [ESPHome](https://esphome.io/guides/getting_started_command_line)
@@ -88,7 +89,8 @@ For this second option, there are several guides we could follow:
 * [beginners-guide-to-esp8266-dht11-mqtt-and-home-assistant-integration](https://medium.com/@tomer.klein/title-beginners-guide-to-esp8266-dht11-mqtt-and-home-assistant-integration-7ba75df5ecfb)
 * [how-to-use-mqtt-on-esp8266](https://cedalo.com/blog/how-to-use-mqtt-on-esp8266/)
 
-On my case, I use an ESP8266 and for testing, the Arduino IDE with the PubSubClient library to use the MQTT client. The code I use could be found on [github](https://github.com/aherrero/Mqtt-esp8266-test). There will be more development using the Espressif microcontrollers (ESP8266 and ESP32) on the following post.
+On my case, I use an ESP8266 and for testing, the Arduino IDE with the PubSubClient library to use the MQTT client. The code I use could be found on [github](https://github.com/aherrero/Mqtt-esp8266-test). 
+There will be more development using the Espressif microcontrollers (ESP8266 and ESP32) on the following post.
 
 ### MQTT Broker with mosquitto
 Anyway, in order to use a MQTT device on the HA, we have to install a MQTT Broker on the rpi:

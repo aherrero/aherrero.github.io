@@ -1,10 +1,9 @@
 ---
 layout: post
-title:  "Home Automation - IoT"
-date:   2025-01-13 08:00 +0200
+title: Home Automation - Introduction
+date: 2025-01-13 08:00 +0200
 categories: iot arduino electronics ble mqtt matter thread
 comments: true
-
 ---
 
 # Introduction
@@ -28,8 +27,9 @@ Image from [leonardocavagnis](https://leonardocavagnis.medium.com/retrofitting-w
 In my case, I am interesting in connecting the different devices I have at home, plus some devices I had to buy in order to test all the possibilities of the system.
 
 Wi-Fi
-* Matter devices as the IKEA Dirigera Controller, with some devices such as lights, door sensor and smart plugs. All IKEA sensors are ZigBee but with the Dirigera, it will be controlled by WiFi
+* Matter devices as the IKEA Dirigera Controller, with some devices such as lights, door sensor and smart plugs. All IKEA sensors are ZigBee but with the Dirigera, they can be controlled by WiFi
 * Smart TV (Samsung TV)
+* Vacuum cleaner
 * MQTT devices with ESP32/ESP8266 connecting sensors or relays
 * MQTT devices with RPi
 
@@ -79,7 +79,7 @@ I have two kind of sensors using Zigbee at this moment:
 Now the fun / most custom IoT part: Developing our own sensors. In the rpi, we can install a MQTT broker (With the help of HA) and our Wifi systems MQTT client could communicate and be part of the HA whole system.
 
 Two kind of programming our ESP devices
-* The easiest way, with [ESPHome](https://randomnerdtutorials.com/getting-started-with-esp8266-wifi-transceiver-review/)
+* The easiest way, with [ESPHome](https://esphome.io/guides/getting_started_command_line)
 * Programming an MQTT client from zero, with Arduino IDE, VSCode or ESP SDK
 
 ### MQTT Client with ESP8266
@@ -88,7 +88,7 @@ For this second option, there are several guides we could follow:
 * [beginners-guide-to-esp8266-dht11-mqtt-and-home-assistant-integration](https://medium.com/@tomer.klein/title-beginners-guide-to-esp8266-dht11-mqtt-and-home-assistant-integration-7ba75df5ecfb)
 * [how-to-use-mqtt-on-esp8266](https://cedalo.com/blog/how-to-use-mqtt-on-esp8266/)
 
-On my case, I use an ESP8266 and for testing, the Arduino IDE with the PubSubClient library to use the MQTT client. The code I use could be found on [github](https://github.com/aherrero/Mqtt-esp8266-test)
+On my case, I use an ESP8266 and for testing, the Arduino IDE with the PubSubClient library to use the MQTT client. The code I use could be found on [github](https://github.com/aherrero/Mqtt-esp8266-test). There will be more development using the Espressif microcontrollers (ESP8266 and ESP32) on the following post.
 
 ### MQTT Broker with mosquitto
 Anyway, in order to use a MQTT device on the HA, we have to install a MQTT Broker on the rpi:
@@ -123,7 +123,7 @@ Temperature measurement coming from a ESP device (With one or several sensors co
 # Wrap-up and Ideas for Enhancement
 * In this post, we configure Home Assistent and basic configuration, covering from standard IoT devices such as the IKEA devices, or ZigBee devices, and also own devices with ESP & MQTT.
 * For the next project,
-    * Use ESPHome, instead of developing MQTT device from zero
+    * Use [ESPHome](https://esphome.io/guides/getting_started_command_line), instead of developing MQTT device from zero
     * We could finish the implementation of a MQTT device with ESP32/ESP8266 with real sensors and battery powered
     * Work on Bluetooth Low Energy with nRF and seeing the capabilitiies to connect to our system
     * Using directly Matter protocol with Arduino Nano Matter

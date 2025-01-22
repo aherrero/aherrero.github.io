@@ -124,11 +124,18 @@ Temperature measurement coming from a ESP device (With one or several sensors co
 
 # Wrap-up and Ideas for Enhancement
 * In this post, we configure Home Assistent and basic configuration, covering from standard IoT devices such as the IKEA devices, or ZigBee devices, and also own devices with ESP & MQTT.
-* For the next project,
+* For the future projects,
     * Use [ESPHome](https://esphome.io/guides/getting_started_command_line), instead of developing MQTT device from zero
     * We could finish the implementation of a MQTT device with ESP32/ESP8266 with real sensors and battery powered
     * Work on Bluetooth Low Energy with nRF and seeing the capabilitiies to connect to our system
     * Using directly Matter protocol with Arduino Nano Matter
+
+
+{% include button.html url="https://aherrero.github.io/iot/arduino/electronics/mqtt/esp/2025/01/22/iot-home-automation-esp.html" %}
+
+
+<button onclick="window.location.href='https://aherrero.github.io/iot/arduino/electronics/mqtt/esp/2025/01/22/iot-home-automation-esp.html';">Next project</button>
+
 
 
 ***

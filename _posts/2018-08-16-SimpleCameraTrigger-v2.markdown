@@ -30,9 +30,9 @@ In the [previous version](https://aherrero.github.io/arduino/iot/2018/08/14/Simp
 
 ## Arduino Pro Mini
 
-![ardu pro mini](https://cdn.sparkfun.com//assets/parts/6/5/4/0/11114-01.jpg)
+![ardu pro mini](https://cdn.sparkfun.com//assets/images/parts/6/5/4/0/11114-01.jpg)
 
-![Pinout](/assets/cam01/arduino-pinout.jpg)
+![Pinout](/assets/images/cam01/arduino-pinout.jpg)
 
 [Download pdf datasheet from here](https://cdn.sparkfun.com/datasheets/Dev/Arduino/Boards/ProMini8MHzv1.pdf)
 
@@ -40,13 +40,13 @@ In the [previous version](https://aherrero.github.io/arduino/iot/2018/08/14/Simp
 ### Battery
 I have two kind of batteries,
 
-![power1](/assets/cam01/power1.jpg)
+![power1](/assets/images/cam01/power1.jpg)
 
 [Buy from sparkfun](https://www.sparkfun.com/products/13851)
 
 or
 
-![power2](/assets/cam01/power2.jpg)
+![power2](/assets/images/cam01/power2.jpg)
 
 [Buy from hobby king](https://hobbyking.com/en_us/zippy-flightmax-1800mah-3s1p-20c.html?___store=en_us)
 
@@ -59,7 +59,7 @@ In the past, I've used voltage regulator to [convert to 5V](https://www.sparkfun
 I've bought this regulator because it is possible also to regulate the current with them, but in this case, it is a great opportunity to use as voltage regulator.
 
 I've found this [schema](https://microcontrollerelectronics.com/lm317-3-3v-source/),
-![lm317_schema.png](/assets/cam01/lm317_schema.png)
+![lm317_schema.png](/assets/images/cam01/lm317_schema.png)
 
 which it's nice, because we have the capacitor to improve the stability of the current, and we have even [this calculator](http://www.reuk.co.uk/wordpress/electric-circuit/lm317-voltage-calculator/) to calculate the resistor for our desired output voltage.
 
@@ -79,24 +79,24 @@ And, in this case, instead of control a [motor](http://bildr.org/2012/03/rfp30n0
 ### Button
 [Buttons](https://www.arduino.cc/en/Tutorial/Button)
 
-![](https://cdn.sparkfun.com//assets/parts/2/6/2/9/09190-03-L.jpg)
+![](https://cdn.sparkfun.com//assets/images/parts/2/6/2/9/09190-03-L.jpg)
 
 ### Display
 [4 digits 7 segments](https://www.hackster.io/SAnwandter1/programming-4-digit-7-segment-led-display-2d33f8)
 
-![](https://cdn.sparkfun.com//assets/parts/7/2/8/8/11441-01.jpeg)
+![](https://cdn.sparkfun.com//assets/images/parts/7/2/8/8/11441-01.jpeg)
 
 
 [7 segments - link 1](https://www.allaboutcircuits.com/projects/interface-a-seven-segment-display-to-an-arduino/)
 
 [7 segments - link 2](http://elcajondeardu.blogspot.com/2014/04/display-de-7-segmentos-1-digito.html)
 
-![](https://cdn.sparkfun.com//assets/parts/1/2/9/0/7SegmentRedLed-04-L.jpg)
+![](https://cdn.sparkfun.com//assets/images/parts/1/2/9/0/7SegmentRedLed-04-L.jpg)
 
 
 ## Electrical Schema
 
-![quickSchema.jpg](/assets/cam01/quickSchema.jpg)
+![quickSchema.jpg](/assets/images/cam01/quickSchema.jpg)
 
 ## Problems
 

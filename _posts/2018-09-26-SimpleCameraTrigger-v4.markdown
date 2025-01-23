@@ -14,7 +14,7 @@ Also, in the [Arduino To Breadboard entry](https://aherrero.github.io/arduino/io
 
 So, this version will improve the version 3 with the same components to put it in a Prototype PCB.
 
-![pcb_complete.JPG](/assets/cam01/pcb_complete.JPG)
+![pcb_complete.JPG](/assets/images/cam01/pcb_complete.JPG)
 
 ## List of components
 - [7-segment display](https://www.sparkfun.com/products/8546)
@@ -47,7 +47,7 @@ You only have to drag and drop the main components you want to use it, and the t
 
 Brief, if in this project I want to use a Atmega328p, 7-segements display, 3 buttons and IR Led, I have to place this 4 kind of components, and the tool is going to tell me what are all the connexion!
 
-![board-328.JPG](/assets/cam01/board-328.png)
+![board-328.JPG](/assets/images/cam01/board-328.png)
 
 Sure, it is not perfect, but it give to you an idea about what you want.
 
@@ -56,7 +56,7 @@ As I didn't design the PCB schematic, I put all my components in a prototype PCB
 
 | PCB Front | PCB Back|
 |-------|--------|
-| ![PCB_Front.JPG](/assets/cam01/PCB_Front.JPG) | ![PCB_Back.JPG](/assets/cam01/PCB_Back.JPG) |
+| ![PCB_Front.JPG](/assets/images/cam01/PCB_Front.JPG) | ![PCB_Back.JPG](/assets/images/cam01/PCB_Back.JPG) |
 
 ## Software
 I did a state machine to change between the configuration of timing and the trigger operation.
@@ -71,7 +71,7 @@ You can see all of the code from my [github](https://github.com/aherrero/CAM01_S
 
 You could manufacture your own box if you want to carry this remote control outside
 
-![PCB_Back.JPG](/assets/cam01/box_pcb.JPG)
+![PCB_Back.JPG](/assets/images/cam01/box_pcb.JPG)
 
 ... or [buy one](https://www.distrelec.ch/en/plastic-enclosure-65-120-40-mm-grey-abs-high-impact-ip54-rnd-components-rnd-455-00052/p/30043295). You saw the results. And there are hundreds of boxes.
 

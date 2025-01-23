@@ -18,7 +18,7 @@ First, probably there are more sophisticate shutter already in the market to set
 
 Final result:
 
-![CAM01_05.JPG](/assets/cam01/CAM01_05.JPG)
+![CAM01_05.JPG](/assets/images/cam01/CAM01_05.JPG)
 
 ## Overkill
 Let's talk about this project that I've discarded (because there were more complex, or even more simpler and I want it something DIY and for NOW).
@@ -26,7 +26,7 @@ Let's talk about this project that I've discarded (because there were more compl
 ### Automatic shutter
 Exactly the thing I want. But in the market and even cheaper.
 On the other hand, I don't know if this will work for my camera.
-![rpi01_1](/assets/cam01/amazon1.jpg)
+![rpi01_1](/assets/images/cam01/amazon1.jpg)
 [Buy in amazon](https://www.amazon.fr/S2-D%C3%A9clencheur-T%C3%A9l%C3%A9commande-obturateur-RX100II/dp/B06ZYKWL8M/ref=sr_1_3?ie=UTF8&qid=1534395448&sr=8-3&keywords=telecommande+sony+camera)
 
 ### IR Led Emitter - Receiver
@@ -48,15 +48,15 @@ The problem with that... Even if normally I am a software guy, I don't want to m
 ## Current project.
 Now, let's talk about my chosen project.
 Currently, I have this control remote.
-![rpi01_1](/assets/cam01/amazon2.jpg)
+![rpi01_1](/assets/images/cam01/amazon2.jpg)
 It's working fine, you can trigger the shooter instantly, or wait 2 seconds.
 [Buy here](https://www.amazon.fr/IR-Telecommande-TOOGOO-Cameras-Compact/dp/B01G37SVXG/ref=sr_1_2?ie=UTF8&qid=1534395448&sr=8-2&keywords=telecommande+sony+camera)
 
 Let's dismount what there is inside the remote control:
 
-![CAM01_01.JPG](/assets/cam01/CAM01_01.JPG)
+![CAM01_01.JPG](/assets/images/cam01/CAM01_01.JPG)
 
-![CAM01_02.JPG](/assets/cam01/CAM01_02.JPG)
+![CAM01_02.JPG](/assets/images/cam01/CAM01_02.JPG)
 
 So, we have two buttons, with two metallic parts. They make the contact and short circuit to send the IR command, though that small microcontroller which I guess, the protocol is encoded.
 
@@ -68,29 +68,29 @@ Pretty simple. So the only thing we have to do is control the switch for the tri
 
 So, it is a relay, but not a mechanical relay, an electronic relay... Wait, there is something that arrives to my thoughts, from the university... Wait a minute. Am I looking for a transistor??
 
-![CAM01_03.JPG](/assets/cam01/CAM01_03.JPG)
+![CAM01_03.JPG](/assets/images/cam01/CAM01_03.JPG)
 
 And I'm going to control from an Arduino. And thinking about powering and to reduce current consummation (we will talk about this later on but, basically, the project intents to have battery for longs period) so, we will use an [Arduino Mini Pro](https://learn.sparkfun.com/tutorials/using-the-arduino-pro-mini-33v)
 
 To control the trigger, we've talked about a transistor. So, we can use something similar described in this [tutorial](https://hackaday.com/2017/09/07/switching-from-relays-to-bipolar-junction-transistors/) or [this](https://www.hackster.io/Arduino_Scuola/how-to-use-bjts-9461d6) for starting.
 
-![bjt-switch-control1.jpg](/assets/cam01/bjt-switch-control1.jpg)
+![bjt-switch-control1.jpg](/assets/images/cam01/bjt-switch-control1.jpg)
 
 The pinout of the transistor,
 
-![bjt1.jpg](/assets/cam01/bjt1.jpg)
+![bjt1.jpg](/assets/images/cam01/bjt1.jpg)
 
 or
 
-![bjt2.jpg](/assets/cam01/bjt2.jpg)
+![bjt2.jpg](/assets/images/cam01/bjt2.jpg)
 
 We could control the trigger, and let the power supply (At this moment, the coin cell) powering always, or we can control the power supply (allowing the current or not) and short-cutting the trigger. I've decided this second option because; It's working. At I reduce the power consummation.
 
 ### Functional prototype
 
-![CAM01_05.JPG](/assets/cam01/CAM01_05.JPG)
+![CAM01_05.JPG](/assets/images/cam01/CAM01_05.JPG)
 
-![CAM01_06.JPG](/assets/cam01/CAM01_06.JPG)
+![CAM01_06.JPG](/assets/images/cam01/CAM01_06.JPG)
 
 ### Sample Code
 

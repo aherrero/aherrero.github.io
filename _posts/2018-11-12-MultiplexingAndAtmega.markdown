@@ -37,7 +37,7 @@ Normally, I prefer the [tutorials from sparkfun](https://learn.sparkfun.com/tuto
 
 With the schema from the [datasheet](http://www.ti.com/lit/ds/symlink/sn74hc595.pdf),
 
-![595_pin_diagram](/assets/SN74HC595/595_pin_diagram.png)
+![595_pin_diagram](/assets/images/SN74HC595/595_pin_diagram.png)
 
 We can start cabling the shift register;
 - VCC and MR pins to VCC
@@ -46,14 +46,14 @@ We can start cabling the shift register;
 - SH_CP (pin 11), clock pin (yellow cable in schematic), to Arduino 12
 - ST_CP (pin 12), latch pin (green cable in schematic), to Arduino 8
 
-![ShftOutExmp1_2.gif](/assets/SN74HC595/ShftOutExmp1_2.gif)
+![ShftOutExmp1_2.gif](/assets/images/SN74HC595/ShftOutExmp1_2.gif)
 
 After that, connect all the outputs (in this case, 8 leds) to the Q0-Q7 pins. Don't forget the resistor before the led.
 Also, as recommendation, capacitor 10uF between VCC and GND.
 
-![ShftOutExmp1_3.gif](/assets/SN74HC595/ShftOutExmp1_3.gif)
+![ShftOutExmp1_3.gif](/assets/images/SN74HC595/ShftOutExmp1_3.gif)
 
-![ShftOut_Schm1.jpg](/assets/SN74HC595/ShftOut_Schm1.jpg)
+![ShftOut_Schm1.jpg](/assets/images/SN74HC595/ShftOut_Schm1.jpg)
 
 #### Software
 You could see the software explained in the Arduino webpage, but it is basically,
@@ -163,12 +163,12 @@ We can start cabling the shift register;
 - SH_CP (pin 11), clock pin (Same pin from Arduino, we could connect this directly to the first clock)
 - ST_CP (pin 12), latch pin (Same pin also, connect to the first latch)
 
-![ShftOutExmp2_2.gif](/assets/SN74HC595/ShftOutExmp2_2.gif)
+![ShftOutExmp2_2.gif](/assets/images/SN74HC595/ShftOutExmp2_2.gif)
 
 And that's it!
 Then, you could connect the outputs to whatever you want to control.
 
-![ShftOut_Schm2.jpg](/assets/SN74HC595/ShftOut_Schm2.jpg)
+![ShftOut_Schm2.jpg](/assets/images/SN74HC595/ShftOut_Schm2.jpg)
 
 ### Software
 The differences between one register to two register or more is the array you could create to enable/disable pins (0-1) and the times you call the function shiftOut
@@ -226,14 +226,14 @@ And we could merge the project with the [AtmegaWithRTC](https://aherrero.github.
 
 Otherwise, we could continue using the watch from the microwave =D
 
-![DSC_0487_2.JPG](/assets/SN74HC595/DSC_0487_2.JPG)
+![DSC_0487_2.JPG](/assets/images/SN74HC595/DSC_0487_2.JPG)
 
 #### Software
 Software in my github, [TMR1_v2_rtcLowDisplay](https://github.com/aherrero/TMR03_Wallclock/tree/master/Software/TMR1_v2_rtcLowDisplay)
 
 You have to be careful what leds you want to turn on / turn off.
 
-![7segment.jpg](/assets/SN74HC595/7segment.jpg)
+![7segment.jpg](/assets/images/SN74HC595/7segment.jpg)
 
 If you connect (Q0, ..., Q6) from the shift register, with the segments (a,..., g) and your display is Common anode (VCC connected to display) the following array is applicable,
 

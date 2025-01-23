@@ -10,7 +10,7 @@ comments: true
 The goal of this project is to make "smart" an old scanner.
 We will have a button to automatically scan what ever you want and send this information to a shared disk, to be accessible from another computer (or in best cases, from mobile phone).
 
-![rpi01_1](/assets/smart_scanner/general.JPG)
+![rpi01_1](/assets/images/smart_scanner/general.JPG)
 
 ## Build of materials
 - [Raspberry Pi Model A](https://www.adafruit.com/product/1344) (The first rpi model, although, it doesn't matter which rpi you will use)
@@ -62,7 +62,7 @@ I let you a small [example](https://www.hackster.io/hardikrathod/push-button-wit
 You should know the pin-out of your rpi.
 As I've used a rpi model 1, this is my pin-out
 
-![rpi01_5](/assets/smart_scanner/rpi-pinout.jpg)
+![rpi01_5](/assets/images/smart_scanner/rpi-pinout.jpg)
 
 
 We can start with the example code from the page below, and then, add the other led and do what you want to do when you press a button
@@ -100,11 +100,11 @@ To call the libraries, we can use simple the "call" function, in python -> [Exam
 
 This is the final configuration for the button, 2 leds and the pin-out.
 
-![rpi01_3](/assets/smart_scanner/pcb-front.JPG)
+![rpi01_3](/assets/images/smart_scanner/pcb-front.JPG)
 
-![rpi01_2](/assets/smart_scanner/pcb-back.JPG)
+![rpi01_2](/assets/images/smart_scanner/pcb-back.JPG)
 
-![rpi01_4](/assets/smart_scanner/pinout.JPG)
+![rpi01_4](/assets/images/smart_scanner/pinout.JPG)
 
 **SW**
 

@@ -15,7 +15,7 @@ Imagine you have a _a new and puppy_ dog, and you have to and you have to leave 
 
 So, as the normal surveillance cameras + interface are so expensive and you want something quick and dirty, as usual, you use whatever you have at home.
 
-![material](/assets/2021may/material.jpeg)
+![material](/assets/images/2021may/material.jpeg)
 
 
 ### Target
@@ -73,12 +73,12 @@ In Synology, the package for the NAS station is called Synology surveillance.
 
 The configuration is easy, it is only set the IP and the port where you are doing the straming.. and that's it !
 
-![nas_surveillance_config](/assets/2021may/nas_surveillance_config.png)
+![nas_surveillance_config](/assets/images/2021may/nas_surveillance_config.png)
 
 ### Web
 The NAS can record several cameras at the same time, activate only with movement and also track some features (not tested on my side). More information in the synology [website](https://www.synology.com/en-global/surveillance)
 
-![web](/assets/2021may/web.png)
+![web](/assets/images/2021may/web.png)
 
 ### Mobile - Android
 As usual with synology, every tool on the web has a good application for smartphone.

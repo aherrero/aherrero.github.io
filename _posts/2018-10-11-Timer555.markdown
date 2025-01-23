@@ -12,7 +12,7 @@ I've remember when I learned about oscillators,  multivibrators, flip-flop and s
 
 Example of what horrified me:
 
-![tim20.gif](/assets/tmr02/tim20.gif)
+![tim20.gif](/assets/images/tmr02/tim20.gif)
 
 [Astable Multivibrator tutorial](https://www.electronics-tutorials.ws/waveforms/astable.html)
 
@@ -31,7 +31,7 @@ In other worlds, it is a small chip, not at all expensive, and very old in the m
 
 The IC 555 has three operating modes: Astable, Monostable and Bistable.
 
-![555_Pinout.svg](/assets/tmr02/555_Pinout.svg)
+![555_Pinout.svg](/assets/images/tmr02/555_Pinout.svg)
 
 You can read the datasheet from [Texas Instruments](http://www.ti.com/lit/ds/symlink/ne555.pdf)
 
@@ -49,13 +49,13 @@ We are going to build a basic astable with the timer 555. For that, I have two r
 
 This is a basic layout:
 
-![tim47.gif](/assets/tmr02/tim47.gif)
+![tim47.gif](/assets/images/tmr02/tim47.gif)
 
 And the formules to calculate the passive components in function of how much frequency, duty cycle etc, you want
 
-![tim49.gif](/assets/tmr02/tim49.gif)
+![tim49.gif](/assets/images/tmr02/tim49.gif)
 
-![tim50.gif](/assets/tmr02/tim50.gif)
+![tim50.gif](/assets/images/tmr02/tim50.gif)
 
 With this [calculator](http://www.ohmslawcalculator.com/555-astable-calculator), we can calculate the passive components that we want for our cycle.
 
@@ -68,7 +68,7 @@ In this case, for a cycle high and low around **350ms each**, I choose the compo
 
 | Simple Output| Double Output|
 |-------|--------|
-| ![PCB_Front.JPG](/assets/tmr02/555_simpleOut_2.JPG) | ![PCB_Back.JPG](/assets/tmr02/555_doubleOut_2.JPG) |
+| ![PCB_Front.JPG](/assets/images/tmr02/555_simpleOut_2.JPG) | ![PCB_Back.JPG](/assets/images/tmr02/555_doubleOut_2.JPG) |
 
 Video:
 

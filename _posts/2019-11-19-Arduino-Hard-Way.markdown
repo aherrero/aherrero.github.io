@@ -19,7 +19,7 @@ Why do that?
 # First steps
 First, there is good pinout diagram from [circuito.io blog](https://www.circuito.io/blog/arduino-uno-pinout/)
 
-![pinout atmega arduino](/assets/cam01/arduino-uno-pinout-diagram.png)
+![pinout atmega arduino](/assets/images/cam01/arduino-uno-pinout-diagram.png)
 
 # Hello World (Blink!)
 Following the pinout and this [reference](https://www.arduino.cc/en/Reference/PortManipulation), we could be able to do something.

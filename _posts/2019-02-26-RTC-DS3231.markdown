@@ -20,7 +20,7 @@ In this test, I am going to use the [DS3231](https://eu.mouser.com/ProductDetail
 
 The  DS3231  is  a  extremely  accurate  I2C real-time  clock  (RTC)  with  an  integrated  temperature-compensated   crystal   oscillator   (TCXO)   and   crystal.   The  device  incorporates  a  battery  input,  and  maintains  accurate  timekeeping  when  main  power  to  the  device  is  interrupted.  The  integration  of  the  crystal  resonator  enhances  the  long-term  accuracy  of  the  device  as  well  as  reduces  the  piece-part  count  in  a  manufacturing  line.
 
-![rtc](/assets/tmr01v3/rtc2.jpg)
+![rtc](/assets/images/tmr01v3/rtc2.jpg)
 
 ## Price
 I've consider is quite expensive (~8e), compare with others RTC (Although, it is more precise, oscillator integrated and temperature sensor for compensation...) but, as always, you can buy in [aliexpress](https://www.aliexpress.com/item/Real-Time-Clock-chip-10PCS-DS3231SN-DS3231-16-SOIC/32837219361.html?spm=a2g0y.10010108.1000001.8.1c1e56388z8bpw) for much less.
@@ -31,9 +31,9 @@ Adafruit has a [breakout pcb](https://learn.adafruit.com/adafruit-ds3231-precisi
 ## Pinout
 You can find the pinout in the official [datasheet](https://eu.mouser.com/datasheet/2/256/DS3231-1513891.pdf),
 
-![Pinout1](/assets/tmr01v3/pinout1.png)
+![Pinout1](/assets/images/tmr01v3/pinout1.png)
 
-![Pinout2](/assets/tmr01v3/pinout2.png)
+![Pinout2](/assets/images/tmr01v3/pinout2.png)
 
 And an [example](https://simple-circuit.com/pic16f877a-ds3231-rtc-set-buttons/) with the tyipical values for the component for using with a pic microcontroller
 

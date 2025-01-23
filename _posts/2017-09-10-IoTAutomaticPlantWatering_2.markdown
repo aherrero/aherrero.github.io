@@ -14,7 +14,7 @@ The arduino will sleep 24 hours, then the sensor will read the value, and it wil
 
 ## Prototype v1.1
 
-![alt text](/assets/IoTAutomaticPlantWatering_v1.1/complete.JPG)
+![alt text](/assets/images/IoTAutomaticPlantWatering_v1.1/complete.JPG)
 
 ## Material used
 - [Arduino Uno](https://www.sparkfun.com/products/11021) or [Arduino Pro Mini 5V](https://www.sparkfun.com/products/11113)
@@ -41,7 +41,7 @@ The circuit to control the Pump Motor is through a mosfet IRF540N, where the mos
 
 This is the circuit:
 
-![alt text](/assets/IoTAutomaticPlantWatering_v0.1/mosfetControl.png)
+![alt text](/assets/images/IoTAutomaticPlantWatering_v0.1/mosfetControl.png)
 
 More information: [http://bildr.org/2012/03/rfp30n06le-arduino/](http://bildr.org/2012/03/rfp30n06le-arduino/)
 
@@ -52,7 +52,7 @@ The full circuit is powered by a Lipo, but with the current controlled, to avoid
 
 The circuit will be:
 
-![alt text](/assets/IoTAutomaticPlantWatering_v0.2/7812Circuit.png)
+![alt text](/assets/images/IoTAutomaticPlantWatering_v0.2/7812Circuit.png)
 
 Direct circuit application from the [Datasheet](https://cdn.sparkfun.com/datasheets/Components/General/TO-220.pdf)
 
@@ -74,11 +74,11 @@ The threshold for me was 800 in raw value (from a 1024 ADC values)
 
 Also, if you are going to use the system outside, you probably want cover the sensor from the water:
 
-![alt text](/assets/IoTAutomaticPlantWatering_v0.1/moisturesensor.JPG)
+![alt text](/assets/images/IoTAutomaticPlantWatering_v0.1/moisturesensor.JPG)
 
 ### Schematic
 
-![alt text](/assets/IoTAutomaticPlantWatering_v1.1/schematic.png)
+![alt text](/assets/images/IoTAutomaticPlantWatering_v1.1/schematic.png)
 
 ### Code
 

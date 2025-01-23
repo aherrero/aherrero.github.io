@@ -67,7 +67,7 @@ The schematics is pretty simple:
 - Push button for displaying the time
 - Test point for programming (ISP programming) and serial communication for Debug (RX,TX)
 
-![atmega_schematics.png](/assets/tmr01_v2/bora2/atmega_schematics.png)
+![atmega_schematics.png](/assets/images/tmr01_v2/bora2/atmega_schematics.png)
 
 ### Board
 
@@ -99,7 +99,7 @@ You can find the software in [github](https://github.com/aherrero/TMR01_Watch/tr
 ### Bootloader
 I've use the [MiniCore](https://github.com/MCUdude/MiniCore) library with Arduino to configure the fuses of the atmega, with the following configuration:
 
-![arduino_config.png](/assets/tmr01_v2/bora2/arduino_config.png)
+![arduino_config.png](/assets/images/tmr01_v2/bora2/arduino_config.png)
 
 ### Programming
 #TODO

@@ -10,7 +10,7 @@ youtubelink: U-sQe68Bytg
 ## Sunday's
 Hummm... Arduino, motor shield to control CC motors, 4 motors, 4 wheels, battery and a RC radio... What could I do with that? =D
 
-![1](/assets/rbt02/1.JPG)
+![1](/assets/images/rbt02/1.JPG)
 
 ## Bill of materials
 Having all those components, thinking about putting them together and build something; it is not a big deal, but, it is always funny for Sunday.
@@ -34,9 +34,9 @@ Basically, connecting everything:
 
 Et voilà!
 
-![2](/assets/rbt02/2.JPG)
+![2](/assets/images/rbt02/2.JPG)
 
-![4](/assets/rbt02/4.JPG)
+![4](/assets/images/rbt02/4.JPG)
 
 ## Software
 The full source code in my [github](https://github.com/aherrero/RBT02_MobileRobot/tree/master/Software)
@@ -94,7 +94,7 @@ We could use this [expression](http://www.benripley.com/diy/arduino/three-ways-t
 ## Final results
 The result,
 
-![3](/assets/rbt02/3.JPG)
+![3](/assets/images/rbt02/3.JPG)
 
 And the video expected,
 

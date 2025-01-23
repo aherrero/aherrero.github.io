@@ -33,7 +33,7 @@ You can follow the [sparkfun tutorial](https://learn.sparkfun.com/tutorials/ir-c
 
 The IR sensor will be connected as a normal LED, but the signal will be connected to the pin 3 in the Arduino Uno. The receiver in this case is not neccesary.
 
-![IR Sensor](https://cdn.sparkfun.com/r/600-600/assets/2/b/c/9/d/5159e97fce395f6d42000000.jpg)
+![IR Sensor](https://cdn.sparkfun.com/r/600-600/assets/images/2/b/c/9/d/5159e97fce395f6d42000000.jpg)
 
 The code for that could be the IRSendDemo included in the library;
 
@@ -74,7 +74,7 @@ With that, you can really test if the IR sensor is working with the camera. And 
 ## Button
 The buttons will be useful to configure the time of the timelapse.
 
-![](https://cdn.sparkfun.com//assets/parts/2/6/2/9/09190-03-L.jpg)
+![](https://cdn.sparkfun.com//assets/images/parts/2/6/2/9/09190-03-L.jpg)
 
 We can see and example about how to use a button from [Arduino webpage](https://www.arduino.cc/en/tutorial/pushbutton)
 
@@ -100,7 +100,7 @@ All the tutorial are done for the typical one, which s the common cathode, but I
 
 Schematic from this [tutorial](https://electronicsforu.com/resources/7-segment-display-pinout-understanding),
 
-![display schematic](/assets/cam01/arduino-interfacing-sample-display.jpg)
+![display schematic](/assets/images/cam01/arduino-interfacing-sample-display.jpg)
 
 And a pretty code for using it in this [tutorial](https://www.jameco.com/jameco/workshop/techtip/working-with-seven-segment-displays.html)
 

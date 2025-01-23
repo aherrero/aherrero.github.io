@@ -9,7 +9,7 @@ youtubeId2: r8ElZAFM2SY
 youtubeId3: nhzhC5NQzSk
 ---
 
-![borarm_v1_img](/assets/borarm/2.1_2.JPG)
+![borarm_v1_img](/assets/images/borarm/2.1_2.JPG)
 
 # Borarm as a first robotic Arm
 The goal of this projects is very simple to understand: Build a simple robotic arm to start using Arduino again.
@@ -27,7 +27,7 @@ But until then, there is so much work to do.
 # Servo testing
 The first to do is to try the electronic available.
 
-![borarm_v1_img](/assets/borarm/1.1_2.JPG)
+![borarm_v1_img](/assets/images/borarm/1.1_2.JPG)
 
 Here is where I've realized that the servos need more power, more current. So, I use an external power supply for the servos (using a microusb adaptator and a normal tranformer from a mobile, 5V, 2A) to move them, and we can use also this power supply to turn on the Arduino with the pin Vin.
 
@@ -36,17 +36,17 @@ The USB cable is connected to the PC for seeing the serial communication termina
 # Structure
 I've used polystyrene to build the structure. Very easy to build something quickly, but not too stable.
 
-![borarm_v1_img](/assets/borarm/1.2_2.JPG)
+![borarm_v1_img](/assets/images/borarm/1.2_2.JPG)
 
 Here, I've realized that I would need spaces between the walls, to restrict the movement. Otherwise, when I tighten the screw, the walls bend. Also, longer screws should work better.
 
-![borarm_v1_img](/assets/borarm/1.4.png)
+![borarm_v1_img](/assets/images/borarm/1.4.png)
 
 In the second iteration,
 
-![borarm_v1_img](/assets/borarm/2.1_2.JPG)
+![borarm_v1_img](/assets/images/borarm/2.1_2.JPG)
 
-![borarm_v1_img](/assets/borarm/2.2_2.JPG)
+![borarm_v1_img](/assets/images/borarm/2.2_2.JPG)
 
 # Control
 I've used a nunchuck to control the servos, instead of multiples potentiometer, or serial communication and a keybord.

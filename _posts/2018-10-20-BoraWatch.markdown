@@ -10,7 +10,7 @@ youtubeTmr01: SHC-i1KxNCg
 ## Introduction
 Hey, I've made my own watch!
 
-![Bora_Watch](/assets/tmr01/DSC_0262_2.JPG)
+![Bora_Watch](/assets/images/tmr01/DSC_0262_2.JPG)
 
 One day, I was really impressed with the project I saw in [hackaday](https://hackaday.com/2018/08/24/an-arduino-watch-without-a-clock/). A project created by [electronoobs](https://www.electronoobs.com/eng_arduino_tut40.php) with internal clock using the atmega328p, 12 leds and resistors, 3V battery and very few components more.
 
@@ -22,7 +22,7 @@ The challenges I had with the project were basically two;
 
 Example of components size,
 
-![DSC_0196_2.JPG](/assets/tmr01/DSC_0196_2.JPG)
+![DSC_0196_2.JPG](/assets/images/tmr01/DSC_0196_2.JPG)
 
 ## Bill-Of-Materials
 - 1 x PCB: [GERBERS here](https://github.com/aherrero/TMR01_Watch/blob/master/v1/HW/Gerber_EN_watch_PCB_20180922223706.zip), [schematics](https://github.com/aherrero/TMR01_Watch/blob/master/v1/HW/Schematic_EN-Bora-watch_Sheet-1_20180922223903.pdf) and [board](https://github.com/aherrero/TMR01_Watch/blob/master/v1/HW/PCB_EN-watch-PCB_20180922223520.pdf). [Designed here](https://easyeda.com/) and [manufactured here](https://jlcpcb.com/)
@@ -46,11 +46,11 @@ I've use the same schematic and board as the original with minor modifications, 
 
 Schematic
 
-![schema](/assets/tmr01/schema.png)
+![schema](/assets/images/tmr01/schema.png)
 
 Board
 
-![board](/assets/tmr01/board.png)
+![board](/assets/images/tmr01/board.png)
 
 It is basically an Atmega328p connected to 12 resistor and 12 leds, to a pushbutton, well configured the reset pin for the bootloader and programming (capacitor and resistor), the pins for programming (SPI and UART) and a battery holder for CR2032.
 
@@ -74,27 +74,27 @@ It is a paste you put in the PCB, you put the components on top of it, and then,
 
 PCB with soldering paste,
 
-![DSC_0198_2.JPG](/assets/tmr01/DSC_0198_2.JPG)
+![DSC_0198_2.JPG](/assets/images/tmr01/DSC_0198_2.JPG)
 
 PCB, paste and components
 
-![DSC_0200_2.JPG](/assets/tmr01/DSC_0200_2.JPG)
+![DSC_0200_2.JPG](/assets/images/tmr01/DSC_0200_2.JPG)
 
 After apply the hot gun,
 
-![DSC_0202_2.JPG](/assets/tmr01/DSC_0202_2.JPG)
+![DSC_0202_2.JPG](/assets/images/tmr01/DSC_0202_2.JPG)
 
 On the back,
 
-![DSC_0204_2.JPG](/assets/tmr01/DSC_0204_2.JPG)
+![DSC_0204_2.JPG](/assets/images/tmr01/DSC_0204_2.JPG)
 
 Atmega328p solder,
 
-![DSC_0205_2.JPG](/assets/tmr01/DSC_0205_2.JPG)
+![DSC_0205_2.JPG](/assets/images/tmr01/DSC_0205_2.JPG)
 
 | Leds and resistors | resistor|
 |-------|--------|
-| ![DSC_0208_2](/assets/tmr01/DSC_0208_2.JPG) | ![DSC_0209_2](/assets/tmr01/DSC_0209_2.JPG) |
+| ![DSC_0208_2](/assets/images/tmr01/DSC_0208_2.JPG) | ![DSC_0209_2](/assets/images/tmr01/DSC_0209_2.JPG) |
 
 Something very important, you should check all the connection after make this procedure (Specially the correlated pins in the microcontroller, and both pins of capacitor and resistor if they are connected between them). It is probably that some components are bad solder and you have to finish the work manually.
 
@@ -108,7 +108,7 @@ In these post I explain basically what we should to do here for having the Atmeg
 
 But one point missing: Connection to this watch.
 
-![boot_1.png](/assets/tmr01/boot_1.png)
+![boot_1.png](/assets/images/tmr01/boot_1.png)
 
 First, I've used Arduino as ISP for burning the bootloader in the watch. This is not the best programmer you should use, and if possible, you could use an [AVR programmer](https://www.sparkfun.com/products/9825).
 
@@ -121,11 +121,11 @@ The complete instructions for the bootloader are also in the [arduino official t
 ### Programming - Transfer the code
 For programming the Arduino we have the UARTs pinout (RX,TX and DTR for the reset) on the watch. We only need an FTDI cable and connect as shown,
 
-![boot_3.png](/assets/tmr01/boot_3.png)
+![boot_3.png](/assets/images/tmr01/boot_3.png)
 
 FTDI pinout,
 
-![FTDI cable schema](/assets/cam01/ftdi_schema.png)
+![FTDI cable schema](/assets/images/cam01/ftdi_schema.png)
 
 In this case, we already have the 0.1uF capacitor between the reset and the DTR line, so, it is not necessary to add.
 
@@ -134,7 +134,7 @@ One of the leds (I don't remember which corresponds to the pin13 in Arduino) is 
 
 Some references with the pinout of the Atmega328p and the Arduino from [circuito.io blog](https://www.circuito.io/blog/arduino-uno-pinout/)
 
-![pinout atmega arduino](/assets/cam01/arduino-uno-pinout-diagram.png)
+![pinout atmega arduino](/assets/images/cam01/arduino-uno-pinout-diagram.png)
 
 And you can download the version of my code, as well ad the original version in my [github](https://github.com/aherrero/TMR01_Watch/tree/master/v1/Software/Code/TMR01_Watch).
 

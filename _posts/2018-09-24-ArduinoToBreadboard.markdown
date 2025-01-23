@@ -49,7 +49,7 @@ You could find additional information about the Arduino ISP in [this link](https
 
 The sketch also supports three LEDs that give you a visual feedback about the programming process (Pins 7,8 and 9)
 
-![programmingISP.JPG](/assets/arduino2breadboard/programmingISP.JPG)
+![programmingISP.JPG](/assets/images/arduino2breadboard/programmingISP.JPG)
 
 ## Programming the Arduino
 Once you have the bootloader inside the Arduino, you can program from different ways:
@@ -61,22 +61,22 @@ Again, in the [official tutorial](https://www.arduino.cc/en/Tutorial/ArduinoToBr
 
 To program the microcontroller, select "Arduino Duemilanove or Nano w/ ATmega328" from the the Tools > Board menu (or "ATmega328 on a breadboard (8 MHz internal clock)" with minimal configuration). Then upload as usual.
 
-![programmingArduino.JPG](/assets/arduino2breadboard/programmingArduino.JPG)
+![programmingArduino.JPG](/assets/images/arduino2breadboard/programmingArduino.JPG)
 
 ### Using FTDI cable.
 This could be useful if you don't have an external Arduino, or you can not remove the Atmega328p from it. Also, if you want to have the pinout for programming easily accesible.
 
 You can follow the steps in [this blog](http://shallowsky.com/blog/hardware/programming-breadboard-atmega.html)
 
-![atmega ftdi](/assets/cam01/bare-atmega-breadboard-ftdi_bb.jpg)
+![atmega ftdi](/assets/images/cam01/bare-atmega-breadboard-ftdi_bb.jpg)
 
 For some reason, the FTDI this tutorial uses has the RX/TX inverted in my FTDI cable. So, you should see the specification of your FTDI chip before of programming (If not, you could have the error of not communication)
 
 In my case, the FTDI cable [specification](https://www.ftdichip.com/Support/Documents/DataSheets/Cables/DS_TTL-232R_CABLES.pdf)
 
-![FTDI cable schema](/assets/cam01/ftdi_schema.png)
+![FTDI cable schema](/assets/images/cam01/ftdi_schema.png)
 
-![programmingFTDI.JPG](/assets/arduino2breadboard/programmingFTDI.JPG)
+![programmingFTDI.JPG](/assets/images/arduino2breadboard/programmingFTDI.JPG)
 
 ### Blink!
 Connect the LED to the famous 13th pin from the Arduino (Wait!! The pin in the Atmega328p which correspond to the PIN13 is the **Pin 19**) and load the Arduino helloworld blink program (don't forget to change to the board Arduino Duemilanove w/ ATmega328).
@@ -96,12 +96,12 @@ A good tutorial to how to use this voltage regulator is [this one](https://www.e
 
 A better one could be the [datasheet of the component.](https://cdn.sparkfun.com/datasheets/Components/General/TO-220.pdf)
 
-![L7800_circuit_example](/assets/cam01/L7800_circuit_example.png)
+![L7800_circuit_example](/assets/images/cam01/L7800_circuit_example.png)
 
 The input could be any voltage from 8V to 20V according the datasheet. That could be a 12V power supply or a 9V battery, for example.
 You should test the 5V voltage in the third pin before to connect to the circuit.
 
-![powering.JPG](/assets/arduino2breadboard/powering.JPG)
+![powering.JPG](/assets/images/arduino2breadboard/powering.JPG)
 
 Another tutorial you could use since program the Arduino to powering is this [instructable](https://www.instructables.com/id/How-to-Build-an-Arduino-Uno-on-a-BreadBoard/).
 
@@ -111,7 +111,7 @@ Only take a look of the [datasheet](http://ww1.microchip.com/downloads/en/Device
 
 You can find a good pinout diagram from [circuito.io blog](https://www.circuito.io/blog/arduino-uno-pinout/)
 
-![pinout atmega arduino](/assets/cam01/arduino-uno-pinout-diagram.png)
+![pinout atmega arduino](/assets/images/cam01/arduino-uno-pinout-diagram.png)
 
 ***
 

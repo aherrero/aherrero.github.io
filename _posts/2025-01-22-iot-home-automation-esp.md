@@ -26,11 +26,11 @@ Using the [Arduino IDE](https://randomnerdtutorials.com/how-to-install-esp8266-b
 
 IDE,
 
-![iot](/assets/20250122/1.png)
+![iot](/assets/images/20250122/1.png)
 
 Examples,
 
-![iot](/assets/20250122/2.png)
+![iot](/assets/images/20250122/2.png)
 
 Blink code example,
 
@@ -68,18 +68,18 @@ Upload the code,
 
 On the Home Assistant side, the ESPHome is detected as new integration, and a new Device (in this case, called espi) could be found
 
-![iot](/assets/20250122/3.png)
+![iot](/assets/images/20250122/3.png)
 
 The feature of the ESP8266 is a simple switch, which will toggle the LED status, D0, between HIGH and LOW. 
 This can now be controlled by the Home Assistant with the control entity
 
-![iot](/assets/20250122/4.png)
+![iot](/assets/images/20250122/4.png)
 
 From here, all the components could be added following the same logic (More component description [here](https://esphome.io/#sensor-components)). 
 
 And after this first programming, the next could be done by OTA.
 
-![iot](/assets/20250122/5.png)
+![iot](/assets/images/20250122/5.png)
 
 ## ESPHome ESP8266 Example - Temperature and Humidity
 If we want to add a sensor for Temperature and Humidity such as the AHT20, it is available in the ESPHome so we just follow the example for the sensor component page for [AHT Sensors](https://esphome.io/components/sensor/aht10)
@@ -106,16 +106,16 @@ i2c:
 
 Hardware connection as follow (According the [pinout](https://randomnerdtutorials.com/esp8266-pinout-reference-gpios/))
 
-![iot](/assets/20250122/6.jpeg)
+![iot](/assets/images/20250122/6.jpeg)
 
 And after uploading the code, we can already see in the logs the communication the communication is successful.
-![iot](/assets/20250122/7.png)
+![iot](/assets/images/20250122/7.png)
 
 The ESP is getting the information from the sensor and sending out.
-![iot](/assets/20250122/8.png)
+![iot](/assets/images/20250122/8.png)
 
 And finally, in the home assistant, we can see the Sensor values humidity and temperature, with the names defined in the .yaml.
-![iot](/assets/20250122/9.png)
+![iot](/assets/images/20250122/9.png)
 
 # ESPHome Device Builder
 Another way to use the ESPHome is with the Builder, as a web server.
@@ -133,11 +133,11 @@ esphome dashboard config
 And launching in chrome the dashboard,
 `localhost:6052`
 
-![iot](/assets/20250122/10.png)
+![iot](/assets/images/20250122/10.png)
 
 The device can be created, and the configuration could be modified directly on the local web. In other words, we could have exaclty the same as the standard ESPHome but with nicer interface.
 
-![iot](/assets/20250122/11.png)
+![iot](/assets/images/20250122/11.png)
 
 # Wrap-up and Ideas for Enhancement
 * In this post, we explore 3 ways to program our Espressif devices: Arduino IDE; ESPHome and ESPHome Builder.

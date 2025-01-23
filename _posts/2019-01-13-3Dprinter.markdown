@@ -15,7 +15,7 @@ This is our first 3D printer!
 
 After several years after my friends got a 3d printer, we decide to get one, at least, the basic and cheaper one, and this is the printer we found... With unexpected very good results!
 
-![20](/assets/3dprinter/20.JPG)
+![20](/assets/images/3dprinter/20.JPG)
 
 In _all3dp_ you find a [good review](https://all3dp.com/1/anet-a8-3d-printer-review-diy-kit/) from the Anet a8.
 
@@ -44,22 +44,22 @@ We spent around 1 week every afternoon assembling the printer and doing the firs
 ### Pictures
 This is the kit I mentioned,
 
-![1](/assets/3dprinter/1.JPG)
+![1](/assets/images/3dprinter/1.JPG)
 
-![2](/assets/3dprinter/2.JPG)
+![2](/assets/images/3dprinter/2.JPG)
 
-![3](/assets/3dprinter/3.JPG)
+![3](/assets/images/3dprinter/3.JPG)
 
 And assembling the printer following the videos...
 
 | Assembling process| |
 |-------|--------|
-| ![4](/assets/3dprinter/4.JPG) | ![5.JPG](/assets/3dprinter/5.JPG) |
-| ![6](/assets/3dprinter/6.JPG) | ![7.JPG](/assets/3dprinter/7_2.JPG) |
-| ![8](/assets/3dprinter/8.JPG) | ![9.JPG](/assets/3dprinter/9.JPG) |
-| ![10](/assets/3dprinter/10.JPG) | ![11.JPG](/assets/3dprinter/11.JPG) |
-| ![12](/assets/3dprinter/12.JPG) | ![14.JPG](/assets/3dprinter/14.JPG) |
-| ![13.JPG](/assets/3dprinter/13.JPG) |
+| ![4](/assets/images/3dprinter/4.JPG) | ![5.JPG](/assets/images/3dprinter/5.JPG) |
+| ![6](/assets/images/3dprinter/6.JPG) | ![7.JPG](/assets/images/3dprinter/7_2.JPG) |
+| ![8](/assets/images/3dprinter/8.JPG) | ![9.JPG](/assets/images/3dprinter/9.JPG) |
+| ![10](/assets/images/3dprinter/10.JPG) | ![11.JPG](/assets/images/3dprinter/11.JPG) |
+| ![12](/assets/images/3dprinter/12.JPG) | ![14.JPG](/assets/images/3dprinter/14.JPG) |
+| ![13.JPG](/assets/images/3dprinter/13.JPG) |
 
 ### First print
 After that, it is the time to check if everything is correct (powering on, the screen message seems OK, etc.)
@@ -112,25 +112,25 @@ The first print was not so ideal. We learnt more about the calibration process, 
 
 | First print| |
 |-------|--------|
-| ![16](/assets/3dprinter/16.JPG) | ![17.JPG](/assets/3dprinter/17.JPG) |
+| ![16](/assets/images/3dprinter/16.JPG) | ![17.JPG](/assets/images/3dprinter/17.JPG) |
 
 But after that, it was pretty well,
 
-![18](/assets/3dprinter/18.JPG)
+![18](/assets/images/3dprinter/18.JPG)
 
-![19](/assets/3dprinter/19.JPG)
+![19](/assets/images/3dprinter/19.JPG)
 
-![22](/assets/3dprinter/22.JPG)
+![22](/assets/images/3dprinter/22.JPG)
 
-![24](/assets/3dprinter/24.JPG)
+![24](/assets/images/3dprinter/24.JPG)
 
-![29](/assets/3dprinter/29.JPG)
+![29](/assets/images/3dprinter/29.JPG)
 
-![33](/assets/3dprinter/33.JPG)
+![33](/assets/images/3dprinter/33.JPG)
 
 And a last advice... The first layer is important. Make sure the layer print is well stuck to the hot bed. Otherwise, if you just launch print and let the printer work without supervision, could happen something like this =D
 
-![31](/assets/3dprinter/31.JPG)
+![31](/assets/images/3dprinter/31.JPG)
 
 ## 3D Modeling
 As you might see, the first thing you could do directly after assemble the printer is print some model 3d designed by other people in [thingverse](https://www.thingiverse.com/).

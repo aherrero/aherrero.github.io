@@ -33,18 +33,18 @@ Button interrupt
 Get the Atmega328 and put it in a Breadboard.
 Place the pull up 10k resistor for the reset pin, and the resistor and led to the Arduino pin 13 (atmega pin19).
 
-![3.JPG](/assets/tmr01_v2/3.JPG)
+![3.JPG](/assets/images/tmr01_v2/3.JPG)
 
 Burn the bootloader with the internal clock 8Mhz and program the blink example. You have everything explain in these previous entries, [ArduinoToBreadboard-v2.html](https://aherrero.github.io/arduino/iot/2018/10/17/ArduinoToBreadboard-v2.html) and [ArduinoToBreadboard.html](https://aherrero.github.io/arduino/iot/2018/09/24/ArduinoToBreadboard.html)
 
 For burning the bootloader and programming, I've used this time a programmer instead of an Arduino as ISP: The [pocket AVR programmer](https://www.sparkfun.com/products/9825) from sparkfun.
 
-![4.JPG](/assets/tmr01_v2/4.JPG)
+![4.JPG](/assets/images/tmr01_v2/4.JPG)
 
 ### Button
 Connect the button with one pin to VCC, and the other to the 10k pulldown resistor to GND and to the Arduino pin2 (interruption pin). In the atmega328, pin 4. You have small tutorial and example code in [arduino webpage](https://www.arduino.cc/en/Tutorial/Button)
 
-![5.JPG](/assets/tmr01_v2/5.JPG)
+![5.JPG](/assets/images/tmr01_v2/5.JPG)
 
 ### RTC MCP7940M and Crystal 32.768kHz
 Once the basic setup is installed, it's time to test the RTC.
@@ -55,7 +55,7 @@ And if you are wondering: Why this frequency exactly? Well, sparkfun has a defin
 
 For the setup, I've followed the schematic from the [MCP7940M datasheet](https://www.distrelec.ch/Web/Downloads/_t/ds/MCP7940M_eng_tds.pdf),
 
-![MCP7940M_schematic.png](/assets/tmr01_v2/MCP7940M_schematic.png)
+![MCP7940M_schematic.png](/assets/images/tmr01_v2/MCP7940M_schematic.png)
 
 But not exactly the same, because I also have another schematic from a library to use this RTC,
 
@@ -63,7 +63,7 @@ But not exactly the same, because I also have another schematic from a library t
 
 My schematic is not exactly elegant, because I've used 3 capacitor 22pF in series for achieving the ~6.8pF ( 1/(1/22+1/22+1/22) = 7.33 pF ) and for me it wasn't necessary the MFP pin (Used for alarms)
 
-![2.JPG](/assets/tmr01_v2/2.JPG)
+![2.JPG](/assets/images/tmr01_v2/2.JPG)
 
 The SCL and SDA pins in the Arduino are the A5 and A4, or in the atmega328 the latest pin (28, 27)
 
@@ -94,7 +94,7 @@ If you want to see what is happening when you do a "println" in the atmega328, y
 
 For the FTDI, following the schema,
 
-![FTDI cable schema](/assets/cam01/ftdi_schema.png)
+![FTDI cable schema](/assets/images/cam01/ftdi_schema.png)
 
 You have to connect only three cables:
 - RX FTDI to TX atmega328 (Pin 3)
@@ -221,7 +221,7 @@ You can see a [good tutorial comparing both](https://tronixstuff.com/2014/12/01/
 
 And also, you could chose one or the other depending where you want to put it. The size of the DS3234 is quite big compare with the others.
 
-![1.JPG](/assets/tmr01_v2/1.JPG)
+![1.JPG](/assets/images/tmr01_v2/1.JPG)
 
 ## Current consumption and final results
 The Arduino sleep mode works very well, even if I don't reach the same values of the [specification](http://ww1.microchip.com/downloads/en/devicedoc/atmega328_p%20avr%20mcu%20with%20picopower%20technology%20data%20sheet%2040001984a.pdf):
@@ -236,11 +236,11 @@ According to ATmega328P Typical Characteristics,
 
 Active mode 3V at 1Mhz: ~0.5mA
 
-![data1.png](/assets/tmr01_v2/data1.png)
+![data1.png](/assets/images/tmr01_v2/data1.png)
 
 Active mode 3V at 8Mhz: ~3mA
 
-![data2.png](/assets/tmr01_v2/data2.png)
+![data2.png](/assets/images/tmr01_v2/data2.png)
 
 ### Actual consumption
 

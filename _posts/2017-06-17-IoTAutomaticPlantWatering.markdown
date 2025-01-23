@@ -14,7 +14,7 @@ The goal of this project is to automate the plant watering, measuring the soil m
 
 ## Prototype v0.1
 
-![alt text](/assets/IoTAutomaticPlantWatering_v0.1/complete.JPG)
+![alt text](/assets/images/IoTAutomaticPlantWatering_v0.1/complete.JPG)
 
 ## Material used
 - [Arduino Pro Mini 5V](https://www.sparkfun.com/products/11113)
@@ -39,7 +39,7 @@ As an external power supply, <b>we should use another power supply than a Lipo</
 
 This is the circuit:
 
-![alt text](/assets/IoTAutomaticPlantWatering_v0.1/mosfetControl.png)
+![alt text](/assets/images/IoTAutomaticPlantWatering_v0.1/mosfetControl.png)
 
 More information: [http://bildr.org/2012/03/rfp30n06le-arduino/](http://bildr.org/2012/03/rfp30n06le-arduino/)
 
@@ -54,7 +54,7 @@ The threshold for me was 800 (from a 1024 ADC values)
 
 Also, if you are going to use the system outside, you probably want cover the sensor from the water:
 
-![alt text](/assets/IoTAutomaticPlantWatering_v0.1/moisturesensor.JPG)
+![alt text](/assets/images/IoTAutomaticPlantWatering_v0.1/moisturesensor.JPG)
 
 ### Power
 The ubec was used to reduce the voltage from the Lipo (11V-12V) to 5V. Although the Arduino accepts 5V, it's the input limit, so, just in case.
@@ -173,15 +173,15 @@ The circuit is working, the sensor reads the moisture, and when the mositure has
 
 In this prototype, we use the same circuit but, as the intention is to work outside, this circuit will be "less" prototyping.
 
-![alt text](/assets/IoTAutomaticPlantWatering_v0.2/complete.JPG)
+![alt text](/assets/images/IoTAutomaticPlantWatering_v0.2/complete.JPG)
 
 More in detail
 
-![alt text](/assets/IoTAutomaticPlantWatering_v0.2/detail.JPG)
+![alt text](/assets/images/IoTAutomaticPlantWatering_v0.2/detail.JPG)
 
 And from the back,
 
-![alt text](/assets/IoTAutomaticPlantWatering_v0.2/back.JPG)
+![alt text](/assets/images/IoTAutomaticPlantWatering_v0.2/back.JPG)
 
 # Conclusion
 The complete circuit works for a short period of time, then, the pump motor broke.
@@ -193,12 +193,12 @@ This could be due a different possibilities:
 - Diode between positive and negative in the pump motor.
 - Current limiter with a motor controller type [L298N](https://www.sparkfun.com/datasheets/Robotics/L298_H_Bridge.pdf). The problem with that is, we don't need run the motor in the opposite direction and the motor may consume more than the motor controller can give us (Typically, the L298N gives 0.5A)
 - Current limiter with [LM317](http://www.ti.com/lit/ds/symlink/lm317.pdf). The circuit would be:
-![alt text](/assets/IoTAutomaticPlantWatering_v0.2/lm317Circuit.png)
+![alt text](/assets/images/IoTAutomaticPlantWatering_v0.2/lm317Circuit.png)
 
   It's a good alternative, but in that moment, I didn't have the material to do it, so, let's see another possibility. (More information,  [http://www.ti.com/lit/ds/symlink/lm317.pdf](http://www.ti.com/lit/ds/symlink/lm317.pdf) and [http://www.techlib.com/electronics/regulators.html](http://www.techlib.com/electronics/regulators.html))
 - Current limiter with
 [L7812](https://www.sparkfun.com/products/12766). The circuit will be
-![alt text](/assets/IoTAutomaticPlantWatering_v0.2/7812Circuit.png)
+![alt text](/assets/images/IoTAutomaticPlantWatering_v0.2/7812Circuit.png)
 
   As alternative of the LM317, it's a good solution. This solution will be implemented in the next iteration [Version 2](/arduino/iot/2017/09/10/IoTAutomaticPlantWatering_2.html)
 

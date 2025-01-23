@@ -10,7 +10,7 @@ youtube01: SHC-i1KxNCg
 ## Introduction
 I've made a second version for my digital watch!
 
-![2.JPG](/assets/tmr01_v2/bora2/4.JPG)
+![2.JPG](/assets/images/tmr01_v2/bora2/4.JPG)
 
 After the [first version](https://aherrero.github.io/arduino/iot/watch/2018/10/20/BoraWatch.html), I've discovered several things I could improve, being the most important the time precision (Improving with a RTC) and the battery life (The external oscillator with the RTC allows the microcontroller go to the sleep mode)
 
@@ -61,7 +61,7 @@ And lot of tutorials!
 
 ### Schematics
 
-![sch1.png](/assets/tmr01_v2/sch1.png)
+![sch1.png](/assets/images/tmr01_v2/sch1.png)
 
 [The schematic in pdf](https://github.com/aherrero/TMR01_Watch/blob/master/v2/Hardware/TMR1_v2/TMR1_v2_Schematic.pdf)
 
@@ -78,13 +78,13 @@ I've also discover two problems in the schematics after ordering the pcb:
 - According to the [atmega328 specification](http://ww1.microchip.com/downloads/en/devicedoc/atmega328_p%20avr%20mcu%20with%20picopower%20technology%20data%20sheet%2040001984a.pdf), the chip has ADC6 and ADC7 pins but I've realized they only work as input for voltage references, not as output, so, I can't use them to control the leds. I was forced to change this pins to SCK and MISO with cables. In the github, the schematics are now correct, but the gerbers were sent with this mistake.
 - The footprint for the oscillator 32.768 wasn't correct for the oscillator I have. So, I have improvised something.
 
-![atmega_schematics.png](/assets/tmr01_v2/bora2/atmega_schematics.png)
+![atmega_schematics.png](/assets/images/tmr01_v2/bora2/atmega_schematics.png)
 
 ### Board
 
 | Top layer| Bottom layer|
 |-------|--------|
-| ![PCB_Front.JPG](/assets/tmr01_v2/board1.png) | ![PCB_Back.JPG](/assets/tmr01_v2/board2.png) |
+| ![PCB_Front.JPG](/assets/images/tmr01_v2/board1.png) | ![PCB_Back.JPG](/assets/images/tmr01_v2/board2.png) |
 
 The board in pdf, [top layer](https://github.com/aherrero/TMR01_Watch/raw/master/v2/Hardware/TMR1_v2/TMR1_v2_PCB_Top.pdf) and [bottom layer](https://github.com/aherrero/TMR01_Watch/blob/master/v2/Hardware/TMR1_v2/TMR1_v2_PCB_Bottom.pdf)
 
@@ -101,24 +101,24 @@ The differences between them for the moment are; Seeedstudio seems more serious 
 ## Fast prototype
 In the meantime waiting for the PCB arrives and in order to develop the software, I built a prototype, using the same atmega328 and same RTC MCP7940M
 
-![proto.JPG](/assets/tmr01_v2/proto.JPG)
+![proto.JPG](/assets/images/tmr01_v2/proto.JPG)
 
 ## Soldering
 This time for soldering the atmega328, I have taken advantage of I am working in a electronics company for using a [soldering microscope](https://www.microscope.com/specialty-microscopes/soldering-microscopes/), so I could solder manually.
 
-![1.JPG](/assets/tmr01_v2/bora2/1.JPG)
+![1.JPG](/assets/images/tmr01_v2/bora2/1.JPG)
 
 For the other components, as it was faster and I didn't need precision, I use again the soldering paste.
 
-![3.JPG](/assets/tmr01_v2/bora2/3.JPG)
+![3.JPG](/assets/images/tmr01_v2/bora2/3.JPG)
 
-![2.JPG](/assets/tmr01_v2/bora2/2.JPG)
+![2.JPG](/assets/images/tmr01_v2/bora2/2.JPG)
 
 So, the final result,
 
 | Top| Bottom|
 |-------|--------|
-| ![5.JPG](/assets/tmr01_v2/bora2/5.JPG) | ![6.JPG](/assets/tmr01_v2/bora2/6.JPG) |
+| ![5.JPG](/assets/images/tmr01_v2/bora2/5.JPG) | ![6.JPG](/assets/images/tmr01_v2/bora2/6.JPG) |
 
 ## Software
 You can find the software in [github](https://github.com/aherrero/TMR01_Watch/tree/master/v2/Software/TMR01v2)
@@ -126,7 +126,7 @@ You can find the software in [github](https://github.com/aherrero/TMR01_Watch/tr
 ### Bootloader
 I've use the [MiniCore](https://github.com/MCUdude/MiniCore) library with Arduino to configure the fuses of the atmega, with the following configuration:
 
-![arduino_config.png](/assets/tmr01_v2/bora2/arduino_config.png)
+![arduino_config.png](/assets/images/tmr01_v2/bora2/arduino_config.png)
 
 ### Programming
 As you may have seen, there are 6 setpoints at the bottom, to connect the ISP for programming. Finally, as I programmed several times to get it works, I solder the pins and then remove it.
@@ -136,11 +136,11 @@ May attention the sense of the pins with the schematics and your ISP cable (Dete
 ## Final results
 Once the velcro strip has been sewn,
 
-![7.JPG](/assets/tmr01_v2/bora2/7.JPG)
+![7.JPG](/assets/images/tmr01_v2/bora2/7.JPG)
 
 And if I compare with the previous version,
 
-![8.JPG](/assets/tmr01_v2/bora2/8.JPG)
+![8.JPG](/assets/images/tmr01_v2/bora2/8.JPG)
 
 ## Improvements
 Obviously, the first fix will be:

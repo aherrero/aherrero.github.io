@@ -149,10 +149,14 @@ Temperature measurement coming from a ESP device (With one or several sensors co
     * Work on Bluetooth Low Energy with nRF and seeing the capabilitiies to connect to our system
     * Using directly Matter protocol with Arduino Nano Matter
 
-# 
+***
+
+<p style="text-align:center;">
 
 <button class="button buttonblue" onclick="window.location.href='https://aherrero.github.io/rpi/linux/synology/2021/05/16/surveillancecameras.html';">Previous</button>
 <button class="button buttonblue" onclick="window.location.href='https://aherrero.github.io/iot/arduino/electronics/mqtt/esp/2025/01/22/iot-home-automation-esp.html';">Next</button>
+
+</p>
 
 
 ***

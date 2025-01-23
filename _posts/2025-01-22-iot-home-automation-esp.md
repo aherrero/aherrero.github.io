@@ -145,6 +145,16 @@ The device can be created, and the configuration could be modified directly on t
 	* ESPHome/ESPHome Builder, are a very quick way to integrate a sensor, if you need only that, and the component you want to integrate is on the list.
 * For the next project,
     * Use [ESP-IDF (Espressif IoT Development Framework)](https://docs.espressif.com/projects/esp-idf/en/stable/esp32/get-started/index.html) for development
+
+***
+
+<p style="text-align:center;">
+
+<button class="button buttonblue" onclick="window.location.href='https://aherrero.github.io/iot/arduino/electronics/ble/mqtt/matter/thread/2025/01/13/iot-home-automation.html';">Previous</button>
+<button class="button buttonblue" disabled="disabled" onclick="window.location.href='';">Next</button>
+
+</p>
+
 ***
 
 {% if page.comments %}

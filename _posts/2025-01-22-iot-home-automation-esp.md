@@ -151,7 +151,6 @@ The device can be created, and the configuration could be modified directly on t
 <p style="text-align:center;">
 
 <button class="button buttonblue" onclick="window.location.href='https://aherrero.github.io/iot/arduino/electronics/ble/mqtt/matter/thread/2025/01/13/iot-home-automation.html';">Previous</button>
-<button class="button buttonblue" disabled="disabled" onclick="window.location.href='';">Next</button>
 
 </p>
 

@@ -45,6 +45,38 @@ gem build
 gem install --local minima-3.0.0.dev.gem
 ```
 
+## Custom Style
+If a custom CSS is needed, we could create the file
+
+`\_sass\minima\custom-styles.scss`
+
+with the desired style.
+
+For example, if a custom button is needed to change the blog page, we could add the following on the css file,
+
+```
+.button {
+    border: none;
+    padding: 12px 28px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.buttonblue {
+    background-color: #79B8FF;
+    color: black;
+}
+```
+
+And using this style in the markdown page,
+
+```
+<button class="button buttonblue" onclick="window.location.href='https....html';">Next</button>
+```
 
 ***
 

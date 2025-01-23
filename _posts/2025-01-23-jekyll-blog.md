@@ -36,7 +36,7 @@ minima:
   skin: dark # or auto if you want it to switch with your system settings.
 ```
 
-If we want the minima theme with latest version in local, we could eventually install it:
+If we want the minima theme with latest version in local, we could eventually install it (Not needed to deploy in github pages)
 
 ```
 git clone https://github.com/jekyll/minima.git

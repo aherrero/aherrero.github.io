@@ -6,6 +6,25 @@ categories: iot arduino electronics ble mqtt matter thread
 comments: true
 ---
 
+<style>
+
+.button {
+    border: none;
+    padding: 12px 28px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.buttonblue {
+    background-color: #79B8FF;
+    color: black;
+}
+</style>
+
 # Introduction
 Like many of us, we started to have several devices to control different smart systems in our homes: lights, robot vacuum cleaners, TVs, and more.
 
@@ -130,9 +149,10 @@ Temperature measurement coming from a ESP device (With one or several sensors co
     * Work on Bluetooth Low Energy with nRF and seeing the capabilitiies to connect to our system
     * Using directly Matter protocol with Arduino Nano Matter
 
+# 
 
-<button onclick="window.location.href='https://aherrero.github.io/iot/arduino/electronics/mqtt/esp/2025/01/22/iot-home-automation-esp.html';">Next project</button>
-
+<button class="button buttonblue" onclick="window.location.href='https://aherrero.github.io/rpi/linux/synology/2021/05/16/surveillancecameras.html';">Previous</button>
+<button class="button buttonblue" onclick="window.location.href='https://aherrero.github.io/iot/arduino/electronics/mqtt/esp/2025/01/22/iot-home-automation-esp.html';">Next</button>
 
 
 ***

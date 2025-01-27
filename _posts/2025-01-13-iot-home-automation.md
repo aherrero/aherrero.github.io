@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Home Automation - Introduction
+title: Home Automation - Introduction (Part I)
 date: 2025-01-13 08:00 +0200
 categories: iot arduino electronics ble mqtt matter thread
 comments: true

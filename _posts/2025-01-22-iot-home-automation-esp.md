@@ -5,10 +5,11 @@ date: 2025-01-22 08:00 +0200
 categories: iot arduino electronics mqtt esp
 comments: true
 ---
-
 # Introduction
-In this post, we explore the diverse capabilities and opportunities offered by Espressif's renowned microcontrollers, the ESP8266 and ESP32. We could compare the microcontrollers and the development boards [here](https://www.espressif.com/en/products/devkits)
+In this post, we explore the diverse capabilities and opportunities offered by Espressif's renowned microcontrollers, the ESP8266 and ESP32. 
 
+Guides:
+* [Development boards comparison](https://www.espressif.com/en/products/devkits)
 * [ESP8266 guide](https://randomnerdtutorials.com/getting-started-with-esp8266-wifi-transceiver-review/) for the NodeMCU development board
 * [ESP32 guide](https://randomnerdtutorials.com/getting-started-with-esp32/)
 
@@ -16,11 +17,12 @@ In order to program and use the boards, we could use different methods:
 * [Arduino IDE](https://randomnerdtutorials.com/how-to-install-esp8266-board-arduino-ide/), as briefly mentioned in the previous post.
 * [ESPHome](https://esphome.io/guides/getting_started_command_line#installation)
 * [ESPHome Device Builder](https://esphome.io/guides/getting_started_command_line#bonus-esphome-device-builder)
-* [ESP-IDF (Espressif IoT Development Framework)](https://docs.espressif.com/projects/esp-idf/en/stable/esp32/get-started/index.html), we will explore this possibility in the next entry.
+* [ESP-IDF (Espressif IoT Development Framework)](https://docs.espressif.com/projects/esp-idf/en/stable/esp32/get-started/index.html), we will explore this possibility in futures entries.
 
 Personally, I have the two types of boards,
 * ESP8266 with NodeMCU Amica [amazon](https://www.amazon.de/diymore-ESP8266-Development-Compatible-Micropython/dp/B09Z6T2XS4/ref=mp_s_a_1_3), [pinout](https://randomnerdtutorials.com/esp8266-pinout-reference-gpios/)
 * ESP32-WROOM-32 [amazon](https://www.amazon.de/dp/B0D9BTQRYT/ref=pe_27091401_487024491_TE_item), [datasheet](https://www.espressif.com/sites/default/files/documentation/esp32-wroom-32_datasheet_en.pdf), [ES32 Series datasheet](https://www.espressif.com/sites/default/files/documentation/esp32_datasheet_en.pdf), [User guide](https://docs.espressif.com/projects/esp-dev-kits/en/latest/esp32/esp32-devkitc/index.html)
+  *Note:* A newest ESP32 is recommended, [ESP32-S3-DEVKITC-1](https://www.digikey.ch/en/products/detail/espressif-systems/ESP32-S3-DEVKITC-1-N8R8/15295894)
 
 # Arduino IDE
 Using the [Arduino IDE](https://randomnerdtutorials.com/how-to-install-esp8266-board-arduino-ide/) is the easiest way to program and use any ESP board, with plenty of examples for development
@@ -141,18 +143,24 @@ The device can be created, and the configuration could be modified directly on t
 ![iot](/assets/images/20250122/11.png)
 
 # Bonus: ESP32 Bluetooth Proxy
-For adding Bluetooth devices to our home assistant, we follow the [recommendation from HA](https://www.home-assistant.io/integrations/bluetooth/) "*A better approach than a directly connected adapter or card is to use a Bluetooth proxy using an ESP32 since Linux kernel updates have previously broken Bluetooth functionality*"
+For adding Bluetooth devices to our home assistant, we could follow the [recommendation from HA](https://www.home-assistant.io/integrations/bluetooth/) "*A better approach than a directly connected adapter or card is to use a Bluetooth proxy using an ESP32 since Linux kernel updates have previously broken Bluetooth functionality*"
 
 Therefore, this is the ESP32 module to add for forwarding the Bluetooth devices to HA via Wi-Fi: [https://esphome.io/components/bluetooth_proxy](https://esphome.io/components/bluetooth_proxy)
 
 Although, there is a "[ready-made project](https://esphome.io/projects/?type=bluetooth)" to use directly for the bluetooth proxy, a better (and configurable) option is to do it ourself, at least, with ESPHome. In any case, this is the [*yaml*](https://github.com/esphome/bluetooth-proxies/blob/main/esp32-generic/esp32-generic.yaml) configuration to add in our devices, coming from the "ready-made" project from before.
 
-
+*Notes:*
+* The ESPHome Device Builder could be installed directly on the rpi with HA, but it the rpi is not the most recent one I don't recommend it for resources.
+* The integrated bluetooth from rpi could be disconnected to ensure we are using the proxy and not the internal bluetooth.
+* With my current / cheap ESP32 I couldn't manage to connect BLE devices. This may be coming because the ESP32 I use is one of the first generation.
 
 # Wrap-up and Ideas for Enhancement
 * In this post, we explore 3 ways to program our Espressif devices: Arduino IDE; ESPHome and ESPHome Builder.
 	* ArduinoIDE is nice, with lot of support, but if custom programming needs to be made, I personally will chose ESP-IDF.
 	* ESPHome/ESPHome Builder, are a very quick way to integrate a sensor, if you need only that, and the component you want to integrate is on the list.
+* HW Setup
+	* A recent ESP32 is recommended, [ESP32-S3-DEVKITC-1](https://www.digikey.ch/en/products/detail/espressif-systems/ESP32-S3-DEVKITC-1-N8R8/15295894)
+	* More powerful RPI (Than the rpi3) is recommended, [rpi5](https://www.digikey.ch/en/products/detail/raspberry-pi/SC1111/21658261)
 * For the next project,
     * Use [ESP-IDF (Espressif IoT Development Framework)](https://docs.espressif.com/projects/esp-idf/en/stable/esp32/get-started/index.html) for development.
     * Use Bluetooth Low Energy (BLE) in home assistant

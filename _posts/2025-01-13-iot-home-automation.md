@@ -5,7 +5,6 @@ date: 2025-01-13 08:00 +0200
 categories: iot arduino electronics ble mqtt matter thread
 comments: true
 ---
-
 # Introduction
 Like many of us, we started to have several devices to control different smart systems in our homes: lights, robot vacuum cleaners, TVs, and more.
 
@@ -27,7 +26,8 @@ Image from [leonardocavagnis](https://leonardocavagnis.medium.com/retrofitting-w
 In my case, I am interesting in connecting the different devices I have at home, plus some devices I had to buy in order to test all the possibilities of the system.
 
 Wi-Fi
-* Matter devices as the IKEA Dirigera Controller, with some devices such as lights, door sensor and smart plugs. All IKEA sensors are ZigBee but with the Dirigera, they can be controlled by WiFi
+* **Matter devices** as the IKEA Dirigera Controller, with some devices such as lights, door sensor and smart plugs. All IKEA sensors are ZigBee but with the Dirigera, they can be controlled by WiFi
+  *Note:* Dirigera controller could be connected also directly Wi-Fi with [HomeKit](https://www.home-assistant.io/integrations/homekit/)
 * Smart TV (Samsung TV)
 * Vacuum cleaner
 * MQTT devices with ESP32/ESP8266 connecting sensors or relays
@@ -60,6 +60,7 @@ The assistant will probably already find some devices that can be added to the n
 3. After that, you will see HA has found directly a Matter Device, the IKEA Hub, with all the devices already associated to this device, so you can control them directly
 ![iot](/assets/images/20250113/11.png)
 
+*Note:* Dirigera controller could be connected also with [HomeKit](https://www.home-assistant.io/integrations/homekit/)
 ## Zigbee sensors
 
 ![iot](/assets/images/20250113/13.jpeg)
@@ -124,6 +125,12 @@ Temperature measurement coming from a ESP device (With one or several sensors co
 
 # Wrap-up and Ideas for Enhancement
 * In this post, we configure Home Assistent and basic configuration, covering from standard IoT devices such as the IKEA devices, or ZigBee devices, and also own devices with ESP & MQTT.
+* In my experience, the IKEA Devices with Dirigera Controller work worst with Matter;
+  a) I had to reconnect the Integration manually from time to time, maybe for the Matter BETA integration in Dirigera side, or the Matter BETA integration in HA)
+  b) I didn't have the "status" of the IKEA devices (If the device was disconnected from the power main) with Matter. 
+  Two options here,
+	* Use [HomeKit](https://www.home-assistant.io/integrations/homekit/) instead Matter.
+	* Connect the IKEA Devices directly with the [Zigbee USB Coordinator](https://sonoff.tech/product/gateway-and-sensors/sonoff-zigbee-3-0-usb-dongle-plus-p/) and [ZHA](https://www.home-assistant.io/integrations/zha/)integration.
 * For the future projects,
     * Use [ESPHome](https://esphome.io/guides/getting_started_command_line), instead of developing MQTT device from zero
     * We could finish the implementation of a MQTT device with ESP32/ESP8266 with real sensors and battery powered
